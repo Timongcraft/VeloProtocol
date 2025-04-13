@@ -26,15 +26,8 @@ public class BlockEntityDataPacket extends VeloPacket {
                 .stateRegistry(StateRegistry.PLAY)
                 .mapping(0x0A, ProtocolVersion.MINECRAFT_1_18_2, encodeOnly)
                 .mapping(0x07, ProtocolVersion.MINECRAFT_1_19, encodeOnly)
-                .mapping(0x07, ProtocolVersion.MINECRAFT_1_19_1, encodeOnly)
-                .mapping(0x07, ProtocolVersion.MINECRAFT_1_19_3, encodeOnly)
                 .mapping(0x08, ProtocolVersion.MINECRAFT_1_19_4, encodeOnly)
-                .mapping(0x08, ProtocolVersion.MINECRAFT_1_20, encodeOnly)
                 .mapping(0x07, ProtocolVersion.MINECRAFT_1_20_2, encodeOnly)
-                .mapping(0x07, ProtocolVersion.MINECRAFT_1_20_3, encodeOnly)
-                .mapping(0x07, ProtocolVersion.MINECRAFT_1_20_5, encodeOnly)
-                .mapping(0x07, ProtocolVersion.MINECRAFT_1_21, encodeOnly)
-                .mapping(0x07, ProtocolVersion.MINECRAFT_1_21_2, encodeOnly)
                 .mapping(0x06, ProtocolVersion.MINECRAFT_1_21_5, encodeOnly)
                 .register();
     }

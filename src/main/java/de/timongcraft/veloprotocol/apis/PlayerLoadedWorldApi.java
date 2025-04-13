@@ -12,10 +12,12 @@ import de.timongcraft.veloprotocol.network.protocol.packets.PlayerLoadedWorldPac
 import org.jetbrains.annotations.Nullable;
 
 import java.time.Duration;
-import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
+@SuppressWarnings("removal")
+@Deprecated(since = "1.3.3", forRemoval = true) // will be removed when the pull request is merged - https://github.com/PaperMC/Velocity/pull/1541
 @Beta
 public class PlayerLoadedWorldApi {
 
@@ -33,36 +35,32 @@ public class PlayerLoadedWorldApi {
     private final ProxyServer proxyServer;
     private final Object pluginMainClass;
     private final Duration timeout;
-    private final Map<UUID, PlayerClientLoadedWorldEvent.Cause> loadingPlayers;
+    private final Set<UUID> loadingPlayers;
 
     private PlayerLoadedWorldApi(Object pluginMainClass, ProxyServer proxyServer, @Nullable Duration timeout) {
         this.proxyServer = proxyServer;
         this.pluginMainClass = pluginMainClass;
         this.timeout = timeout != null ? timeout : NOTCHIAN_TIMEOUT;
-        loadingPlayers = new ConcurrentHashMap<>();
+        loadingPlayers = ConcurrentHashMap.newKeySet();
     }
 
     @Subscribe
     public void onPostConnect(ServerPostConnectEvent event) {
         if (event.getPlayer().getProtocolVersion().lessThan(ProtocolVersion.MINECRAFT_1_21_4)) return;
-        loadingPlayers.put(event.getPlayer().getUniqueId(), PlayerClientLoadedWorldEvent.Cause.SERVER_JOIN);
+        loadingPlayers.add(event.getPlayer().getUniqueId());
 
         proxyServer.getScheduler().buildTask(pluginMainClass, () -> {
-            PlayerClientLoadedWorldEvent.Cause cause = loadingPlayers.remove(event.getPlayer().getUniqueId());
-            if (cause == null) return;
+            loadingPlayers.remove(event.getPlayer().getUniqueId());
             if (!event.getPlayer().isActive()) return;
-
-            proxyServer.getEventManager().fireAndForget(new PlayerClientLoadedWorldEvent(event.getPlayer(), cause, true));
+            proxyServer.getEventManager().fireAndForget(new PlayerClientLoadedWorldEvent(event.getPlayer(), true));
         }).delay(timeout).schedule();
     }
 
     @Subscribe
     public void onClientLoadedWorldPacket(PacketReceiveEvent event) {
         if (!(event.getPacket() instanceof PlayerLoadedWorldPacket)) return;
-        PlayerClientLoadedWorldEvent.Cause cause = loadingPlayers.remove(event.getPlayer().getUniqueId());
-        if (cause == null) return;
-
-        proxyServer.getEventManager().fireAndForget(new PlayerClientLoadedWorldEvent(event.getPlayer(), cause, false));
+        loadingPlayers.remove(event.getPlayer().getUniqueId());
+        proxyServer.getEventManager().fireAndForget(new PlayerClientLoadedWorldEvent(event.getPlayer(), false));
     }
 
     @Subscribe

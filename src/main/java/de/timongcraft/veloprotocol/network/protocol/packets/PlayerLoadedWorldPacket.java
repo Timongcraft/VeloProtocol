@@ -14,6 +14,7 @@ import io.netty.buffer.ByteBuf;
  * (latest) Resource Id: 'minecraft:player_loaded'
  */
 @SuppressWarnings("unused")
+@Deprecated(since = "1.3.3", forRemoval = true) // will be removed when the pull request is merged - https://github.com/PaperMC/Velocity/pull/1541
 @Beta
 @Since(ProtocolVersion.MINECRAFT_1_21_4)
 public class PlayerLoadedWorldPacket extends VeloPacket {

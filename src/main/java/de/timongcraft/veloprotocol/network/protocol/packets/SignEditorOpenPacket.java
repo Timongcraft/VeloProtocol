@@ -25,11 +25,8 @@ public class SignEditorOpenPacket extends VeloPacket {
                 .mapping(0x2E, ProtocolVersion.MINECRAFT_1_19_1, encodeOnly)
                 .mapping(0x2D, ProtocolVersion.MINECRAFT_1_19_3, encodeOnly)
                 .mapping(0x31, ProtocolVersion.MINECRAFT_1_19_4, encodeOnly)
-                .mapping(0x31, ProtocolVersion.MINECRAFT_1_20, encodeOnly)
                 .mapping(0x32, ProtocolVersion.MINECRAFT_1_20_2, encodeOnly)
-                .mapping(0x32, ProtocolVersion.MINECRAFT_1_20_3, encodeOnly)
                 .mapping(0x34, ProtocolVersion.MINECRAFT_1_20_5, encodeOnly)
-                .mapping(0x34, ProtocolVersion.MINECRAFT_1_21, encodeOnly)
                 .mapping(0x36, ProtocolVersion.MINECRAFT_1_21_2, encodeOnly)
                 .mapping(0x35, ProtocolVersion.MINECRAFT_1_21_5, encodeOnly)
                 .register();

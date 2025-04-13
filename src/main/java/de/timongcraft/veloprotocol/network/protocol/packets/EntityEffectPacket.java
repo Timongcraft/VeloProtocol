@@ -34,11 +34,9 @@ public class EntityEffectPacket extends VeloPacket {
                 .mapping(0x69, ProtocolVersion.MINECRAFT_1_19_1, encodeOnly)
                 .mapping(0x68, ProtocolVersion.MINECRAFT_1_19_3, encodeOnly)
                 .mapping(0x6C, ProtocolVersion.MINECRAFT_1_19_4, encodeOnly)
-                .mapping(0x6C, ProtocolVersion.MINECRAFT_1_20, encodeOnly)
                 .mapping(0x6E, ProtocolVersion.MINECRAFT_1_20_2, encodeOnly)
                 .mapping(0x72, ProtocolVersion.MINECRAFT_1_20_3, encodeOnly)
                 .mapping(0x76, ProtocolVersion.MINECRAFT_1_20_5, encodeOnly)
-                .mapping(0x76, ProtocolVersion.MINECRAFT_1_21, encodeOnly)
                 .mapping(0x7D, ProtocolVersion.MINECRAFT_1_21_2, encodeOnly)
                 .register();
     }

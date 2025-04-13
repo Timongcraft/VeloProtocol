@@ -151,8 +151,8 @@ public class VeloBlockEntityTypes {
         int[] protocolIds = new int[ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.size()];
 
         for (int i = 0; i < ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.size(); i++) {
-            Integer nameProtocolId = ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.get(i).mappings().get("minecraft:block_entity_type").getOrDefault(name, null);
-            protocolIds[i] = nameProtocolId != null ? nameProtocolId : -1;
+            int nameProtocolId = ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.get(i).mappings().get("minecraft:block_entity_type").getOrDefault(name, -1);
+            protocolIds[i] = nameProtocolId;
         }
 
         return protocolIds;
