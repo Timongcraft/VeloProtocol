@@ -219,22 +219,6 @@ public class VeloDataComponentTypes {
     private static VeloDataComponentType load(String name) {
         VeloDataComponentType veloDataComponentType = new VeloDataComponentType(name, getProtocolIds(name));
 
-        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_18_2, unused -> new HashMap<>())
-                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_18_2), veloDataComponentType);
-        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_19, unused -> new HashMap<>())
-                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_19), veloDataComponentType);
-        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_19_1, unused -> new HashMap<>())
-                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_19_1), veloDataComponentType);
-        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_19_3, unused -> new HashMap<>())
-                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_19_3), veloDataComponentType);
-        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_19_4, unused -> new HashMap<>())
-                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_19_4), veloDataComponentType);
-        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_20, unused -> new HashMap<>())
-                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_20), veloDataComponentType);
-        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_20_2, unused -> new HashMap<>())
-                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_20_2), veloDataComponentType);
-        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_20_3, unused -> new HashMap<>())
-                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_20_3), veloDataComponentType);
         LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_20_5, unused -> new HashMap<>())
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_20_5), veloDataComponentType);
         LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21, unused -> new HashMap<>())

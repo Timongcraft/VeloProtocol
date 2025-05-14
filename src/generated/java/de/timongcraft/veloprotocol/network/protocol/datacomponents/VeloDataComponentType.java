@@ -8,14 +8,6 @@ import java.util.Arrays;
 public class VeloDataComponentType {
 
     public static final ProtocolVersion[] SUPPORTED_VERSIONS = {
-            ProtocolVersion.MINECRAFT_1_18_2,
-            ProtocolVersion.MINECRAFT_1_19,
-            ProtocolVersion.MINECRAFT_1_19_1,
-            ProtocolVersion.MINECRAFT_1_19_3,
-            ProtocolVersion.MINECRAFT_1_19_4,
-            ProtocolVersion.MINECRAFT_1_20,
-            ProtocolVersion.MINECRAFT_1_20_2,
-            ProtocolVersion.MINECRAFT_1_20_3,
             ProtocolVersion.MINECRAFT_1_20_5,
             ProtocolVersion.MINECRAFT_1_21,
             ProtocolVersion.MINECRAFT_1_21_2,
