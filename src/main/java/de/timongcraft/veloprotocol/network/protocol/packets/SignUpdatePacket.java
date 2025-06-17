@@ -32,6 +32,7 @@ public class SignUpdatePacket extends VeloPacket {
                 .mapping(0x37, ProtocolVersion.MINECRAFT_1_21_2, encodeOnly)
                 .mapping(0x39, ProtocolVersion.MINECRAFT_1_21_4, encodeOnly)
                 .mapping(0x3A, ProtocolVersion.MINECRAFT_1_21_5, encodeOnly)
+                .mapping(0x3B, ProtocolVersion.MINECRAFT_1_21_6, encodeOnly)
                 .register();
     }
 

@@ -25,6 +25,7 @@ public class PlayerLoadedWorldPacket extends VeloPacket {
                 .packetSupplier(PlayerLoadedWorldPacket::new)
                 .stateRegistry(StateRegistry.PLAY)
                 .mapping(0x2A, ProtocolVersion.MINECRAFT_1_21_4, encodeOnly)
+                .mapping(0x2B, ProtocolVersion.MINECRAFT_1_21_6, encodeOnly)
                 .register();
     }
 
