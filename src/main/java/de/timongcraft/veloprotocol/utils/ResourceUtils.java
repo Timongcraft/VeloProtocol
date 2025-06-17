@@ -1,40 +1,25 @@
 package de.timongcraft.veloprotocol.utils;
 
+import org.jetbrains.annotations.Unmodifiable;
+
 import java.io.InputStream;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.FileSystem;
+import java.nio.file.FileSystemNotFoundException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Stream;
 
+//Based on Tgc-Translations's ResourceUtils
 public class ResourceUtils {
 
-    public static List<Path> getFilePaths(String folderPath) {
-        List<Path> filePaths = new ArrayList<>();
-        try {
-            URL resourceUrl = ResourceUtils.class.getClassLoader().getResource(folderPath);
-            if (resourceUrl != null) {
-                try (FileSystem fileSystem = FileSystems.newFileSystem(resourceUrl.toURI(), Collections.emptyMap())) {
-                    Path folderRootPath = fileSystem.getPath(folderPath);
-                    try (Stream<Path> paths = Files.walk(folderRootPath, 1)) {
-                        paths.filter(path -> !path.equals(folderRootPath))
-                                .forEach(filePaths::add);
-                    }
-                }
-            } else {
-                System.out.println("Folder " + folderPath + " not in resources");
-            }
-        } catch (Exception e) {
-            System.out.println("Failed to get Paths from folder in resources");
-            e.printStackTrace();
-        }
-        return filePaths;
-    }
-
+    @Unmodifiable
     public static List<InputStream> getFileStreams(String folderPath) {
         ClassLoader classLoader = ResourceUtils.class.getClassLoader();
 
@@ -42,18 +27,34 @@ public class ResourceUtils {
         try {
             URL resourceUrl = classLoader.getResource(folderPath);
             if (resourceUrl != null) {
-                try (FileSystem fileSystem = FileSystems.newFileSystem(resourceUrl.toURI(), Collections.emptyMap())) {
+                FileSystem fileSystem = null;
+                boolean createdFileSystem = false;
+                try {
+                    URI resourceUri = resourceUrl.toURI();
+                    try {
+                        fileSystem = FileSystems.getFileSystem(resourceUri);
+                    } catch (FileSystemNotFoundException e) {
+                        fileSystem = FileSystems.newFileSystem(resourceUri, Collections.emptyMap());
+                        createdFileSystem = true;
+                    }
+
                     Path folderRootPath = fileSystem.getPath(folderPath);
                     try (Stream<Path> paths = Files.walk(folderRootPath, 1)) {
-                        paths.filter(path -> !path.equals(folderRootPath))
-                                .forEach(path -> fileStreams.add(classLoader.getResourceAsStream(path.toString())));
+                        return paths.filter(path -> !path.equals(folderRootPath))
+                                .map(path -> classLoader.getResourceAsStream(path.toString()))
+                                .filter(Objects::nonNull)
+                                .toList();
+                    }
+                } finally {
+                    if (createdFileSystem && fileSystem != null) {
+                        fileSystem.close();
                     }
                 }
             } else {
-                System.out.println("Folder " + folderPath + " not in resources");
+                System.out.println("Unable to find folder " + folderPath + " in resources");
             }
         } catch (Exception e) {
-            System.out.println("Failed to get InputStreams from folder in resources");
+            System.out.println("Unable to read resources files from " + folderPath);
             e.printStackTrace();
         }
         return fileStreams;

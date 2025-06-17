@@ -551,6 +551,22 @@ public class VeloSounds {
     public static final String BLOCK_DISPENSER_FAIL = "minecraft:block.dispenser.fail";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_DISPENSER_LAUNCH = "minecraft:block.dispenser.launch";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRIED_GHAST_AMBIENT = "minecraft:block.dried_ghast.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRIED_GHAST_AMBIENT_WATER = "minecraft:block.dried_ghast.ambient_water";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRIED_GHAST_BREAK = "minecraft:block.dried_ghast.break";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRIED_GHAST_FALL = "minecraft:block.dried_ghast.fall";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRIED_GHAST_PLACE = "minecraft:block.dried_ghast.place";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRIED_GHAST_PLACE_IN_WATER = "minecraft:block.dried_ghast.place_in_water";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRIED_GHAST_STEP = "minecraft:block.dried_ghast.step";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRIED_GHAST_TRANSITION = "minecraft:block.dried_ghast.transition";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_DRIPSTONE_BLOCK_BREAK = "minecraft:block.dripstone_block.break";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -561,6 +577,8 @@ public class VeloSounds {
     public static final String BLOCK_DRIPSTONE_BLOCK_PLACE = "minecraft:block.dripstone_block.place";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_DRIPSTONE_BLOCK_STEP = "minecraft:block.dripstone_block.step";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String BLOCK_DRY_GRASS_AMBIENT = "minecraft:block.dry_grass.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_ENCHANTMENT_TABLE_USE = "minecraft:block.enchantment_table.use";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1175,7 +1193,7 @@ public class VeloSounds {
     public static final String BLOCK_SAND_PLACE = "minecraft:block.sand.place";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_SAND_STEP = "minecraft:block.sand.step";
-    @Since(ProtocolVersion.MINECRAFT_1_21_5)
+    @Since(ProtocolVersion.MINECRAFT_1_21_5) @Until(ProtocolVersion.MINECRAFT_1_21_5)
     public static final String BLOCK_SAND_WIND = "minecraft:block.sand.wind";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_SCAFFOLDING_BREAK = "minecraft:block.scaffolding.break";
@@ -2065,6 +2083,14 @@ public class VeloSounds {
     public static final String ENTITY_GHAST_SHOOT = "minecraft:entity.ghast.shoot";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_GHAST_WARN = "minecraft:entity.ghast.warn";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_GHASTLING_AMBIENT = "minecraft:entity.ghastling.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_GHASTLING_DEATH = "minecraft:entity.ghastling.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_GHASTLING_HURT = "minecraft:entity.ghastling.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_GHASTLING_SPAWN = "minecraft:entity.ghastling.spawn";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_GLOW_ITEM_FRAME_ADD_ITEM = "minecraft:entity.glow_item_frame.add_item";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2137,6 +2163,22 @@ public class VeloSounds {
     public static final String ENTITY_GUARDIAN_HURT = "minecraft:entity.guardian.hurt";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_GUARDIAN_HURT_LAND = "minecraft:entity.guardian.hurt_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_HAPPY_GHAST_AMBIENT = "minecraft:entity.happy_ghast.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_HAPPY_GHAST_DEATH = "minecraft:entity.happy_ghast.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_HAPPY_GHAST_EQUIP = "minecraft:entity.happy_ghast.equip";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_HAPPY_GHAST_HARNESS_GOGGLES_DOWN = "minecraft:entity.happy_ghast.harness_goggles_down";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_HAPPY_GHAST_HARNESS_GOGGLES_UP = "minecraft:entity.happy_ghast.harness_goggles_up";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_HAPPY_GHAST_HURT = "minecraft:entity.happy_ghast.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_HAPPY_GHAST_RIDING = "minecraft:entity.happy_ghast.riding";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ENTITY_HAPPY_GHAST_UNEQUIP = "minecraft:entity.happy_ghast.unequip";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_HOGLIN_AMBIENT = "minecraft:entity.hoglin.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2241,9 +2283,9 @@ public class VeloSounds {
     public static final String ENTITY_ITEM_FRAME_REMOVE_ITEM = "minecraft:entity.item_frame.remove_item";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_ITEM_FRAME_ROTATE_ITEM = "minecraft:entity.item_frame.rotate_item";
-    @Since(ProtocolVersion.MINECRAFT_1_18_2)
+    @Since(ProtocolVersion.MINECRAFT_1_18_2) @Until(ProtocolVersion.MINECRAFT_1_21_5)
     public static final String ENTITY_LEASH_KNOT_BREAK = "minecraft:entity.leash_knot.break";
-    @Since(ProtocolVersion.MINECRAFT_1_18_2)
+    @Since(ProtocolVersion.MINECRAFT_1_18_2) @Until(ProtocolVersion.MINECRAFT_1_21_5)
     public static final String ENTITY_LEASH_KNOT_PLACE = "minecraft:entity.leash_knot.place";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_LIGHTNING_BOLT_IMPACT = "minecraft:entity.lightning_bolt.impact";
@@ -2545,7 +2587,7 @@ public class VeloSounds {
     public static final String ENTITY_POLAR_BEAR_STEP = "minecraft:entity.polar_bear.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_POLAR_BEAR_WARNING = "minecraft:entity.polar_bear.warning";
-    @Since(ProtocolVersion.MINECRAFT_1_18_2)
+    @Since(ProtocolVersion.MINECRAFT_1_18_2) @Until(ProtocolVersion.MINECRAFT_1_21_5)
     public static final String ENTITY_PUFFER_FISH_AMBIENT = "minecraft:entity.puffer_fish.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PUFFER_FISH_BLOW_OUT = "minecraft:entity.puffer_fish.blow_out";
@@ -3251,8 +3293,18 @@ public class VeloSounds {
     public static final String ITEM_HONEY_BOTTLE_DRINK = "minecraft:item.honey_bottle.drink";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_HONEYCOMB_WAX_ON = "minecraft:item.honeycomb.wax_on";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ITEM_HORSE_ARMOR_UNEQUIP = "minecraft:item.horse_armor.unequip";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_INK_SAC_USE = "minecraft:item.ink_sac.use";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ITEM_LEAD_BREAK = "minecraft:item.lead.break";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ITEM_LEAD_TIED = "minecraft:item.lead.tied";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ITEM_LEAD_UNTIED = "minecraft:item.lead.untied";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ITEM_LLAMA_CARPET_UNEQUIP = "minecraft:item.llama_carpet.unequip";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_LODESTONE_COMPASS_LOCK = "minecraft:item.lodestone_compass.lock";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -3265,6 +3317,10 @@ public class VeloSounds {
     public static final String ITEM_NETHER_WART_PLANT = "minecraft:item.nether_wart.plant";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final String ITEM_OMINOUS_BOTTLE_DISPOSE = "minecraft:item.ominous_bottle.dispose";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ITEM_SADDLE_UNEQUIP = "minecraft:item.saddle.unequip";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String ITEM_SHEARS_SNIP = "minecraft:item.shears.snip";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_SHIELD_BLOCK = "minecraft:item.shield.block";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3399,6 +3455,8 @@ public class VeloSounds {
     public static final String MUSIC_DISC_STAL = "minecraft:music_disc.stal";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String MUSIC_DISC_STRAD = "minecraft:music_disc.strad";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String MUSIC_DISC_TEARS = "minecraft:music_disc.tears";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String MUSIC_DISC_WAIT = "minecraft:music_disc.wait";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
