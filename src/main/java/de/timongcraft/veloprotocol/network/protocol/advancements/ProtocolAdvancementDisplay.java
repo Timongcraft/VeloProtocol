@@ -150,7 +150,7 @@ public class ProtocolAdvancementDisplay {
     public void write(ByteBuf buf, ProtocolVersion version) {
         new ComponentHolder(version, title).write(buf);
         new ComponentHolder(version, description).write(buf);
-        VeloItemStack.write(buf, icon, version);
+        icon.write(buf, version);
         ExProtocolUtils.writeEnumOrdinal(buf, frameType);
 
         int i = 0;

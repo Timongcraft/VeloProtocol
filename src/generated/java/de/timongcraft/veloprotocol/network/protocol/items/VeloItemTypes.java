@@ -219,6 +219,8 @@ public class VeloItemTypes {
     public static final VeloItemType BLACK_DYE = load("minecraft:black_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLACK_GLAZED_TERRACOTTA = load("minecraft:black_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType BLACK_HARNESS = load("minecraft:black_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLACK_SHULKER_BOX = load("minecraft:black_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -267,6 +269,8 @@ public class VeloItemTypes {
     public static final VeloItemType BLUE_EGG = load("minecraft:blue_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLUE_GLAZED_TERRACOTTA = load("minecraft:blue_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType BLUE_HARNESS = load("minecraft:blue_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLUE_ICE = load("minecraft:blue_ice");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -347,6 +351,8 @@ public class VeloItemTypes {
     public static final VeloItemType BROWN_EGG = load("minecraft:brown_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BROWN_GLAZED_TERRACOTTA = load("minecraft:brown_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType BROWN_HARNESS = load("minecraft:brown_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BROWN_MUSHROOM = load("minecraft:brown_mushroom");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -679,6 +685,8 @@ public class VeloItemTypes {
     public static final VeloItemType CYAN_DYE = load("minecraft:cyan_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CYAN_GLAZED_TERRACOTTA = load("minecraft:cyan_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType CYAN_HARNESS = load("minecraft:cyan_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CYAN_SHULKER_BOX = load("minecraft:cyan_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -861,6 +869,8 @@ public class VeloItemTypes {
     public static final VeloItemType DRAGON_EGG = load("minecraft:dragon_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DRAGON_HEAD = load("minecraft:dragon_head");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType DRIED_GHAST = load("minecraft:dried_ghast");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DRIED_KELP = load("minecraft:dried_kelp");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1105,6 +1115,8 @@ public class VeloItemTypes {
     public static final VeloItemType GRAY_DYE = load("minecraft:gray_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GRAY_GLAZED_TERRACOTTA = load("minecraft:gray_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType GRAY_HARNESS = load("minecraft:gray_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GRAY_SHULKER_BOX = load("minecraft:gray_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1133,6 +1145,8 @@ public class VeloItemTypes {
     public static final VeloItemType GREEN_DYE = load("minecraft:green_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GREEN_GLAZED_TERRACOTTA = load("minecraft:green_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType GREEN_HARNESS = load("minecraft:green_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GREEN_SHULKER_BOX = load("minecraft:green_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1155,6 +1169,8 @@ public class VeloItemTypes {
     public static final VeloItemType GUSTER_POTTERY_SHERD = load("minecraft:guster_pottery_sherd");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType HANGING_ROOTS = load("minecraft:hanging_roots");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType HAPPY_GHAST_SPAWN_EGG = load("minecraft:happy_ghast_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType HAY_BLOCK = load("minecraft:hay_block");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1351,6 +1367,8 @@ public class VeloItemTypes {
     public static final VeloItemType LIGHT_BLUE_DYE = load("minecraft:light_blue_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_BLUE_GLAZED_TERRACOTTA = load("minecraft:light_blue_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType LIGHT_BLUE_HARNESS = load("minecraft:light_blue_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_BLUE_SHULKER_BOX = load("minecraft:light_blue_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1379,6 +1397,8 @@ public class VeloItemTypes {
     public static final VeloItemType LIGHT_GRAY_DYE = load("minecraft:light_gray_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_GRAY_GLAZED_TERRACOTTA = load("minecraft:light_gray_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType LIGHT_GRAY_HARNESS = load("minecraft:light_gray_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_GRAY_SHULKER_BOX = load("minecraft:light_gray_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1417,6 +1437,8 @@ public class VeloItemTypes {
     public static final VeloItemType LIME_DYE = load("minecraft:lime_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIME_GLAZED_TERRACOTTA = load("minecraft:lime_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType LIME_HARNESS = load("minecraft:lime_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIME_SHULKER_BOX = load("minecraft:lime_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1455,6 +1477,8 @@ public class VeloItemTypes {
     public static final VeloItemType MAGENTA_DYE = load("minecraft:magenta_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MAGENTA_GLAZED_TERRACOTTA = load("minecraft:magenta_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType MAGENTA_HARNESS = load("minecraft:magenta_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MAGENTA_SHULKER_BOX = load("minecraft:magenta_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1601,6 +1625,8 @@ public class VeloItemTypes {
     public static final VeloItemType MUSIC_DISC_STAL = load("minecraft:music_disc_stal");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MUSIC_DISC_STRAD = load("minecraft:music_disc_strad");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType MUSIC_DISC_TEARS = load("minecraft:music_disc_tears");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MUSIC_DISC_WAIT = load("minecraft:music_disc_wait");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1733,6 +1759,8 @@ public class VeloItemTypes {
     public static final VeloItemType ORANGE_DYE = load("minecraft:orange_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ORANGE_GLAZED_TERRACOTTA = load("minecraft:orange_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType ORANGE_HARNESS = load("minecraft:orange_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ORANGE_SHULKER_BOX = load("minecraft:orange_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1857,6 +1885,8 @@ public class VeloItemTypes {
     public static final VeloItemType PINK_DYE = load("minecraft:pink_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PINK_GLAZED_TERRACOTTA = load("minecraft:pink_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType PINK_HARNESS = load("minecraft:pink_harness");
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
     public static final VeloItemType PINK_PETALS = load("minecraft:pink_petals");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2017,6 +2047,8 @@ public class VeloItemTypes {
     public static final VeloItemType PURPLE_DYE = load("minecraft:purple_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PURPLE_GLAZED_TERRACOTTA = load("minecraft:purple_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType PURPLE_HARNESS = load("minecraft:purple_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PURPLE_SHULKER_BOX = load("minecraft:purple_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2095,6 +2127,8 @@ public class VeloItemTypes {
     public static final VeloItemType RED_DYE = load("minecraft:red_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_GLAZED_TERRACOTTA = load("minecraft:red_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType RED_HARNESS = load("minecraft:red_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_MUSHROOM = load("minecraft:red_mushroom");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2731,6 +2765,8 @@ public class VeloItemTypes {
     public static final VeloItemType WHITE_DYE = load("minecraft:white_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WHITE_GLAZED_TERRACOTTA = load("minecraft:white_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType WHITE_HARNESS = load("minecraft:white_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WHITE_SHULKER_BOX = load("minecraft:white_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2795,6 +2831,8 @@ public class VeloItemTypes {
     public static final VeloItemType YELLOW_DYE = load("minecraft:yellow_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType YELLOW_GLAZED_TERRACOTTA = load("minecraft:yellow_glazed_terracotta");
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final VeloItemType YELLOW_HARNESS = load("minecraft:yellow_harness");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType YELLOW_SHULKER_BOX = load("minecraft:yellow_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2851,15 +2889,19 @@ public class VeloItemTypes {
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_4), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_5, unused -> new HashMap<>())
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_5), veloItemType);
+        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_6, unused -> new HashMap<>())
+                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_6), veloItemType);
 
         return veloItemType;
     }
 
     private static int[] getProtocolIds(String name) {
-        int[] protocolIds = new int[ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.size()];
+        ProtocolVersion[] supportedVersions = VeloItemType.SUPPORTED_VERSIONS;
+        int[] protocolIds = new int[supportedVersions.length];
 
-        for (int i = 0; i < ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.size(); i++) {
-            int nameProtocolId = ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.get(i).mappings().get("minecraft:item").getOrDefault(name, -1);
+        for (int i = 0; i < supportedVersions.length; i++) {
+            int nameProtocolId = ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.get(supportedVersions[i])
+                    .mappings().get("minecraft:item").getOrDefault(name, -1);
             protocolIds[i] = nameProtocolId;
         }
 

@@ -85,6 +85,8 @@ public class AdvancementTrigger {
     public static final String PLAYER_INTERACTED_WITH_ENTITY = "minecraft:player_interacted_with_entity";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String PLAYER_KILLED_ENTITY = "minecraft:player_killed_entity";
+    @Since(ProtocolVersion.MINECRAFT_1_21_6)
+    public static final String PLAYER_SHEARED_EQUIPMENT = "minecraft:player_sheared_equipment";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String RECIPE_CRAFTED = "minecraft:recipe_crafted";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)

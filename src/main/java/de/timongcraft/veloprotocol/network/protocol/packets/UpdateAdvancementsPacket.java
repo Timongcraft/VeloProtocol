@@ -34,8 +34,6 @@ public class UpdateAdvancementsPacket extends VeloPacket {
                 .mapping(0x6C, MINECRAFT_1_20_2, encodeOnly)
                 .mapping(0x70, MINECRAFT_1_20_3, encodeOnly)
                 .mapping(0x74, MINECRAFT_1_20_5, encodeOnly)
-                .mapping(0x74, MINECRAFT_1_21, encodeOnly)
-                .mapping(0x74, MINECRAFT_1_21_2, encodeOnly)
                 .mapping(0x7B, MINECRAFT_1_21_4, encodeOnly)
                 .register();
     }
