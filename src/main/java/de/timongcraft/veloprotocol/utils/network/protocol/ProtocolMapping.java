@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.velocitypowered.api.network.ProtocolVersion;
+import org.jetbrains.annotations.ApiStatus;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +17,7 @@ import java.nio.file.Path;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+@ApiStatus.Internal
 public record ProtocolMapping(ProtocolVersion protocolVersion,
                               Map<String, Map<String, Integer>> mappings) {
 

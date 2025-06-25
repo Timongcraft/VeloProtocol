@@ -131,10 +131,12 @@ public class VeloEntityEffects {
     }
 
     private static int[] getProtocolIds(String name) {
-        int[] protocolIds = new int[ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.size()];
+        ProtocolVersion[] supportedVersions = VeloEntityEffect.SUPPORTED_VERSIONS;
+        int[] protocolIds = new int[supportedVersions.length];
 
-        for (int i = 0; i < ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.size(); i++) {
-            int nameProtocolId = ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.get(i).mappings().get("minecraft:mob_effect").getOrDefault(name, -1);
+        for (int i = 0; i < supportedVersions.length; i++) {
+            int nameProtocolId = ProtocolMappingsCache.RESOURCE_PROTOCOL_MAPPINGS.get(supportedVersions[i])
+                    .mappings().get("minecraft:mob_effect").getOrDefault(name, -1);
             protocolIds[i] = nameProtocolId;
         }
 
