@@ -13,7 +13,8 @@ public class VeloDataComponentType {
             ProtocolVersion.MINECRAFT_1_21_2,
             ProtocolVersion.MINECRAFT_1_21_4,
             ProtocolVersion.MINECRAFT_1_21_5,
-            ProtocolVersion.MINECRAFT_1_21_6
+            ProtocolVersion.MINECRAFT_1_21_6,
+            ProtocolVersion.MINECRAFT_1_21_7
     };
 
     private final String name;

@@ -231,6 +231,8 @@ public class VeloDataComponentTypes {
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_5), veloDataComponentType);
         LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_6, unused -> new HashMap<>())
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_6), veloDataComponentType);
+        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_7, unused -> new HashMap<>())
+                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_7), veloDataComponentType);
 
         return veloDataComponentType;
     }

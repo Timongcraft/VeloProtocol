@@ -3439,6 +3439,8 @@ public class VeloSounds {
     public static final String MUSIC_DISC_CREATOR_MUSIC_BOX = "minecraft:music_disc.creator_music_box";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String MUSIC_DISC_FAR = "minecraft:music_disc.far";
+    @Since(ProtocolVersion.MINECRAFT_1_21_7)
+    public static final String MUSIC_DISC_LAVA_CHICKEN = "minecraft:music_disc.lava_chicken";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String MUSIC_DISC_MALL = "minecraft:music_disc.mall";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)

@@ -126,6 +126,8 @@ public class VeloEntityEffects {
                 .put(veloEntityEffect.getProtocolId(ProtocolVersion.MINECRAFT_1_21_5), veloEntityEffect);
         LOADED_VELO_ENTITY_EFFECTS_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_6, unused -> new HashMap<>())
                 .put(veloEntityEffect.getProtocolId(ProtocolVersion.MINECRAFT_1_21_6), veloEntityEffect);
+        LOADED_VELO_ENTITY_EFFECTS_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_7, unused -> new HashMap<>())
+                .put(veloEntityEffect.getProtocolId(ProtocolVersion.MINECRAFT_1_21_7), veloEntityEffect);
 
         return veloEntityEffect;
     }

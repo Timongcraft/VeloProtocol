@@ -1609,6 +1609,8 @@ public class VeloItemTypes {
     public static final VeloItemType MUSIC_DISC_CREATOR_MUSIC_BOX = load("minecraft:music_disc_creator_music_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MUSIC_DISC_FAR = load("minecraft:music_disc_far");
+    @Since(ProtocolVersion.MINECRAFT_1_21_7)
+    public static final VeloItemType MUSIC_DISC_LAVA_CHICKEN = load("minecraft:music_disc_lava_chicken");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MUSIC_DISC_MALL = load("minecraft:music_disc_mall");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2891,6 +2893,8 @@ public class VeloItemTypes {
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_5), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_6, unused -> new HashMap<>())
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_6), veloItemType);
+        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_7, unused -> new HashMap<>())
+                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_7), veloItemType);
 
         return veloItemType;
     }
