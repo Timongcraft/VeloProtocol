@@ -12,22 +12,24 @@ import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
 
+import static com.velocitypowered.api.network.ProtocolVersion.*;
+
 /**
  * The "Protocol" prefix signifies that this class is a minimal, serialization-only representation.
  */
 @SuppressWarnings("unused")
 @ApiStatus.Experimental
-@Since(ProtocolVersion.MINECRAFT_1_20_2)
+@Since(MINECRAFT_1_20_5)
 public class ProtocolAdvancementDisplay {
 
-    @Until(ProtocolVersion.MINECRAFT_1_21_4)
+    @Until(MINECRAFT_1_21_4)
     private static final String LEGACY_BACKGROUND_TEXTURE_PREFIX = "texture/";
-    @Until(ProtocolVersion.MINECRAFT_1_21_4)
+    @Until(MINECRAFT_1_21_4)
     private static final String LEGACY_BACKGROUND_TEXTURE_SUFFIX = ".png";
 
     // since 1.21.5 no more 'textures/' prefix and '.png' suffix
     public static String formatBackgroundTextureForVersion(String backgroundTexture, ProtocolVersion version) {
-        if (version.greaterThan(ProtocolVersion.MINECRAFT_1_21_4)) {
+        if (version.greaterThan(MINECRAFT_1_21_4)) {
             if (backgroundTexture.startsWith(LEGACY_BACKGROUND_TEXTURE_PREFIX)) {
                 backgroundTexture = backgroundTexture.substring(LEGACY_BACKGROUND_TEXTURE_PREFIX.length());
             }

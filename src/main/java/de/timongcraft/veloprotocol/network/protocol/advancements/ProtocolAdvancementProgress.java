@@ -1,6 +1,5 @@
 package de.timongcraft.veloprotocol.network.protocol.advancements;
 
-import com.velocitypowered.api.network.ProtocolVersion;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.veloprotocol.utils.network.protocol.ExProtocolUtils;
 import io.netty.buffer.ByteBuf;
@@ -11,17 +10,20 @@ import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.velocitypowered.api.network.ProtocolVersion.*;
+
 /**
  * The "Protocol" prefix signifies that this class is a minimal, serialization-only representation.
  */
 @SuppressWarnings("unused")
 @ApiStatus.Experimental
-@Since(ProtocolVersion.MINECRAFT_1_20_2)
+@Since(MINECRAFT_1_20_5)
 public class ProtocolAdvancementProgress {
 
     public static ProtocolAdvancementProgress of(@Nullable Map<String, CriterionProgress> criteriaProgresses) {
-        if (criteriaProgresses == null)
+        if (criteriaProgresses == null) {
             criteriaProgresses = new HashMap<>();
+        }
 
         return new ProtocolAdvancementProgress(criteriaProgresses);
     }

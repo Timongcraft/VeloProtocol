@@ -10,12 +10,14 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Collections;
 import java.util.Set;
 
+import static com.velocitypowered.api.network.ProtocolVersion.*;
+
 /**
  * The "Protocol" prefix signifies that this class is a minimal, serialization-only representation.
  */
 @SuppressWarnings("unused")
 @ApiStatus.Experimental
-@Since(ProtocolVersion.MINECRAFT_1_20_2)
+@Since(MINECRAFT_1_20_5)
 public class ProtocolAdvancement {
 
     public static ProtocolAdvancement of(@Nullable String parentId, Set<Set<String>> requirements, boolean telemetryData) {

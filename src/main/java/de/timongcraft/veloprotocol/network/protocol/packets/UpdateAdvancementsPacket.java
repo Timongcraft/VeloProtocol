@@ -22,7 +22,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  */
 @SuppressWarnings("unused")
 @ApiStatus.Experimental
-@Since(MINECRAFT_1_20_2)
+@Since(MINECRAFT_1_20_5)
 public class UpdateAdvancementsPacket extends VeloPacket {
 
     public static void register(boolean encodeOnly) {
@@ -30,8 +30,6 @@ public class UpdateAdvancementsPacket extends VeloPacket {
                 .direction(ProtocolUtils.Direction.CLIENTBOUND)
                 .packetSupplier(UpdateAdvancementsPacket::new)
                 .stateRegistry(StateRegistry.PLAY)
-                .mapping(0x6C, MINECRAFT_1_20_2, encodeOnly)
-                .mapping(0x70, MINECRAFT_1_20_3, encodeOnly)
                 .mapping(0x74, MINECRAFT_1_20_5, encodeOnly)
                 .mapping(0x7B, MINECRAFT_1_21_4, encodeOnly)
                 .register();
