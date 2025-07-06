@@ -3,10 +3,12 @@ package de.timongcraft.veloprotocol.network.protocol.advancements;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.packet.chat.ComponentHolder;
+import de.timongcraft.velopacketimpl.utils.ComponentUtils;
+import de.timongcraft.velopacketimpl.utils.Either;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.velopacketimpl.utils.annotations.Until;
 import de.timongcraft.veloprotocol.network.protocol.items.VeloItemStack;
-import de.timongcraft.veloprotocol.utils.network.protocol.ExProtocolUtils;
+import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
 import io.netty.buffer.ByteBuf;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.ApiStatus;
@@ -96,8 +98,8 @@ public class ProtocolAdvancementDisplay {
     }
 
     public static ProtocolAdvancementDisplay of(ByteBuf buf, ProtocolVersion version) {
-        Component title = ComponentHolder.read(buf, version).getComponent();
-        Component description = ComponentHolder.read(buf, version).getComponent();
+        ComponentHolder title = ExProtocolUtils.readComponentHolder(buf, version);
+        ComponentHolder description = ExProtocolUtils.readComponentHolder(buf, version);
         VeloItemStack icon = VeloItemStack.of(buf, version);
         FrameType frame = ExProtocolUtils.readEnumByOrdinal(buf, FrameType.class);
 
@@ -126,8 +128,8 @@ public class ProtocolAdvancementDisplay {
      *   <li>33 to 40 chars for a normal two-page display.</li>
      * </ul>
      */
-    private Component title;
-    private Component description;
+    private Either<ComponentHolder, Component> title;
+    private Either<ComponentHolder, Component> description;
     private VeloItemStack icon;
     private FrameType frameType;
     private @Nullable String backgroundTexture;
@@ -136,10 +138,24 @@ public class ProtocolAdvancementDisplay {
     private float x;
     private float y;
 
+    @ApiStatus.Internal
+    private ProtocolAdvancementDisplay(ComponentHolder title, ComponentHolder description, VeloItemStack icon, FrameType frameType,
+                                       @Nullable String backgroundTexture, boolean showToast, boolean hidden, float x, float y) {
+        this.title = Either.primary(title);
+        this.description = Either.primary(description);
+        this.icon = icon;
+        this.frameType = frameType;
+        this.backgroundTexture = backgroundTexture;
+        this.showToast = showToast;
+        this.hidden = hidden;
+        this.x = x;
+        this.y = y;
+    }
+
     private ProtocolAdvancementDisplay(Component title, Component description, VeloItemStack icon, FrameType frameType,
                                        @Nullable String backgroundTexture, boolean showToast, boolean hidden, float x, float y) {
-        this.title = title;
-        this.description = description;
+        this.title = Either.secondary(title);
+        this.description = Either.secondary(description);
         this.icon = icon;
         this.frameType = frameType;
         this.backgroundTexture = backgroundTexture;
@@ -150,8 +166,8 @@ public class ProtocolAdvancementDisplay {
     }
 
     public void write(ByteBuf buf, ProtocolVersion version) {
-        new ComponentHolder(version, title).write(buf);
-        new ComponentHolder(version, description).write(buf);
+        ExProtocolUtils.writeInternalComponent(buf, version, title);
+        ExProtocolUtils.writeInternalComponent(buf, version, description);
         icon.write(buf, version);
         ExProtocolUtils.writeEnumOrdinal(buf, frameType);
 
@@ -170,19 +186,29 @@ public class ProtocolAdvancementDisplay {
     }
 
     public Component getTitle() {
-        return title;
+        return ComponentUtils.getComponent(title);
     }
 
     public void setTitle(Component title) {
-        this.title = title;
+        this.title = Either.secondary(title);
+    }
+
+    @ApiStatus.Internal
+    public void setTitle(ComponentHolder titleHolder) {
+        this.title = Either.primary(titleHolder);
     }
 
     public Component getDescription() {
-        return description;
+        return ComponentUtils.getComponent(description);
     }
 
     public void setDescription(Component description) {
-        this.description = description;
+        this.description = Either.secondary(description);
+    }
+
+    @ApiStatus.Internal
+    public void setDescription(ComponentHolder descriptionHolder) {
+        this.description = Either.primary(descriptionHolder);
     }
 
     public VeloItemStack getIcon() {

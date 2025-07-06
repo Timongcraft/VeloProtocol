@@ -8,7 +8,7 @@ import de.timongcraft.velopacketimpl.shaded.vpacketevents.api.register.PacketReg
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.veloprotocol.network.protocol.advancements.ProtocolAdvancement;
 import de.timongcraft.veloprotocol.network.protocol.advancements.ProtocolAdvancementProgress;
-import de.timongcraft.veloprotocol.utils.network.protocol.ExProtocolUtils;
+import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
 import io.netty.buffer.ByteBuf;
 import org.jetbrains.annotations.ApiStatus;
 
@@ -73,7 +73,7 @@ public class UpdateAdvancementsPacket extends VeloPacket {
     public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
         buf.writeBoolean(reset);
         ExProtocolUtils.writeStringKeyMap(buf, advancementsToAdd, advancement -> advancement.write(buf, protocolVersion));
-        ExProtocolUtils.writeStringSet(buf, advancementsToRemove);
+        ExProtocolUtils.writeCollection(buf, advancementsToRemove, key -> ProtocolUtils.writeString(buf, key));
         ExProtocolUtils.writeStringKeyMap(buf, advancementProgresses, advancementProgress ->
                 advancementProgress.write(buf)
         );

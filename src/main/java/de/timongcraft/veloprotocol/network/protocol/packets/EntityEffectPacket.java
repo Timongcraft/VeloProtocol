@@ -8,6 +8,7 @@ import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.velopacketimpl.utils.annotations.Until;
 import de.timongcraft.veloprotocol.network.protocol.effects.VeloEntityEffect;
 import de.timongcraft.veloprotocol.network.protocol.effects.VeloEntityEffects;
+import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
 import net.kyori.adventure.nbt.BinaryTag;
@@ -88,9 +89,7 @@ public class EntityEffectPacket extends VeloPacket {
 
         if (protocolVersion.noLessThan(MINECRAFT_1_19)
                 && protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
-            if (buf.readBoolean()) {
-                factorData = ProtocolUtils.readBinaryTag(buf, protocolVersion, BinaryTagIO.reader());
-            }
+            factorData = ExProtocolUtils.readOpt(buf, () -> ProtocolUtils.readBinaryTag(buf, protocolVersion, BinaryTagIO.reader()));
         }
     }
 
@@ -116,11 +115,8 @@ public class EntityEffectPacket extends VeloPacket {
 
         if (protocolVersion.noLessThan(MINECRAFT_1_19)
                 && protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
-            buf.writeBoolean(factorData != null);
-
-            if (factorData != null) {
-                ProtocolUtils.writeBinaryTag(buf, protocolVersion, factorData);
-            }
+            ExProtocolUtils.writeOpt(buf, factorData, binaryTag ->
+                    ProtocolUtils.writeBinaryTag(buf, protocolVersion, binaryTag));
         }
     }
 

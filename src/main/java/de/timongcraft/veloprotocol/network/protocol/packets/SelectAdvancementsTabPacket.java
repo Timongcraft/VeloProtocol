@@ -6,7 +6,7 @@ import com.velocitypowered.proxy.protocol.StateRegistry;
 import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
 import de.timongcraft.velopacketimpl.shaded.vpacketevents.api.register.PacketRegistration;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
-import de.timongcraft.veloprotocol.utils.network.protocol.ExProtocolUtils;
+import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
 import io.netty.buffer.ByteBuf;
 import net.kyori.adventure.key.Key;
 import org.jetbrains.annotations.ApiStatus;

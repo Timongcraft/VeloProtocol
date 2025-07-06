@@ -1,7 +1,7 @@
 package de.timongcraft.veloprotocol.network.protocol.advancements;
 
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
-import de.timongcraft.veloprotocol.utils.network.protocol.ExProtocolUtils;
+import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
 import io.netty.buffer.ByteBuf;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
@@ -75,9 +75,7 @@ public class ProtocolAdvancementProgress {
         }
 
         public static CriterionProgress of(ByteBuf buf) {
-            return new CriterionProgress(
-                    ExProtocolUtils.readOpt(buf, () -> Instant.ofEpochMilli(buf.readLong()))
-            );
+            return new CriterionProgress(ExProtocolUtils.readOpt(buf, () -> Instant.ofEpochMilli(buf.readLong())));
         }
 
         private @Nullable Instant obtainedTime;

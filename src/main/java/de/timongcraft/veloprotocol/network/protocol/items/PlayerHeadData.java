@@ -6,7 +6,7 @@ import com.velocitypowered.api.util.GameProfile;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import de.timongcraft.veloprotocol.network.protocol.datacomponents.VeloDataComponentType;
 import de.timongcraft.veloprotocol.network.protocol.datacomponents.VeloDataComponentTypes;
-import de.timongcraft.veloprotocol.utils.network.protocol.ExProtocolUtils;
+import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
 import io.netty.buffer.ByteBuf;
 
 @SuppressWarnings("unused")
@@ -42,10 +42,7 @@ public class PlayerHeadData implements ComponentData {
             ProtocolUtils.writeString(buf, "textures");
 
             ProtocolUtils.writeString(buf, texturesProperty.getValue());
-            buf.writeBoolean(texturesProperty.getSignature() != null);
-            if (texturesProperty.getSignature() != null) {
-                ProtocolUtils.writeString(buf, texturesProperty.getSignature());
-            }
+            ExProtocolUtils.writeOptString(buf, texturesProperty.getSignature());
         }
     }
 

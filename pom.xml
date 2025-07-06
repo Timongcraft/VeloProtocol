@@ -6,7 +6,7 @@
 
     <groupId>de.timongcraft</groupId>
     <artifactId>VeloProtocol</artifactId>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -125,12 +125,12 @@
         <dependency>
             <groupId>de.timongcraft</groupId>
             <artifactId>VeloPacketImpl</artifactId>
-            <version>3.1.1</version>
+            <version>3.1.2</version>
         </dependency>
         <dependency>
             <groupId>de.timongcraft</groupId>
             <artifactId>VeloPacketImpl</artifactId>
-            <version>3.1.1</version>
+            <version>3.1.2</version>
             <classifier>tests</classifier>
             <scope>test</scope>
         </dependency>

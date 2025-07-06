@@ -1,8 +1,10 @@
 package de.timongcraft.veloprotocol.network.protocol.advancements;
 
+import com.google.common.collect.Sets;
 import com.velocitypowered.api.network.ProtocolVersion;
+import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
-import de.timongcraft.veloprotocol.utils.network.protocol.ExProtocolUtils;
+import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
 import io.netty.buffer.ByteBuf;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
@@ -51,7 +53,9 @@ public class ProtocolAdvancement {
         return new ProtocolAdvancement(
                 ExProtocolUtils.readOptString(buf),
                 ExProtocolUtils.readOpt(buf, () -> ProtocolAdvancementDisplay.of(buf, version)),
-                ExProtocolUtils.readSetOfStringSets(buf),
+                ExProtocolUtils.readCollection(buf, Sets::newHashSetWithExpectedSize, () ->
+                        ExProtocolUtils.readCollection(buf, Sets::newHashSetWithExpectedSize, () ->
+                                ProtocolUtils.readString(buf))),
                 buf.readBoolean()
         );
     }
@@ -75,7 +79,9 @@ public class ProtocolAdvancement {
     public void write(ByteBuf buf, ProtocolVersion protocolVersion) {
         ExProtocolUtils.writeOptString(buf, parentId);
         ExProtocolUtils.writeOpt(buf, displayData, presentDisplay -> presentDisplay.write(buf, protocolVersion));
-        ExProtocolUtils.writeSetOfStringSets(buf, requirements);
+        ExProtocolUtils.writeCollection(buf, requirements, innerSet ->
+                ExProtocolUtils.writeCollection(buf, innerSet, key ->
+                        ProtocolUtils.writeString(buf, key)));
         buf.writeBoolean(telemetryData);
     }
 
