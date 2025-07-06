@@ -43,8 +43,9 @@ public class PlayerHeadData implements ComponentData {
 
             ProtocolUtils.writeString(buf, texturesProperty.getValue());
             buf.writeBoolean(texturesProperty.getSignature() != null);
-            if (texturesProperty.getSignature() != null)
+            if (texturesProperty.getSignature() != null) {
                 ProtocolUtils.writeString(buf, texturesProperty.getSignature());
+            }
         }
     }
 

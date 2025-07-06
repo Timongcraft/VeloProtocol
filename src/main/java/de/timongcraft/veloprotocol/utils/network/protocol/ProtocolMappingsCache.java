@@ -4,8 +4,6 @@ import com.velocitypowered.api.network.ProtocolVersion;
 import de.timongcraft.veloprotocol.utils.ResourceUtils;
 import org.jetbrains.annotations.ApiStatus;
 
-import java.util.Comparator;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;

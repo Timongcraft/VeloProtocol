@@ -1,7 +1,6 @@
 package de.timongcraft.veloprotocol.network.protocol.packets;
 
 import com.velocitypowered.api.network.ProtocolVersion;
-import com.velocitypowered.proxy.connection.MinecraftSessionHandler;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
 import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
@@ -18,6 +17,8 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.velocitypowered.api.network.ProtocolVersion.*;
+
 /**
  * (latest) Resource Id: 'minecraft:update_mob_effect'
  */
@@ -29,15 +30,15 @@ public class EntityEffectPacket extends VeloPacket {
                 .direction(ProtocolUtils.Direction.CLIENTBOUND)
                 .packetSupplier(EntityEffectPacket::new)
                 .stateRegistry(StateRegistry.PLAY)
-                .mapping(0x65, ProtocolVersion.MINECRAFT_1_18_2, encodeOnly)
-                .mapping(0x66, ProtocolVersion.MINECRAFT_1_19, encodeOnly)
-                .mapping(0x69, ProtocolVersion.MINECRAFT_1_19_1, encodeOnly)
-                .mapping(0x68, ProtocolVersion.MINECRAFT_1_19_3, encodeOnly)
-                .mapping(0x6C, ProtocolVersion.MINECRAFT_1_19_4, encodeOnly)
-                .mapping(0x6E, ProtocolVersion.MINECRAFT_1_20_2, encodeOnly)
-                .mapping(0x72, ProtocolVersion.MINECRAFT_1_20_3, encodeOnly)
-                .mapping(0x76, ProtocolVersion.MINECRAFT_1_20_5, encodeOnly)
-                .mapping(0x7D, ProtocolVersion.MINECRAFT_1_21_2, encodeOnly)
+                .mapping(0x65, MINECRAFT_1_18_2, encodeOnly)
+                .mapping(0x66, MINECRAFT_1_19, encodeOnly)
+                .mapping(0x69, MINECRAFT_1_19_1, encodeOnly)
+                .mapping(0x68, MINECRAFT_1_19_3, encodeOnly)
+                .mapping(0x6C, MINECRAFT_1_19_4, encodeOnly)
+                .mapping(0x6E, MINECRAFT_1_20_2, encodeOnly)
+                .mapping(0x72, MINECRAFT_1_20_3, encodeOnly)
+                .mapping(0x76, MINECRAFT_1_20_5, encodeOnly)
+                .mapping(0x7D, MINECRAFT_1_21_2, encodeOnly)
                 .register();
     }
 
@@ -46,8 +47,8 @@ public class EntityEffectPacket extends VeloPacket {
     private int amplifier;
     private int duration;
     private List<Flag> flags;
-    @Since(ProtocolVersion.MINECRAFT_1_19)
-    @Until(ProtocolVersion.MINECRAFT_1_20_3)
+    @Since(MINECRAFT_1_19)
+    @Until(MINECRAFT_1_20_3)
     private @Nullable BinaryTag factorData;
 
     public EntityEffectPacket() {}
@@ -69,7 +70,7 @@ public class EntityEffectPacket extends VeloPacket {
 
         effectType = VeloEntityEffects.getFromProtocolId(ProtocolUtils.readVarInt(buf), protocolVersion);
 
-        if (protocolVersion.noGreaterThan(ProtocolVersion.MINECRAFT_1_20_3)) {
+        if (protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
             amplifier = buf.readByte();
         } else {
             amplifier = ProtocolUtils.readVarInt(buf);
@@ -79,14 +80,17 @@ public class EntityEffectPacket extends VeloPacket {
 
         int flagsBitmask = buf.readUnsignedByte();
         flags = new ArrayList<>();
-        for (Flag flag : Flag.values())
-            if ((flag.getBitmask() & flagsBitmask) == flag.getBitmask())
+        for (Flag flag : Flag.values()) {
+            if ((flag.getBitmask() & flagsBitmask) == flag.getBitmask()) {
                 flags.add(flag);
+            }
+        }
 
-        if (protocolVersion.noLessThan(ProtocolVersion.MINECRAFT_1_19) &&
-                protocolVersion.noGreaterThan(ProtocolVersion.MINECRAFT_1_20_3)) {
-            if (buf.readBoolean())
+        if (protocolVersion.noLessThan(MINECRAFT_1_19)
+                && protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
+            if (buf.readBoolean()) {
                 factorData = ProtocolUtils.readBinaryTag(buf, protocolVersion, BinaryTagIO.reader());
+            }
         }
     }
 
@@ -96,7 +100,7 @@ public class EntityEffectPacket extends VeloPacket {
 
         ProtocolUtils.writeVarInt(buf, effectType.getProtocolId(protocolVersion));
 
-        if (protocolVersion.noGreaterThan(ProtocolVersion.MINECRAFT_1_20_3)) {
+        if (protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
             buf.writeByte(amplifier);
         } else {
             ProtocolUtils.writeVarInt(buf, amplifier);
@@ -105,23 +109,19 @@ public class EntityEffectPacket extends VeloPacket {
         ProtocolUtils.writeVarInt(buf, duration);
 
         int flagsBitmask = 0;
-        for (Flag flag : flags)
+        for (Flag flag : flags) {
             flagsBitmask |= flag.getBitmask();
+        }
         buf.writeByte(flagsBitmask);
 
-        if (protocolVersion.noLessThan(ProtocolVersion.MINECRAFT_1_19) &&
-                protocolVersion.noGreaterThan(ProtocolVersion.MINECRAFT_1_20_3)) {
+        if (protocolVersion.noLessThan(MINECRAFT_1_19)
+                && protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
             buf.writeBoolean(factorData != null);
 
             if (factorData != null) {
                 ProtocolUtils.writeBinaryTag(buf, protocolVersion, factorData);
             }
         }
-    }
-
-    @Override
-    public boolean handle(MinecraftSessionHandler handler) {
-        return false;
     }
 
     public int getEntityId() {
@@ -164,15 +164,15 @@ public class EntityEffectPacket extends VeloPacket {
         this.flags = flags;
     }
 
-    @Since(ProtocolVersion.MINECRAFT_1_19)
-    @Until(ProtocolVersion.MINECRAFT_1_20_3)
+    @Since(MINECRAFT_1_19)
+    @Until(MINECRAFT_1_20_3)
     @Nullable
     public BinaryTag getFactorData() {
         return factorData;
     }
 
-    @Since(ProtocolVersion.MINECRAFT_1_19)
-    @Until(ProtocolVersion.MINECRAFT_1_20_3)
+    @Since(MINECRAFT_1_19)
+    @Until(MINECRAFT_1_20_3)
     public void setFactorData(@Nullable BinaryTag factorData) {
         this.factorData = factorData;
     }
@@ -181,7 +181,7 @@ public class EntityEffectPacket extends VeloPacket {
         IS_AMBIENT(0x01),
         SHOW_PARTICLES(0x02),
         SHOW_ICON(0x04),
-        @Since(ProtocolVersion.MINECRAFT_1_20_5)
+        @Since(MINECRAFT_1_20_5)
         BLEND(0x08);
 
         private final int bitmask;

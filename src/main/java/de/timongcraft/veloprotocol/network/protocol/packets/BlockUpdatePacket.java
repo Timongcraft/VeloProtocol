@@ -10,6 +10,8 @@ import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
 import org.jetbrains.annotations.ApiStatus;
 
+import static com.velocitypowered.api.network.ProtocolVersion.*;
+
 /**
  * (latest) Resource Id: 'minecraft:block_update'
  */
@@ -22,11 +24,11 @@ public class BlockUpdatePacket extends VeloPacket {
                 .direction(ProtocolUtils.Direction.CLIENTBOUND)
                 .packetSupplier(BlockUpdatePacket::new)
                 .stateRegistry(StateRegistry.PLAY)
-                .mapping(0x0C, ProtocolVersion.MINECRAFT_1_18_2, encodeOnly)
-                .mapping(0x09, ProtocolVersion.MINECRAFT_1_19, encodeOnly)
-                .mapping(0x0A, ProtocolVersion.MINECRAFT_1_19_4, encodeOnly)
-                .mapping(0x09, ProtocolVersion.MINECRAFT_1_20_2, encodeOnly)
-                .mapping(0x08, ProtocolVersion.MINECRAFT_1_21_5, encodeOnly)
+                .mapping(0x0C, MINECRAFT_1_18_2, encodeOnly)
+                .mapping(0x09, MINECRAFT_1_19, encodeOnly)
+                .mapping(0x0A, MINECRAFT_1_19_4, encodeOnly)
+                .mapping(0x09, MINECRAFT_1_20_2, encodeOnly)
+                .mapping(0x08, MINECRAFT_1_21_5, encodeOnly)
                 .register();
     }
 
@@ -59,11 +61,6 @@ public class BlockUpdatePacket extends VeloPacket {
     public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         position.write(buf);
         ProtocolUtils.writeVarInt(buf, blockStateId);
-    }
-
-    @Override
-    public boolean handle(MinecraftSessionHandler handler) {
-        return false;
     }
 
     public Position getPosition() {

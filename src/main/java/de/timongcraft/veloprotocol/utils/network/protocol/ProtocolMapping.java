@@ -18,8 +18,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @ApiStatus.Internal
-public record ProtocolMapping(ProtocolVersion protocolVersion,
-                              Map<String, Map<String, Integer>> mappings) {
+public record ProtocolMapping(ProtocolVersion protocolVersion, Map<String, Map<String, Integer>> mappings) {
 
     public static ProtocolMapping parse(Path path) {
         try (Reader reader = Files.newBufferedReader(path)) {
@@ -46,9 +45,11 @@ public record ProtocolMapping(ProtocolVersion protocolVersion,
 
             Map<String, Integer> categoryMappings = new LinkedHashMap<>();
 
-            for (Map.Entry<String, JsonElement> entry : registryJson.entrySet())
-                if (entry.getValue() instanceof JsonPrimitive primitive && primitive.isNumber())
+            for (Map.Entry<String, JsonElement> entry : registryJson.entrySet()) {
+                if (entry.getValue() instanceof JsonPrimitive primitive && primitive.isNumber()) {
                     categoryMappings.put(entry.getKey(), primitive.getAsInt());
+                }
+            }
             mappings.put(registry.getKey(), categoryMappings);
         }
 

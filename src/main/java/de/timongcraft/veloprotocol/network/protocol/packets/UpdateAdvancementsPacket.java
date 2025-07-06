@@ -1,7 +1,6 @@
 package de.timongcraft.veloprotocol.network.protocol.packets;
 
 import com.velocitypowered.api.network.ProtocolVersion;
-import com.velocitypowered.proxy.connection.MinecraftSessionHandler;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
 import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
@@ -42,7 +41,7 @@ public class UpdateAdvancementsPacket extends VeloPacket {
     private Map<String, ProtocolAdvancement> advancementsToAdd;
     private Set<String> advancementsToRemove;
     private Map<String, ProtocolAdvancementProgress> advancementProgresses;
-    @Since(ProtocolVersion.MINECRAFT_1_21_5)
+    @Since(MINECRAFT_1_21_5)
     private boolean showToast;
 
     public UpdateAdvancementsPacket() {}
@@ -83,11 +82,6 @@ public class UpdateAdvancementsPacket extends VeloPacket {
         if (protocolVersion.noLessThan(MINECRAFT_1_21_5)) {
             buf.writeBoolean(showToast);
         }
-    }
-
-    @Override
-    public boolean handle(MinecraftSessionHandler minecraftSessionHandler) {
-        return false;
     }
 
     public boolean isReset() {

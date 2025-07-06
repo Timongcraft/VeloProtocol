@@ -10,6 +10,8 @@ import de.timongcraft.veloprotocol.network.protocol.effects.VeloEntityEffects;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
 
+import static com.velocitypowered.api.network.ProtocolVersion.*;
+
 /**
  * (latest) Resource Id: 'minecraft:remove_mob_effect'
  */
@@ -21,15 +23,15 @@ public class RemoveEntityEffectPacket extends VeloPacket {
                 .direction(ProtocolUtils.Direction.CLIENTBOUND)
                 .packetSupplier(RemoveEntityEffectPacket::new)
                 .stateRegistry(StateRegistry.PLAY)
-                .mapping(0x3B, ProtocolVersion.MINECRAFT_1_18_2, encodeOnly)
-                .mapping(0x39, ProtocolVersion.MINECRAFT_1_19, encodeOnly)
-                .mapping(0x3C, ProtocolVersion.MINECRAFT_1_19_1, encodeOnly)
-                .mapping(0x3B, ProtocolVersion.MINECRAFT_1_19_3, encodeOnly)
-                .mapping(0x3F, ProtocolVersion.MINECRAFT_1_19_4, encodeOnly)
-                .mapping(0x41, ProtocolVersion.MINECRAFT_1_20_2, encodeOnly)
-                .mapping(0x43, ProtocolVersion.MINECRAFT_1_20_5, encodeOnly)
-                .mapping(0x48, ProtocolVersion.MINECRAFT_1_21_2, encodeOnly)
-                .mapping(0x47, ProtocolVersion.MINECRAFT_1_21_5, encodeOnly)
+                .mapping(0x3B, MINECRAFT_1_18_2, encodeOnly)
+                .mapping(0x39, MINECRAFT_1_19, encodeOnly)
+                .mapping(0x3C, MINECRAFT_1_19_1, encodeOnly)
+                .mapping(0x3B, MINECRAFT_1_19_3, encodeOnly)
+                .mapping(0x3F, MINECRAFT_1_19_4, encodeOnly)
+                .mapping(0x41, MINECRAFT_1_20_2, encodeOnly)
+                .mapping(0x43, MINECRAFT_1_20_5, encodeOnly)
+                .mapping(0x48, MINECRAFT_1_21_2, encodeOnly)
+                .mapping(0x47, MINECRAFT_1_21_5, encodeOnly)
                 .register();
     }
 
@@ -57,11 +59,6 @@ public class RemoveEntityEffectPacket extends VeloPacket {
         ProtocolUtils.writeVarInt(buf, entityId);
 
         ProtocolUtils.writeVarInt(buf, effectType.getProtocolId(protocolVersion));
-    }
-
-    @Override
-    public boolean handle(MinecraftSessionHandler handler) {
-        return false;
     }
 
     public int getEntityId() {

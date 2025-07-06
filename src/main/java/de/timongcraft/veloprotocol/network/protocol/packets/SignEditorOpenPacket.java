@@ -9,6 +9,8 @@ import de.timongcraft.veloprotocol.utils.network.Position;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
 
+import static com.velocitypowered.api.network.ProtocolVersion.*;
+
 /**
  * (latest) Resource Id: 'minecraft:open_sign_editor'
  */
@@ -20,15 +22,15 @@ public class SignEditorOpenPacket extends VeloPacket {
                 .direction(ProtocolUtils.Direction.CLIENTBOUND)
                 .packetSupplier(SignEditorOpenPacket::new)
                 .stateRegistry(StateRegistry.PLAY)
-                .mapping(0x2F, ProtocolVersion.MINECRAFT_1_18_2, encodeOnly)
-                .mapping(0x2C, ProtocolVersion.MINECRAFT_1_19, encodeOnly)
-                .mapping(0x2E, ProtocolVersion.MINECRAFT_1_19_1, encodeOnly)
-                .mapping(0x2D, ProtocolVersion.MINECRAFT_1_19_3, encodeOnly)
-                .mapping(0x31, ProtocolVersion.MINECRAFT_1_19_4, encodeOnly)
-                .mapping(0x32, ProtocolVersion.MINECRAFT_1_20_2, encodeOnly)
-                .mapping(0x34, ProtocolVersion.MINECRAFT_1_20_5, encodeOnly)
-                .mapping(0x36, ProtocolVersion.MINECRAFT_1_21_2, encodeOnly)
-                .mapping(0x35, ProtocolVersion.MINECRAFT_1_21_5, encodeOnly)
+                .mapping(0x2F, MINECRAFT_1_18_2, encodeOnly)
+                .mapping(0x2C, MINECRAFT_1_19, encodeOnly)
+                .mapping(0x2E, MINECRAFT_1_19_1, encodeOnly)
+                .mapping(0x2D, MINECRAFT_1_19_3, encodeOnly)
+                .mapping(0x31, MINECRAFT_1_19_4, encodeOnly)
+                .mapping(0x32, MINECRAFT_1_20_2, encodeOnly)
+                .mapping(0x34, MINECRAFT_1_20_5, encodeOnly)
+                .mapping(0x36, MINECRAFT_1_21_2, encodeOnly)
+                .mapping(0x35, MINECRAFT_1_21_5, encodeOnly)
                 .register();
     }
 
@@ -47,18 +49,15 @@ public class SignEditorOpenPacket extends VeloPacket {
         decoded = true;
 
         position = Position.read(buf);
+
         frontText = buf.readBoolean();
     }
 
     @Override
     public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
         position.write(buf);
-        buf.writeBoolean(frontText);
-    }
 
-    @Override
-    public boolean handle(MinecraftSessionHandler handler) {
-        return false;
+        buf.writeBoolean(frontText);
     }
 
     public Position getPosition() {
