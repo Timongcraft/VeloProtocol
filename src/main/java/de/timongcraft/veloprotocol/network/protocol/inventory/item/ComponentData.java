@@ -1,4 +1,4 @@
-package de.timongcraft.veloprotocol.network.protocol.items;
+package de.timongcraft.veloprotocol.network.protocol.inventory.item;
 
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;

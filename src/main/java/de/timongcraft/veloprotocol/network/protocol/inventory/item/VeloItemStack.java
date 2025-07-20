@@ -1,4 +1,4 @@
-package de.timongcraft.veloprotocol.network.protocol.items;
+package de.timongcraft.veloprotocol.network.protocol.inventory.item;
 
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
@@ -8,15 +8,18 @@ import io.netty.buffer.ByteBuf;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
 
+import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@ApiStatus.Internal
 @Since(ProtocolVersion.MINECRAFT_1_20_5)
 public class VeloItemStack {
+
+    // do not mutate
+    private static final VeloItemStack NULL_STACK = VeloItemStack.of(null);
 
     public static VeloItemStack of(VeloItemType itemType) {
         return of(itemType, 1);
@@ -39,6 +42,16 @@ public class VeloItemStack {
 
     public static VeloItemStack of(ByteBuf buf, ProtocolVersion version) {
         throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public static VeloItemStack ofOpt(ByteBuf buf, ProtocolVersion version) {
+        int amount = ProtocolUtils.readVarInt(buf);
+
+        if (amount < 1) {
+            return NULL_STACK;
+        } else {
+            return of(buf, version);
+        }
     }
 
     public static void write(ByteBuf buf, @Nullable VeloItemStack item, ProtocolVersion version) {
@@ -70,6 +83,14 @@ public class VeloItemStack {
         writeComponentChanges(buf, version);
     }
 
+    public void writeOpt(ByteBuf buf, ProtocolVersion version) {
+        if (isEmpty()) {
+            ProtocolUtils.writeVarInt(buf, 0);
+        } else {
+            write(buf, version);
+        }
+    }
+
     private void writeComponentChanges(ByteBuf buf, ProtocolVersion version) {
         ProtocolUtils.writeVarInt(buf, setComponents.size());
         ProtocolUtils.writeVarInt(buf, removedComponents.size());
@@ -78,6 +99,10 @@ public class VeloItemStack {
             entry.getValue().ifPresentOrElse(componentData -> componentData.write(buf, version),
                     () -> ComponentData.writeNonValued(entry.getKey(), buf, version));
         }
+    }
+
+    public boolean isEmpty() {
+        return this == NULL_STACK || itemType == VeloItemTypes.AIR || amount <= 0;
     }
 
     public VeloItemType getType() {

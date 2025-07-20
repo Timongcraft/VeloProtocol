@@ -91,8 +91,8 @@ public class VeloEntityEffects {
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloEntityEffect WITHER = load("minecraft:wither");
 
-    public static VeloEntityEffect getFromProtocolId(int protocolId, ProtocolVersion protocolVersion) {
-        return LOADED_VELO_ENTITY_EFFECTS_CACHE.get(protocolVersion).get(protocolId);
+    public static VeloEntityEffect getFromProtocolId(int protocolId, ProtocolVersion version) {
+        return LOADED_VELO_ENTITY_EFFECTS_CACHE.get(version).get(protocolId);
     }
 
     private static VeloEntityEffect load(String name) {

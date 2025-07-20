@@ -110,8 +110,8 @@ public class VeloBlockEntityTypes {
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloBlockEntityType VAULT = load("minecraft:vault");
 
-    public static VeloBlockEntityType getFromProtocolId(int protocolId, ProtocolVersion protocolVersion) {
-        return LOADED_VELO_BLOCK_ENTITY_TYPES_CACHE.get(protocolVersion).get(protocolId);
+    public static VeloBlockEntityType getFromProtocolId(int protocolId, ProtocolVersion version) {
+        return LOADED_VELO_BLOCK_ENTITY_TYPES_CACHE.get(version).get(protocolId);
     }
 
     private static VeloBlockEntityType load(String name) {

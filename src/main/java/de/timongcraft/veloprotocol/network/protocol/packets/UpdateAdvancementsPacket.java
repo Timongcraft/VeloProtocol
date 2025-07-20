@@ -42,7 +42,7 @@ public class UpdateAdvancementsPacket extends VeloPacket {
     @Since(MINECRAFT_1_21_5)
     private boolean showToast;
 
-    public UpdateAdvancementsPacket() {}
+    private UpdateAdvancementsPacket() {}
 
     public UpdateAdvancementsPacket(boolean reset,
                                     Map<String, ProtocolAdvancement> advancementsToAdd,
@@ -57,27 +57,27 @@ public class UpdateAdvancementsPacket extends VeloPacket {
     }
 
     @Override
-    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         throw new UnsupportedOperationException("Not implemented, requires VeloItemStack to be decodable");
 
         /*reset = buf.readBoolean();
-        advancementsToAdd = ExProtocolUtils.readStringKeyMap(buf, () -> ProtocolAdvancement.of(buf, protocolVersion));
+        advancementsToAdd = ExProtocolUtils.readStringKeyMap(buf, () -> ProtocolAdvancement.of(buf, version));
         advancementsToRemove = ExProtocolUtils.readStringSet(buf);
         advancementProgresses = ExProtocolUtils.readStringKeyMap(buf, () -> ProtocolAdvancementProgress.of(buf));
-        if (protocolVersion.noLessThan(MINECRAFT_1_21_5)) {
+        if (version.noLessThan(MINECRAFT_1_21_5)) {
             showToast = buf.readBoolean();
         }*/
     }
 
     @Override
-    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         buf.writeBoolean(reset);
-        ExProtocolUtils.writeStringKeyMap(buf, advancementsToAdd, advancement -> advancement.write(buf, protocolVersion));
+        ExProtocolUtils.writeStringKeyMap(buf, advancementsToAdd, advancement -> advancement.write(buf, version));
         ExProtocolUtils.writeCollection(buf, advancementsToRemove, key -> ProtocolUtils.writeString(buf, key));
         ExProtocolUtils.writeStringKeyMap(buf, advancementProgresses, advancementProgress ->
                 advancementProgress.write(buf)
         );
-        if (protocolVersion.noLessThan(MINECRAFT_1_21_5)) {
+        if (version.noLessThan(MINECRAFT_1_21_5)) {
             buf.writeBoolean(showToast);
         }
     }

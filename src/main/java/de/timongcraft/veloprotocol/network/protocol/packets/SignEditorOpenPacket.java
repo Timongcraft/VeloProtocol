@@ -37,7 +37,7 @@ public class SignEditorOpenPacket extends VeloPacket {
     private Position position;
     private boolean frontText;
 
-    public SignEditorOpenPacket() {}
+    private SignEditorOpenPacket() {}
 
     public SignEditorOpenPacket(Position position, boolean frontText) {
         this.position = position;
@@ -45,7 +45,7 @@ public class SignEditorOpenPacket extends VeloPacket {
     }
 
     @Override
-    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         decoded = true;
 
         position = Position.read(buf);
@@ -54,7 +54,7 @@ public class SignEditorOpenPacket extends VeloPacket {
     }
 
     @Override
-    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         position.write(buf);
 
         buf.writeBoolean(frontText);

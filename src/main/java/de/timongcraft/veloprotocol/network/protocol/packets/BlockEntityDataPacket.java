@@ -37,7 +37,7 @@ public class BlockEntityDataPacket extends VeloPacket {
     private VeloBlockEntityType type;
     private CompoundBinaryTag nbt;
 
-    public BlockEntityDataPacket() {}
+    private BlockEntityDataPacket() {}
 
     public BlockEntityDataPacket(Position position, VeloBlockEntityType type, CompoundBinaryTag nbt) {
         this.position = position;

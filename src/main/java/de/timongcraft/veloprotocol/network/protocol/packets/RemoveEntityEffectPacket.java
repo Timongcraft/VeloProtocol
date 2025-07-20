@@ -1,7 +1,6 @@
 package de.timongcraft.veloprotocol.network.protocol.packets;
 
 import com.velocitypowered.api.network.ProtocolVersion;
-import com.velocitypowered.proxy.connection.MinecraftSessionHandler;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
 import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
@@ -38,7 +37,7 @@ public class RemoveEntityEffectPacket extends VeloPacket {
     private int entityId;
     private VeloEntityEffect effectType;
 
-    public RemoveEntityEffectPacket() {}
+    private RemoveEntityEffectPacket() {}
 
     public RemoveEntityEffectPacket(int entityId, VeloEntityEffect effectType) {
         this.entityId = entityId;
@@ -46,19 +45,19 @@ public class RemoveEntityEffectPacket extends VeloPacket {
     }
 
     @Override
-    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         decoded = true;
 
         entityId = ProtocolUtils.readVarInt(buf);
 
-        effectType = VeloEntityEffects.getFromProtocolId(ProtocolUtils.readVarInt(buf), protocolVersion);
+        effectType = VeloEntityEffects.getFromProtocolId(ProtocolUtils.readVarInt(buf), version);
     }
 
     @Override
-    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         ProtocolUtils.writeVarInt(buf, entityId);
 
-        ProtocolUtils.writeVarInt(buf, effectType.getProtocolId(protocolVersion));
+        ProtocolUtils.writeVarInt(buf, effectType.getProtocolId(version));
     }
 
     public int getEntityId() {

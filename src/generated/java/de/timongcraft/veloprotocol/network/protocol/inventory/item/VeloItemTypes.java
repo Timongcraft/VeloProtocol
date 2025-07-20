@@ -1,4 +1,4 @@
-package de.timongcraft.veloprotocol.network.protocol.items;
+package de.timongcraft.veloprotocol.network.protocol.inventory.item;
 
 import com.velocitypowered.api.network.ProtocolVersion;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
@@ -2858,8 +2858,8 @@ public class VeloItemTypes {
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ZOMBIFIED_PIGLIN_SPAWN_EGG = load("minecraft:zombified_piglin_spawn_egg");
 
-    public static VeloItemType getFromProtocolId(int protocolId, ProtocolVersion protocolVersion) {
-        return LOADED_VELO_ITEM_TYPES_CACHE.get(protocolVersion).get(protocolId);
+    public static VeloItemType getFromProtocolId(int protocolId, ProtocolVersion version) {
+        return LOADED_VELO_ITEM_TYPES_CACHE.get(version).get(protocolId);
     }
 
     private static VeloItemType load(String name) {

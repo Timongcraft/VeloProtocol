@@ -35,14 +35,14 @@ public class BlockUpdatePacket extends VeloPacket {
     private Position position;
 
     /**
-     * Currently there's no built-in way to get block state ids.
+     * Currently there's no built-in way in VeloProtocol to get block state ids.
      *
      * <p>You can still obtain them via <a href="https://minecraft.wiki/w/Tutorials/Running_the_data_generator">data gen</a> ({@code --reports})
      * <br>in {@code generated\reports\blocks.json}
      */
     private int blockStateId;
 
-    public BlockUpdatePacket() {}
+    private BlockUpdatePacket() {}
 
     public BlockUpdatePacket(Position position, int blockStateId) {
         this.position = position;

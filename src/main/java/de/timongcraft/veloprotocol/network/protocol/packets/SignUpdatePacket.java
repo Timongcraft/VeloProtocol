@@ -42,7 +42,7 @@ public class SignUpdatePacket extends VeloPacket {
     private boolean frontText;
     private String[] lines = new String[4];
 
-    public SignUpdatePacket() {}
+    private SignUpdatePacket() {}
 
     public SignUpdatePacket(Position position, boolean frontText, String[] lines) {
         this.position = position;
@@ -51,26 +51,32 @@ public class SignUpdatePacket extends VeloPacket {
     }
 
     @Override
-    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         decoded = true;
 
         position = Position.read(buf);
 
-        if (protocolVersion.greaterThan(MINECRAFT_1_19_4)) {
+        if (version.greaterThan(MINECRAFT_1_19_4)) {
             frontText = buf.readBoolean();
         }
 
         for (int i = 0; i < lines.length; i++) {
-            lines[i] = ProtocolUtils.readString(buf, LINE_LENGTH_CAP);
+            //lines[i] = ProtocolUtils.readString(buf, LINE_LENGTH_CAP);
+
+            // circumvent MC-299502
+            lines[i] = ProtocolUtils.readString(buf);
+            if (lines[i].length() > LINE_LENGTH_CAP) {
+                lines[i] = lines[i].substring(0, LINE_LENGTH_CAP);
+            }
         }
     }
 
     @Override
-    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         position.write(buf);
 
 
-        if (protocolVersion.greaterThan(MINECRAFT_1_19_4)) {
+        if (version.greaterThan(MINECRAFT_1_19_4)) {
             buf.writeBoolean(frontText);
         }
 

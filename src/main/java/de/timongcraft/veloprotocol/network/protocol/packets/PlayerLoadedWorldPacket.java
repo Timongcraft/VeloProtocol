@@ -9,8 +9,7 @@ import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
 
-import static com.velocitypowered.api.network.ProtocolVersion.MINECRAFT_1_21_4;
-import static com.velocitypowered.api.network.ProtocolVersion.MINECRAFT_1_21_6;
+import static com.velocitypowered.api.network.ProtocolVersion.*;
 
 /**
  * (latest) Resource Id: 'minecraft:player_loaded'
@@ -31,15 +30,15 @@ public class PlayerLoadedWorldPacket extends VeloPacket {
                 .register();
     }
 
-    public PlayerLoadedWorldPacket() {}
+    private PlayerLoadedWorldPacket() {}
 
     @Override
-    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         decoded = true;
     }
 
     @Override
-    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
     }
 
 }

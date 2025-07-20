@@ -12,7 +12,7 @@ public class RegistryEntriesPreLoader {
     }
 
     public static void loadVeloItemTypes() {
-        load("de.timongcraft.veloprotocol.network.protocol.items.VeloItemTypes");
+        load("de.timongcraft.veloprotocol.network.protocol.inventory.item.VeloItemTypes");
     }
 
     public static void loadVeloEntityEffects() {
@@ -27,6 +27,10 @@ public class RegistryEntriesPreLoader {
         load("de.timongcraft.veloprotocol.network.protocol.datacomponents.VeloDataComponentTypes");
     }
 
+    public static void loadVeloContainerTypes() {
+        load("de.timongcraft.veloprotocol.network.protocol.inventory.container.VeloContainerTypes");
+    }
+
     private static void load(String name) {
         try {
             Class.forName(name);
@@ -34,7 +38,6 @@ public class RegistryEntriesPreLoader {
             throw new RuntimeException(e);
         }
     }
-
 
     private RegistryEntriesPreLoader() {}
 

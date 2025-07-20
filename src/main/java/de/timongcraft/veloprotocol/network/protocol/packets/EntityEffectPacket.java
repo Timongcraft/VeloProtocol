@@ -52,7 +52,7 @@ public class EntityEffectPacket extends VeloPacket {
     @Until(MINECRAFT_1_20_3)
     private @Nullable BinaryTag factorData;
 
-    public EntityEffectPacket() {}
+    private EntityEffectPacket() {}
 
     public EntityEffectPacket(int entityId, VeloEntityEffect effectType, byte amplifier, int duration, List<Flag> flags, @Nullable BinaryTag factorData) {
         this.entityId = entityId;
@@ -64,14 +64,14 @@ public class EntityEffectPacket extends VeloPacket {
     }
 
     @Override
-    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         decoded = true;
 
         entityId = ProtocolUtils.readVarInt(buf);
 
-        effectType = VeloEntityEffects.getFromProtocolId(ProtocolUtils.readVarInt(buf), protocolVersion);
+        effectType = VeloEntityEffects.getFromProtocolId(ProtocolUtils.readVarInt(buf), version);
 
-        if (protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
+        if (version.noGreaterThan(MINECRAFT_1_20_3)) {
             amplifier = buf.readByte();
         } else {
             amplifier = ProtocolUtils.readVarInt(buf);
@@ -87,19 +87,19 @@ public class EntityEffectPacket extends VeloPacket {
             }
         }
 
-        if (protocolVersion.noLessThan(MINECRAFT_1_19)
-                && protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
-            factorData = ExProtocolUtils.readOpt(buf, () -> ProtocolUtils.readBinaryTag(buf, protocolVersion, BinaryTagIO.reader()));
+        if (version.noLessThan(MINECRAFT_1_19)
+                && version.noGreaterThan(MINECRAFT_1_20_3)) {
+            factorData = ExProtocolUtils.readOpt(buf, () -> ProtocolUtils.readBinaryTag(buf, version, BinaryTagIO.reader()));
         }
     }
 
     @Override
-    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion protocolVersion) {
+    public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         ProtocolUtils.writeVarInt(buf, entityId);
 
-        ProtocolUtils.writeVarInt(buf, effectType.getProtocolId(protocolVersion));
+        ProtocolUtils.writeVarInt(buf, effectType.getProtocolId(version));
 
-        if (protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
+        if (version.noGreaterThan(MINECRAFT_1_20_3)) {
             buf.writeByte(amplifier);
         } else {
             ProtocolUtils.writeVarInt(buf, amplifier);
@@ -113,10 +113,10 @@ public class EntityEffectPacket extends VeloPacket {
         }
         buf.writeByte(flagsBitmask);
 
-        if (protocolVersion.noLessThan(MINECRAFT_1_19)
-                && protocolVersion.noGreaterThan(MINECRAFT_1_20_3)) {
+        if (version.noLessThan(MINECRAFT_1_19)
+                && version.noGreaterThan(MINECRAFT_1_20_3)) {
             ExProtocolUtils.writeOpt(buf, factorData, binaryTag ->
-                    ProtocolUtils.writeBinaryTag(buf, protocolVersion, binaryTag));
+                    ProtocolUtils.writeBinaryTag(buf, version, binaryTag));
         }
     }
 

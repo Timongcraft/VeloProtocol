@@ -38,7 +38,7 @@ public class SelectAdvancementsTabPacket extends VeloPacket {
     private Action action;
     private @Nullable Key tabKey;
 
-    public SelectAdvancementsTabPacket() {}
+    private SelectAdvancementsTabPacket() {}
 
     public SelectAdvancementsTabPacket(Action action, @Nullable Key tabKey) {
         this.action = action;

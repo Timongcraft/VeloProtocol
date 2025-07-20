@@ -212,8 +212,8 @@ public class VeloDataComponentTypes {
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType WRITTEN_BOOK_CONTENT = load("minecraft:written_book_content");
 
-    public static VeloDataComponentType getFromProtocolId(int protocolId, ProtocolVersion protocolVersion) {
-        return LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.get(protocolVersion).get(protocolId);
+    public static VeloDataComponentType getFromProtocolId(int protocolId, ProtocolVersion version) {
+        return LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.get(version).get(protocolId);
     }
 
     private static VeloDataComponentType load(String name) {

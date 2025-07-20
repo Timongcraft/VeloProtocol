@@ -76,9 +76,9 @@ public class ProtocolAdvancement {
         this.telemetryData = telemetryData;
     }
 
-    public void write(ByteBuf buf, ProtocolVersion protocolVersion) {
+    public void write(ByteBuf buf, ProtocolVersion version) {
         ExProtocolUtils.writeOptString(buf, parentId);
-        ExProtocolUtils.writeOpt(buf, displayData, presentDisplay -> presentDisplay.write(buf, protocolVersion));
+        ExProtocolUtils.writeOpt(buf, displayData, presentDisplay -> presentDisplay.write(buf, version));
         ExProtocolUtils.writeCollection(buf, requirements, innerSet ->
                 ExProtocolUtils.writeCollection(buf, innerSet, key ->
                         ProtocolUtils.writeString(buf, key)));

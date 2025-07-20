@@ -7,7 +7,7 @@ import de.timongcraft.velopacketimpl.utils.ComponentUtils;
 import de.timongcraft.velopacketimpl.utils.Either;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.velopacketimpl.utils.annotations.Until;
-import de.timongcraft.veloprotocol.network.protocol.items.VeloItemStack;
+import de.timongcraft.veloprotocol.network.protocol.inventory.item.VeloItemStack;
 import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
 import io.netty.buffer.ByteBuf;
 import net.kyori.adventure.text.Component;

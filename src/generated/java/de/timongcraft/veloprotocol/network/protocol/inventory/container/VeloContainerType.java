@@ -1,11 +1,11 @@
-package de.timongcraft.veloprotocol.network.protocol.items;
+package de.timongcraft.veloprotocol.network.protocol.inventory.container;
 
 import com.velocitypowered.api.network.ProtocolVersion;
 
 import java.util.Arrays;
 
 @SuppressWarnings("unused")
-public class VeloItemType {
+public class VeloContainerType {
 
     public static final ProtocolVersion[] SUPPORTED_VERSIONS = {
             ProtocolVersion.MINECRAFT_1_18_2,
@@ -28,7 +28,7 @@ public class VeloItemType {
     private final String name;
     private final int[] protocolIds;
 
-    public VeloItemType(String name, int[] protocolIds) {
+    public VeloContainerType(String name, int[] protocolIds) {
         this.name = name;
         this.protocolIds = protocolIds;
     }
