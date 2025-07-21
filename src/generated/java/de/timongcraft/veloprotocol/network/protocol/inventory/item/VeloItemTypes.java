@@ -2,7 +2,6 @@ package de.timongcraft.veloprotocol.network.protocol.inventory.item;
 
 import com.velocitypowered.api.network.ProtocolVersion;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
-import de.timongcraft.velopacketimpl.utils.annotations.Until;
 import de.timongcraft.veloprotocol.utils.network.protocol.ProtocolMappingsCache;
 
 import java.util.HashMap;
@@ -1091,8 +1090,6 @@ public class VeloItemTypes {
     public static final VeloItemType GRANITE_STAIRS = load("minecraft:granite_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GRANITE_WALL = load("minecraft:granite_wall");
-    @Since(ProtocolVersion.MINECRAFT_1_18_2) @Until(ProtocolVersion.MINECRAFT_1_20_2)
-    public static final VeloItemType GRASS = load("minecraft:grass");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GRASS_BLOCK = load("minecraft:grass_block");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1987,14 +1984,6 @@ public class VeloItemTypes {
     public static final VeloItemType POTATO = load("minecraft:potato");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType POTION = load("minecraft:potion");
-    @Since(ProtocolVersion.MINECRAFT_1_19_4) @Until(ProtocolVersion.MINECRAFT_1_19_4)
-    public static final VeloItemType POTTERY_SHARD_ARCHER = load("minecraft:pottery_shard_archer");
-    @Since(ProtocolVersion.MINECRAFT_1_19_4) @Until(ProtocolVersion.MINECRAFT_1_19_4)
-    public static final VeloItemType POTTERY_SHARD_ARMS_UP = load("minecraft:pottery_shard_arms_up");
-    @Since(ProtocolVersion.MINECRAFT_1_19_4) @Until(ProtocolVersion.MINECRAFT_1_19_4)
-    public static final VeloItemType POTTERY_SHARD_PRIZE = load("minecraft:pottery_shard_prize");
-    @Since(ProtocolVersion.MINECRAFT_1_19_4) @Until(ProtocolVersion.MINECRAFT_1_19_4)
-    public static final VeloItemType POTTERY_SHARD_SKULL = load("minecraft:pottery_shard_skull");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType POWDER_SNOW_BUCKET = load("minecraft:powder_snow_bucket");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2237,8 +2226,6 @@ public class VeloItemTypes {
     public static final VeloItemType SCULK_SHRIEKER = load("minecraft:sculk_shrieker");
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final VeloItemType SCULK_VEIN = load("minecraft:sculk_vein");
-    @Since(ProtocolVersion.MINECRAFT_1_18_2) @Until(ProtocolVersion.MINECRAFT_1_20_3)
-    public static final VeloItemType SCUTE = load("minecraft:scute");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SEA_LANTERN = load("minecraft:sea_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2865,22 +2852,6 @@ public class VeloItemTypes {
     private static VeloItemType load(String name) {
         VeloItemType veloItemType = new VeloItemType(name, getProtocolIds(name));
 
-        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_18_2, unused -> new HashMap<>())
-                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_18_2), veloItemType);
-        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_19, unused -> new HashMap<>())
-                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_19), veloItemType);
-        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_19_1, unused -> new HashMap<>())
-                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_19_1), veloItemType);
-        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_19_3, unused -> new HashMap<>())
-                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_19_3), veloItemType);
-        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_19_4, unused -> new HashMap<>())
-                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_19_4), veloItemType);
-        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_20, unused -> new HashMap<>())
-                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_20), veloItemType);
-        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_20_2, unused -> new HashMap<>())
-                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_20_2), veloItemType);
-        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_20_3, unused -> new HashMap<>())
-                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_20_3), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_20_5, unused -> new HashMap<>())
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_20_5), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21, unused -> new HashMap<>())
