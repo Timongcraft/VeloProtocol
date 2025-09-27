@@ -4,7 +4,7 @@ import com.google.common.annotations.Beta;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
@@ -18,7 +18,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
 @Deprecated(since = "1.3.3", forRemoval = true) // will be removed when the pull request is merged - https://github.com/PaperMC/Velocity/pull/1541
 @Beta
 @Since(ProtocolVersion.MINECRAFT_1_21_4)
-public class PlayerLoadedWorldPacket extends VeloPacket {
+public class PlayerLoadedWorldPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(PlayerLoadedWorldPacket.class)
@@ -34,7 +34,7 @@ public class PlayerLoadedWorldPacket extends VeloPacket {
 
     @Override
     public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
-        decoded = true;
+        super.decode(buf, direction, version);
     }
 
     @Override

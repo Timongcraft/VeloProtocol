@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import de.timongcraft.velopacketimpl.shaded.vpacketevents.api.register.PacketRegistration;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.veloprotocol.network.protocol.advancements.ProtocolAdvancement;
@@ -23,7 +23,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
 @SuppressWarnings("unused")
 @ApiStatus.Experimental
 @Since(MINECRAFT_1_20_5)
-public class UpdateAdvancementsPacket extends VeloPacket {
+public class UpdateAdvancementsPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(UpdateAdvancementsPacket.class)

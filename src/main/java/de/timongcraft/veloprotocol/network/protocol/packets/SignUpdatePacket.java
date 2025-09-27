@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.veloprotocol.utils.network.Position;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
@@ -15,7 +15,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * (latest) Resource Id: 'minecraft:sign_update'
  */
 @SuppressWarnings("unused")
-public class SignUpdatePacket extends VeloPacket {
+public class SignUpdatePacket extends AbstractPacket {
 
     public static final int LINE_LENGTH_CAP = 384;
 
@@ -52,7 +52,7 @@ public class SignUpdatePacket extends VeloPacket {
 
     @Override
     public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
-        decoded = true;
+        super.decode(buf, direction, version);
 
         position = Position.read(buf);
 

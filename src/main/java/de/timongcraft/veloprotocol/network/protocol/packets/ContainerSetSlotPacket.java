@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.veloprotocol.network.protocol.inventory.item.VeloItemStack;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
@@ -16,7 +16,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  */
 @SuppressWarnings("unused")
 @Since(ProtocolVersion.MINECRAFT_1_20_5)
-public class ContainerSetSlotPacket extends VeloPacket {
+public class ContainerSetSlotPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(ContainerSetSlotPacket.class)

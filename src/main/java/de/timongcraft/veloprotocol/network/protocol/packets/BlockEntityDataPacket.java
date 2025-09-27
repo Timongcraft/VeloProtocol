@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import de.timongcraft.veloprotocol.network.protocol.blockentities.VeloBlockEntityType;
 import de.timongcraft.veloprotocol.network.protocol.blockentities.VeloBlockEntityTypes;
 import de.timongcraft.veloprotocol.utils.network.Position;
@@ -18,7 +18,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * (latest) Resource Id: 'minecraft:block_entity_data'
  */
 @SuppressWarnings("unused")
-public class BlockEntityDataPacket extends VeloPacket {
+public class BlockEntityDataPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(BlockEntityDataPacket.class)
@@ -47,7 +47,7 @@ public class BlockEntityDataPacket extends VeloPacket {
 
     @Override
     public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
-        decoded = true;
+        super.decode(buf, direction, version);
 
         position = Position.read(buf);
         type = VeloBlockEntityTypes.getFromProtocolId(ProtocolUtils.readVarInt(buf), version);

@@ -4,7 +4,7 @@ import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
 import com.velocitypowered.proxy.protocol.packet.chat.ComponentHolder;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import de.timongcraft.velopacketimpl.utils.ComponentUtils;
 import de.timongcraft.velopacketimpl.utils.Either;
 import de.timongcraft.velopacketimpl.utils.network.protocol.ExProtocolUtils;
@@ -21,7 +21,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * (latest) Resource Id: 'minecraft:open_screen'
  */
 @SuppressWarnings("unused")
-public class ContainerOpenPacket extends VeloPacket {
+public class ContainerOpenPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(ContainerOpenPacket.class)

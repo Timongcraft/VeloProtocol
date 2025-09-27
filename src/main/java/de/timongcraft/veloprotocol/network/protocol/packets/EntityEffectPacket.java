@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.velopacketimpl.utils.annotations.Until;
 import de.timongcraft.veloprotocol.network.protocol.effects.VeloEntityEffect;
@@ -24,7 +24,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * (latest) Resource Id: 'minecraft:update_mob_effect'
  */
 @SuppressWarnings("unused")
-public class EntityEffectPacket extends VeloPacket {
+public class EntityEffectPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(EntityEffectPacket.class)
@@ -65,7 +65,7 @@ public class EntityEffectPacket extends VeloPacket {
 
     @Override
     public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
-        decoded = true;
+        super.decode(buf, direction, version);
 
         entityId = ProtocolUtils.readVarInt(buf);
 

@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
 
@@ -12,7 +12,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
 /**
  * (latest) Resource Id: 'minecraft:rename_item'
  */
-public class AnvilRenameItemPacket extends VeloPacket {
+public class AnvilRenameItemPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(AnvilRenameItemPacket.class)
@@ -42,7 +42,7 @@ public class AnvilRenameItemPacket extends VeloPacket {
 
     @Override
     public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
-        decoded = true;
+        super.decode(buf, direction, version);
 
         itemName = ProtocolUtils.readString(buf);
     }

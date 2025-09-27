@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
 import org.jetbrains.annotations.ApiStatus;
@@ -15,7 +15,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  */
 @SuppressWarnings("unused")
 @ApiStatus.Experimental
-public class ContainerSetPropertyPacket extends VeloPacket {
+public class ContainerSetPropertyPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(ContainerSetPropertyPacket.class)

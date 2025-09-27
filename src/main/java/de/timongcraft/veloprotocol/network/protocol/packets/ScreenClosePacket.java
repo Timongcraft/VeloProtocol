@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
 
@@ -13,7 +13,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * (latest) Resource Id: 'minecraft:container_close'
  */
 @SuppressWarnings("unused")
-public class ScreenClosePacket extends VeloPacket {
+public class ScreenClosePacket extends AbstractPacket {
 
     public static void registerClientBound(boolean encodeOnly) {
         PacketRegistration.of(ScreenClosePacket.class)
@@ -56,7 +56,7 @@ public class ScreenClosePacket extends VeloPacket {
 
     @Override
     public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
-        decoded = true;
+        super.decode(buf, direction, version);
 
         if (version.noLessThan(MINECRAFT_1_21_2)) {
             windowId = ProtocolUtils.readVarInt(buf);

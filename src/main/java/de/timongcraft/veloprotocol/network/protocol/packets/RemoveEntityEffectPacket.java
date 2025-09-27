@@ -3,7 +3,7 @@ package de.timongcraft.veloprotocol.network.protocol.packets;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
-import de.timongcraft.velopacketimpl.network.protocol.packets.VeloPacket;
+import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
 import de.timongcraft.veloprotocol.network.protocol.effects.VeloEntityEffect;
 import de.timongcraft.veloprotocol.network.protocol.effects.VeloEntityEffects;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
@@ -15,7 +15,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * (latest) Resource Id: 'minecraft:remove_mob_effect'
  */
 @SuppressWarnings("unused")
-public class RemoveEntityEffectPacket extends VeloPacket {
+public class RemoveEntityEffectPacket extends AbstractPacket {
 
     public static void register(boolean encodeOnly) {
         PacketRegistration.of(RemoveEntityEffectPacket.class)
@@ -46,7 +46,7 @@ public class RemoveEntityEffectPacket extends VeloPacket {
 
     @Override
     public void decode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
-        decoded = true;
+        super.decode(buf, direction, version);
 
         entityId = ProtocolUtils.readVarInt(buf);
 
