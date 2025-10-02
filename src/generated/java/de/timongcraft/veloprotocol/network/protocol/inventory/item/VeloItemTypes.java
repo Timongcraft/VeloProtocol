@@ -2,6 +2,7 @@ package de.timongcraft.veloprotocol.network.protocol.inventory.item;
 
 import com.velocitypowered.api.network.ProtocolVersion;
 import de.timongcraft.velopacketimpl.utils.annotations.Since;
+import de.timongcraft.velopacketimpl.utils.annotations.Until;
 import de.timongcraft.veloprotocol.utils.network.protocol.ProtocolMappingsCache;
 
 import java.util.HashMap;
@@ -36,6 +37,8 @@ public class VeloItemTypes {
     public static final VeloItemType ACACIA_PRESSURE_PLATE = load("minecraft:acacia_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ACACIA_SAPLING = load("minecraft:acacia_sapling");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType ACACIA_SHELF = load("minecraft:acacia_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ACACIA_SIGN = load("minecraft:acacia_sign");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -128,6 +131,8 @@ public class VeloItemTypes {
     public static final VeloItemType BAMBOO_PRESSURE_PLATE = load("minecraft:bamboo_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_19_3)
     public static final VeloItemType BAMBOO_RAFT = load("minecraft:bamboo_raft");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType BAMBOO_SHELF = load("minecraft:bamboo_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_19_3)
     public static final VeloItemType BAMBOO_SIGN = load("minecraft:bamboo_sign");
     @Since(ProtocolVersion.MINECRAFT_1_19_3)
@@ -190,6 +195,8 @@ public class VeloItemTypes {
     public static final VeloItemType BIRCH_PRESSURE_PLATE = load("minecraft:birch_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BIRCH_SAPLING = load("minecraft:birch_sapling");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType BIRCH_SHELF = load("minecraft:birch_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BIRCH_SIGN = load("minecraft:birch_sign");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -414,7 +421,7 @@ public class VeloItemTypes {
     public static final VeloItemType CAULDRON = load("minecraft:cauldron");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CAVE_SPIDER_SPAWN_EGG = load("minecraft:cave_spider_spawn_egg");
-    @Since(ProtocolVersion.MINECRAFT_1_18_2)
+    @Since(ProtocolVersion.MINECRAFT_1_18_2) @Until(ProtocolVersion.MINECRAFT_1_21_7)
     public static final VeloItemType CHAIN = load("minecraft:chain");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CHAIN_COMMAND_BLOCK = load("minecraft:chain_command_block");
@@ -452,6 +459,8 @@ public class VeloItemTypes {
     public static final VeloItemType CHERRY_PRESSURE_PLATE = load("minecraft:cherry_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
     public static final VeloItemType CHERRY_SAPLING = load("minecraft:cherry_sapling");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType CHERRY_SHELF = load("minecraft:cherry_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
     public static final VeloItemType CHERRY_SIGN = load("minecraft:cherry_sign");
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
@@ -574,18 +583,54 @@ public class VeloItemTypes {
     public static final VeloItemType COOKED_SALMON = load("minecraft:cooked_salmon");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType COOKIE = load("minecraft:cookie");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_AXE = load("minecraft:copper_axe");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_BARS = load("minecraft:copper_bars");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType COPPER_BLOCK = load("minecraft:copper_block");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_BOOTS = load("minecraft:copper_boots");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType COPPER_BULB = load("minecraft:copper_bulb");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_CHAIN = load("minecraft:copper_chain");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_CHEST = load("minecraft:copper_chest");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_CHESTPLATE = load("minecraft:copper_chestplate");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType COPPER_DOOR = load("minecraft:copper_door");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_GOLEM_SPAWN_EGG = load("minecraft:copper_golem_spawn_egg");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_GOLEM_STATUE = load("minecraft:copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType COPPER_GRATE = load("minecraft:copper_grate");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_HELMET = load("minecraft:copper_helmet");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_HOE = load("minecraft:copper_hoe");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_HORSE_ARMOR = load("minecraft:copper_horse_armor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType COPPER_INGOT = load("minecraft:copper_ingot");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_LANTERN = load("minecraft:copper_lantern");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_LEGGINGS = load("minecraft:copper_leggings");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_NUGGET = load("minecraft:copper_nugget");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType COPPER_ORE = load("minecraft:copper_ore");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_PICKAXE = load("minecraft:copper_pickaxe");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_SHOVEL = load("minecraft:copper_shovel");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_SWORD = load("minecraft:copper_sword");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType COPPER_TORCH = load("minecraft:copper_torch");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType COPPER_TRAPDOOR = load("minecraft:copper_trapdoor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -638,6 +683,8 @@ public class VeloItemTypes {
     public static final VeloItemType CRIMSON_PRESSURE_PLATE = load("minecraft:crimson_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CRIMSON_ROOTS = load("minecraft:crimson_roots");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType CRIMSON_SHELF = load("minecraft:crimson_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CRIMSON_SIGN = load("minecraft:crimson_sign");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -726,6 +773,8 @@ public class VeloItemTypes {
     public static final VeloItemType DARK_OAK_PRESSURE_PLATE = load("minecraft:dark_oak_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DARK_OAK_SAPLING = load("minecraft:dark_oak_sapling");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType DARK_OAK_SHELF = load("minecraft:dark_oak_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DARK_OAK_SIGN = load("minecraft:dark_oak_sign");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -940,12 +989,22 @@ public class VeloItemTypes {
     public static final VeloItemType EXPOSED_CHISELED_COPPER = load("minecraft:exposed_chiseled_copper");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType EXPOSED_COPPER = load("minecraft:exposed_copper");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType EXPOSED_COPPER_BARS = load("minecraft:exposed_copper_bars");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType EXPOSED_COPPER_BULB = load("minecraft:exposed_copper_bulb");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType EXPOSED_COPPER_CHAIN = load("minecraft:exposed_copper_chain");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType EXPOSED_COPPER_CHEST = load("minecraft:exposed_copper_chest");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType EXPOSED_COPPER_DOOR = load("minecraft:exposed_copper_door");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType EXPOSED_COPPER_GOLEM_STATUE = load("minecraft:exposed_copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType EXPOSED_COPPER_GRATE = load("minecraft:exposed_copper_grate");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType EXPOSED_COPPER_LANTERN = load("minecraft:exposed_copper_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType EXPOSED_COPPER_TRAPDOOR = load("minecraft:exposed_copper_trapdoor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -954,6 +1013,8 @@ public class VeloItemTypes {
     public static final VeloItemType EXPOSED_CUT_COPPER_SLAB = load("minecraft:exposed_cut_copper_slab");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType EXPOSED_CUT_COPPER_STAIRS = load("minecraft:exposed_cut_copper_stairs");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType EXPOSED_LIGHTNING_ROD = load("minecraft:exposed_lightning_rod");
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
     public static final VeloItemType EYE_ARMOR_TRIM_SMITHING_TEMPLATE = load("minecraft:eye_armor_trim_smithing_template");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1234,6 +1295,8 @@ public class VeloItemTypes {
     public static final VeloItemType IRON_BLOCK = load("minecraft:iron_block");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType IRON_BOOTS = load("minecraft:iron_boots");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType IRON_CHAIN = load("minecraft:iron_chain");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType IRON_CHESTPLATE = load("minecraft:iron_chestplate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1294,6 +1357,8 @@ public class VeloItemTypes {
     public static final VeloItemType JUNGLE_PRESSURE_PLATE = load("minecraft:jungle_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType JUNGLE_SAPLING = load("minecraft:jungle_sapling");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType JUNGLE_SHELF = load("minecraft:jungle_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType JUNGLE_SIGN = load("minecraft:jungle_sign");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1518,6 +1583,8 @@ public class VeloItemTypes {
     public static final VeloItemType MANGROVE_PROPAGULE = load("minecraft:mangrove_propagule");
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final VeloItemType MANGROVE_ROOTS = load("minecraft:mangrove_roots");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType MANGROVE_SHELF = load("minecraft:mangrove_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final VeloItemType MANGROVE_SIGN = load("minecraft:mangrove_sign");
     @Since(ProtocolVersion.MINECRAFT_1_19)
@@ -1716,6 +1783,8 @@ public class VeloItemTypes {
     public static final VeloItemType OAK_PRESSURE_PLATE = load("minecraft:oak_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType OAK_SAPLING = load("minecraft:oak_sapling");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType OAK_SHELF = load("minecraft:oak_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType OAK_SIGN = load("minecraft:oak_sign");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1778,12 +1847,22 @@ public class VeloItemTypes {
     public static final VeloItemType OXIDIZED_CHISELED_COPPER = load("minecraft:oxidized_chiseled_copper");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType OXIDIZED_COPPER = load("minecraft:oxidized_copper");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType OXIDIZED_COPPER_BARS = load("minecraft:oxidized_copper_bars");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType OXIDIZED_COPPER_BULB = load("minecraft:oxidized_copper_bulb");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType OXIDIZED_COPPER_CHAIN = load("minecraft:oxidized_copper_chain");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType OXIDIZED_COPPER_CHEST = load("minecraft:oxidized_copper_chest");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType OXIDIZED_COPPER_DOOR = load("minecraft:oxidized_copper_door");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType OXIDIZED_COPPER_GOLEM_STATUE = load("minecraft:oxidized_copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType OXIDIZED_COPPER_GRATE = load("minecraft:oxidized_copper_grate");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType OXIDIZED_COPPER_LANTERN = load("minecraft:oxidized_copper_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType OXIDIZED_COPPER_TRAPDOOR = load("minecraft:oxidized_copper_trapdoor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1792,6 +1871,8 @@ public class VeloItemTypes {
     public static final VeloItemType OXIDIZED_CUT_COPPER_SLAB = load("minecraft:oxidized_cut_copper_slab");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType OXIDIZED_CUT_COPPER_STAIRS = load("minecraft:oxidized_cut_copper_stairs");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType OXIDIZED_LIGHTNING_ROD = load("minecraft:oxidized_lightning_rod");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PACKED_ICE = load("minecraft:packed_ice");
     @Since(ProtocolVersion.MINECRAFT_1_19)
@@ -1828,6 +1909,8 @@ public class VeloItemTypes {
     public static final VeloItemType PALE_OAK_PRESSURE_PLATE = load("minecraft:pale_oak_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final VeloItemType PALE_OAK_SAPLING = load("minecraft:pale_oak_sapling");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType PALE_OAK_SHELF = load("minecraft:pale_oak_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final VeloItemType PALE_OAK_SIGN = load("minecraft:pale_oak_sign");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
@@ -2376,6 +2459,8 @@ public class VeloItemTypes {
     public static final VeloItemType SPRUCE_PRESSURE_PLATE = load("minecraft:spruce_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SPRUCE_SAPLING = load("minecraft:spruce_sapling");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType SPRUCE_SHELF = load("minecraft:spruce_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SPRUCE_SIGN = load("minecraft:spruce_sign");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2622,6 +2707,8 @@ public class VeloItemTypes {
     public static final VeloItemType WARPED_PRESSURE_PLATE = load("minecraft:warped_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WARPED_ROOTS = load("minecraft:warped_roots");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WARPED_SHELF = load("minecraft:warped_shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WARPED_SIGN = load("minecraft:warped_sign");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2638,14 +2725,24 @@ public class VeloItemTypes {
     public static final VeloItemType WATER_BUCKET = load("minecraft:water_bucket");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_CHISELED_COPPER = load("minecraft:waxed_chiseled_copper");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_COPPER_BARS = load("minecraft:waxed_copper_bars");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WAXED_COPPER_BLOCK = load("minecraft:waxed_copper_block");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_COPPER_BULB = load("minecraft:waxed_copper_bulb");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_COPPER_CHAIN = load("minecraft:waxed_copper_chain");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_COPPER_CHEST = load("minecraft:waxed_copper_chest");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_COPPER_DOOR = load("minecraft:waxed_copper_door");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_COPPER_GOLEM_STATUE = load("minecraft:waxed_copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_COPPER_GRATE = load("minecraft:waxed_copper_grate");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_COPPER_LANTERN = load("minecraft:waxed_copper_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_COPPER_TRAPDOOR = load("minecraft:waxed_copper_trapdoor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2658,12 +2755,22 @@ public class VeloItemTypes {
     public static final VeloItemType WAXED_EXPOSED_CHISELED_COPPER = load("minecraft:waxed_exposed_chiseled_copper");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WAXED_EXPOSED_COPPER = load("minecraft:waxed_exposed_copper");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_EXPOSED_COPPER_BARS = load("minecraft:waxed_exposed_copper_bars");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_EXPOSED_COPPER_BULB = load("minecraft:waxed_exposed_copper_bulb");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_EXPOSED_COPPER_CHAIN = load("minecraft:waxed_exposed_copper_chain");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_EXPOSED_COPPER_CHEST = load("minecraft:waxed_exposed_copper_chest");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_EXPOSED_COPPER_DOOR = load("minecraft:waxed_exposed_copper_door");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_EXPOSED_COPPER_GOLEM_STATUE = load("minecraft:waxed_exposed_copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_EXPOSED_COPPER_GRATE = load("minecraft:waxed_exposed_copper_grate");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_EXPOSED_COPPER_LANTERN = load("minecraft:waxed_exposed_copper_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_EXPOSED_COPPER_TRAPDOOR = load("minecraft:waxed_exposed_copper_trapdoor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2672,16 +2779,30 @@ public class VeloItemTypes {
     public static final VeloItemType WAXED_EXPOSED_CUT_COPPER_SLAB = load("minecraft:waxed_exposed_cut_copper_slab");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WAXED_EXPOSED_CUT_COPPER_STAIRS = load("minecraft:waxed_exposed_cut_copper_stairs");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_EXPOSED_LIGHTNING_ROD = load("minecraft:waxed_exposed_lightning_rod");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_LIGHTNING_ROD = load("minecraft:waxed_lightning_rod");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_OXIDIZED_CHISELED_COPPER = load("minecraft:waxed_oxidized_chiseled_copper");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WAXED_OXIDIZED_COPPER = load("minecraft:waxed_oxidized_copper");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_OXIDIZED_COPPER_BARS = load("minecraft:waxed_oxidized_copper_bars");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_OXIDIZED_COPPER_BULB = load("minecraft:waxed_oxidized_copper_bulb");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_OXIDIZED_COPPER_CHAIN = load("minecraft:waxed_oxidized_copper_chain");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_OXIDIZED_COPPER_CHEST = load("minecraft:waxed_oxidized_copper_chest");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_OXIDIZED_COPPER_DOOR = load("minecraft:waxed_oxidized_copper_door");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_OXIDIZED_COPPER_GOLEM_STATUE = load("minecraft:waxed_oxidized_copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_OXIDIZED_COPPER_GRATE = load("minecraft:waxed_oxidized_copper_grate");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_OXIDIZED_COPPER_LANTERN = load("minecraft:waxed_oxidized_copper_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_OXIDIZED_COPPER_TRAPDOOR = load("minecraft:waxed_oxidized_copper_trapdoor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2690,16 +2811,28 @@ public class VeloItemTypes {
     public static final VeloItemType WAXED_OXIDIZED_CUT_COPPER_SLAB = load("minecraft:waxed_oxidized_cut_copper_slab");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WAXED_OXIDIZED_CUT_COPPER_STAIRS = load("minecraft:waxed_oxidized_cut_copper_stairs");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_OXIDIZED_LIGHTNING_ROD = load("minecraft:waxed_oxidized_lightning_rod");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_WEATHERED_CHISELED_COPPER = load("minecraft:waxed_weathered_chiseled_copper");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WAXED_WEATHERED_COPPER = load("minecraft:waxed_weathered_copper");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_WEATHERED_COPPER_BARS = load("minecraft:waxed_weathered_copper_bars");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_WEATHERED_COPPER_BULB = load("minecraft:waxed_weathered_copper_bulb");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_WEATHERED_COPPER_CHAIN = load("minecraft:waxed_weathered_copper_chain");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_WEATHERED_COPPER_CHEST = load("minecraft:waxed_weathered_copper_chest");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_WEATHERED_COPPER_DOOR = load("minecraft:waxed_weathered_copper_door");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_WEATHERED_COPPER_GOLEM_STATUE = load("minecraft:waxed_weathered_copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_WEATHERED_COPPER_GRATE = load("minecraft:waxed_weathered_copper_grate");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_WEATHERED_COPPER_LANTERN = load("minecraft:waxed_weathered_copper_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WAXED_WEATHERED_COPPER_TRAPDOOR = load("minecraft:waxed_weathered_copper_trapdoor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2708,18 +2841,30 @@ public class VeloItemTypes {
     public static final VeloItemType WAXED_WEATHERED_CUT_COPPER_SLAB = load("minecraft:waxed_weathered_cut_copper_slab");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WAXED_WEATHERED_CUT_COPPER_STAIRS = load("minecraft:waxed_weathered_cut_copper_stairs");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WAXED_WEATHERED_LIGHTNING_ROD = load("minecraft:waxed_weathered_lightning_rod");
     @Since(ProtocolVersion.MINECRAFT_1_20)
     public static final VeloItemType WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE = load("minecraft:wayfinder_armor_trim_smithing_template");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WEATHERED_CHISELED_COPPER = load("minecraft:weathered_chiseled_copper");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WEATHERED_COPPER = load("minecraft:weathered_copper");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WEATHERED_COPPER_BARS = load("minecraft:weathered_copper_bars");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WEATHERED_COPPER_BULB = load("minecraft:weathered_copper_bulb");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WEATHERED_COPPER_CHAIN = load("minecraft:weathered_copper_chain");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WEATHERED_COPPER_CHEST = load("minecraft:weathered_copper_chest");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WEATHERED_COPPER_DOOR = load("minecraft:weathered_copper_door");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WEATHERED_COPPER_GOLEM_STATUE = load("minecraft:weathered_copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WEATHERED_COPPER_GRATE = load("minecraft:weathered_copper_grate");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WEATHERED_COPPER_LANTERN = load("minecraft:weathered_copper_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType WEATHERED_COPPER_TRAPDOOR = load("minecraft:weathered_copper_trapdoor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2728,6 +2873,8 @@ public class VeloItemTypes {
     public static final VeloItemType WEATHERED_CUT_COPPER_SLAB = load("minecraft:weathered_cut_copper_slab");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WEATHERED_CUT_COPPER_STAIRS = load("minecraft:weathered_cut_copper_stairs");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloItemType WEATHERED_LIGHTNING_ROD = load("minecraft:weathered_lightning_rod");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WEEPING_VINES = load("minecraft:weeping_vines");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2866,6 +3013,8 @@ public class VeloItemTypes {
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_6), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_7, unused -> new HashMap<>())
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_7), veloItemType);
+        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_9, unused -> new HashMap<>())
+                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_9), veloItemType);
 
         return veloItemType;
     }

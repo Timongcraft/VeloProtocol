@@ -32,6 +32,7 @@ public class UpdateAdvancementsPacket extends AbstractPacket {
                 .stateRegistry(StateRegistry.PLAY)
                 .mapping(0x74, MINECRAFT_1_20_5, encodeOnly)
                 .mapping(0x7B, MINECRAFT_1_21_4, encodeOnly)
+                .mapping(0x80, MINECRAFT_1_21_9, encodeOnly)
                 .register();
     }
 

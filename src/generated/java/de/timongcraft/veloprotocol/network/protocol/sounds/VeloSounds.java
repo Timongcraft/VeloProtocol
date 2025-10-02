@@ -447,10 +447,32 @@ public class VeloSounds {
     public static final String BLOCK_COPPER_BULB_TURN_OFF = "minecraft:block.copper_bulb.turn_off";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String BLOCK_COPPER_BULB_TURN_ON = "minecraft:block.copper_bulb.turn_on";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_CHEST_CLOSE = "minecraft:block.copper_chest.close";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_CHEST_OPEN = "minecraft:block.copper_chest.open";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_CHEST_OXIDIZED_CLOSE = "minecraft:block.copper_chest_oxidized.close";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_CHEST_OXIDIZED_OPEN = "minecraft:block.copper_chest_oxidized.open";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_CHEST_WEATHERED_CLOSE = "minecraft:block.copper_chest_weathered.close";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_CHEST_WEATHERED_OPEN = "minecraft:block.copper_chest_weathered.open";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String BLOCK_COPPER_DOOR_CLOSE = "minecraft:block.copper_door.close";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String BLOCK_COPPER_DOOR_OPEN = "minecraft:block.copper_door.open";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_GOLEM_STATUE_BREAK = "minecraft:block.copper_golem_statue.break";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_GOLEM_STATUE_FALL = "minecraft:block.copper_golem_statue.fall";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_GOLEM_STATUE_HIT = "minecraft:block.copper_golem_statue.hit";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_GOLEM_STATUE_PLACE = "minecraft:block.copper_golem_statue.place";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_COPPER_GOLEM_STATUE_STEP = "minecraft:block.copper_golem_statue.step";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String BLOCK_COPPER_GRATE_BREAK = "minecraft:block.copper_grate.break";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
@@ -1267,6 +1289,28 @@ public class VeloSounds {
     public static final String BLOCK_SCULK_VEIN_PLACE = "minecraft:block.sculk_vein.place";
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final String BLOCK_SCULK_VEIN_STEP = "minecraft:block.sculk_vein.step";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_ACTIVATE = "minecraft:block.shelf.activate";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_BREAK = "minecraft:block.shelf.break";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_DEACTIVATE = "minecraft:block.shelf.deactivate";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_FALL = "minecraft:block.shelf.fall";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_HIT = "minecraft:block.shelf.hit";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_MULTI_SWAP = "minecraft:block.shelf.multi_swap";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_PLACE = "minecraft:block.shelf.place";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_PLACE_ITEM = "minecraft:block.shelf.place_item";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_SINGLE_SWAP = "minecraft:block.shelf.single_swap";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_STEP = "minecraft:block.shelf.step";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String BLOCK_SHELF_TAKE_ITEM = "minecraft:block.shelf.take_item";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_SHROOMLIGHT_BREAK = "minecraft:block.shroomlight.break";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1815,6 +1859,44 @@ public class VeloSounds {
     public static final String ENTITY_COD_FLOP = "minecraft:entity.cod.flop";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_COD_HURT = "minecraft:entity.cod.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_DEATH = "minecraft:entity.copper_golem.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_HURT = "minecraft:entity.copper_golem.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_ITEM_DROP = "minecraft:entity.copper_golem.item_drop";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_ITEM_NO_DROP = "minecraft:entity.copper_golem.item_no_drop";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_NO_ITEM_GET = "minecraft:entity.copper_golem.no_item_get";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_NO_ITEM_NO_GET = "minecraft:entity.copper_golem.no_item_no_get";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_SHEAR = "minecraft:entity.copper_golem.shear";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_SPAWN = "minecraft:entity.copper_golem.spawn";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_SPIN = "minecraft:entity.copper_golem.spin";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_STEP = "minecraft:entity.copper_golem.step";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_BECOME_STATUE = "minecraft:entity.copper_golem_become_statue";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_OXIDIZED_DEATH = "minecraft:entity.copper_golem_oxidized.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_OXIDIZED_HURT = "minecraft:entity.copper_golem_oxidized.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_OXIDIZED_SPIN = "minecraft:entity.copper_golem_oxidized.spin";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_OXIDIZED_STEP = "minecraft:entity.copper_golem_oxidized.step";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_WEATHERED_DEATH = "minecraft:entity.copper_golem_weathered.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_WEATHERED_HURT = "minecraft:entity.copper_golem_weathered.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_WEATHERED_SPIN = "minecraft:entity.copper_golem_weathered.spin";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ENTITY_COPPER_GOLEM_WEATHERED_STEP = "minecraft:entity.copper_golem_weathered.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_COW_AMBIENT = "minecraft:entity.cow.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3155,6 +3237,8 @@ public class VeloSounds {
     public static final String INTENTIONALLY_EMPTY = "minecraft:intentionally_empty";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_ARMOR_EQUIP_CHAIN = "minecraft:item.armor.equip_chain";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String ITEM_ARMOR_EQUIP_COPPER = "minecraft:item.armor.equip_copper";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_ARMOR_EQUIP_DIAMOND = "minecraft:item.armor.equip_diamond";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3485,6 +3569,8 @@ public class VeloSounds {
     public static final String UI_TOAST_IN = "minecraft:ui.toast.in";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String UI_TOAST_OUT = "minecraft:ui.toast.out";
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final String WEATHER_END_FLASH = "minecraft:weather.end_flash";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String WEATHER_RAIN = "minecraft:weather.rain";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)

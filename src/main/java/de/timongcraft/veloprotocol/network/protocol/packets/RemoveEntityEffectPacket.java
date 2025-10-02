@@ -31,6 +31,7 @@ public class RemoveEntityEffectPacket extends AbstractPacket {
                 .mapping(0x43, MINECRAFT_1_20_5, encodeOnly)
                 .mapping(0x48, MINECRAFT_1_21_2, encodeOnly)
                 .mapping(0x47, MINECRAFT_1_21_5, encodeOnly)
+                .mapping(0x4C, MINECRAFT_1_21_9, encodeOnly)
                 .register();
     }
 

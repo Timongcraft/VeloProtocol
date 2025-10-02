@@ -6,7 +6,7 @@
 
     <groupId>de.timongcraft</groupId>
     <artifactId>VeloProtocol</artifactId>
-    <version>1.6.2</version>
+    <version>1.6.3</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -54,6 +54,12 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <relocations>
+                                <relocation>
+                                    <pattern>de.timongcraft.velopacketimpl</pattern>
+                                    <shadedPattern>de.timongcraft.veloprotocol.shaded.velopacketimpl</shadedPattern>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
@@ -125,12 +131,12 @@
         <dependency>
             <groupId>de.timongcraft</groupId>
             <artifactId>VeloPacketImpl</artifactId>
-            <version>3.1.4</version>
+            <version>3.1.5</version>
         </dependency>
         <dependency>
             <groupId>de.timongcraft</groupId>
             <artifactId>VeloPacketImpl</artifactId>
-            <version>3.1.4</version>
+            <version>3.1.5</version>
             <classifier>tests</classifier>
             <scope>test</scope>
         </dependency>

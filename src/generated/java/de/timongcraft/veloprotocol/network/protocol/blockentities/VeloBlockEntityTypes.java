@@ -45,6 +45,8 @@ public class VeloBlockEntityTypes {
     public static final VeloBlockEntityType COMPARATOR = load("minecraft:comparator");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloBlockEntityType CONDUIT = load("minecraft:conduit");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloBlockEntityType COPPER_GOLEM_STATUE = load("minecraft:copper_golem_statue");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloBlockEntityType CRAFTER = load("minecraft:crafter");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
@@ -87,6 +89,8 @@ public class VeloBlockEntityTypes {
     public static final VeloBlockEntityType SCULK_SENSOR = load("minecraft:sculk_sensor");
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final VeloBlockEntityType SCULK_SHRIEKER = load("minecraft:sculk_shrieker");
+    @Since(ProtocolVersion.MINECRAFT_1_21_9)
+    public static final VeloBlockEntityType SHELF = load("minecraft:shelf");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloBlockEntityType SHULKER_BOX = load("minecraft:shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -147,6 +151,8 @@ public class VeloBlockEntityTypes {
                 .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_6), veloBlockEntityType);
         LOADED_VELO_BLOCK_ENTITY_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_7, unused -> new HashMap<>())
                 .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_7), veloBlockEntityType);
+        LOADED_VELO_BLOCK_ENTITY_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_9, unused -> new HashMap<>())
+                .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_9), veloBlockEntityType);
 
         return veloBlockEntityType;
     }
