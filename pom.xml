@@ -6,7 +6,7 @@
 
     <groupId>de.timongcraft</groupId>
     <artifactId>VeloProtocol</artifactId>
-    <version>1.6.3</version>
+    <version>1.6.4</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -53,7 +53,6 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <relocations>
                                 <relocation>
                                     <pattern>de.timongcraft.velopacketimpl</pattern>

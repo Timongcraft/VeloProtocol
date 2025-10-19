@@ -14,9 +14,9 @@ import io.netty.buffer.ByteBuf;
 import net.kyori.adventure.nbt.BinaryTag;
 import net.kyori.adventure.nbt.BinaryTagIO;
 
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import org.jetbrains.annotations.Nullable;
 
 import static com.velocitypowered.api.network.ProtocolVersion.*;
 
