@@ -13,6 +13,8 @@ public class VeloDataComponentTypes {
 
     private static final Map<ProtocolVersion, Map<Integer, VeloDataComponentType>> LOADED_VELO_DATA_COMPONENT_TYPES_CACHE = new HashMap<>();
 
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloDataComponentType ATTACK_RANGE = load("minecraft:attack_range");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType ATTRIBUTE_MODIFIERS = load("minecraft:attribute_modifiers");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
@@ -67,6 +69,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType DAMAGE = load("minecraft:damage");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final VeloDataComponentType DAMAGE_RESISTANT = load("minecraft:damage_resistant");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloDataComponentType DAMAGE_TYPE = load("minecraft:damage_type");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final VeloDataComponentType DEATH_PROTECTION = load("minecraft:death_protection");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -113,6 +117,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType ITEM_NAME = load("minecraft:item_name");
     @Since(ProtocolVersion.MINECRAFT_1_21)
     public static final VeloDataComponentType JUKEBOX_PLAYABLE = load("minecraft:jukebox_playable");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloDataComponentType KINETIC_WEAPON = load("minecraft:kinetic_weapon");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType LLAMA_VARIANT = load("minecraft:llama/variant");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -133,6 +139,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType MAX_DAMAGE = load("minecraft:max_damage");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType MAX_STACK_SIZE = load("minecraft:max_stack_size");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloDataComponentType MINIMUM_ATTACK_CHARGE = load("minecraft:minimum_attack_charge");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType MOOSHROOM_VARIANT = load("minecraft:mooshroom/variant");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -143,6 +151,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType PAINTING_VARIANT = load("minecraft:painting/variant");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType PARROT_VARIANT = load("minecraft:parrot/variant");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloDataComponentType PIERCING_WEAPON = load("minecraft:piercing_weapon");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType PIG_VARIANT = load("minecraft:pig/variant");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -177,6 +187,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType STORED_ENCHANTMENTS = load("minecraft:stored_enchantments");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType SUSPICIOUS_STEW_EFFECTS = load("minecraft:suspicious_stew_effects");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloDataComponentType SWING_ANIMATION = load("minecraft:swing_animation");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType TOOL = load("minecraft:tool");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
@@ -195,6 +207,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType UNBREAKABLE = load("minecraft:unbreakable");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final VeloDataComponentType USE_COOLDOWN = load("minecraft:use_cooldown");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloDataComponentType USE_EFFECTS = load("minecraft:use_effects");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final VeloDataComponentType USE_REMAINDER = load("minecraft:use_remainder");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
@@ -211,6 +225,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType WRITABLE_BOOK_CONTENT = load("minecraft:writable_book_content");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType WRITTEN_BOOK_CONTENT = load("minecraft:written_book_content");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloDataComponentType ZOMBIE_NAUTILUS_VARIANT = load("minecraft:zombie_nautilus/variant");
 
     public static VeloDataComponentType getFromProtocolId(int protocolId, ProtocolVersion version) {
         return LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.get(version).get(protocolId);
@@ -235,6 +251,8 @@ public class VeloDataComponentTypes {
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_7), veloDataComponentType);
         LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_9, unused -> new HashMap<>())
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_9), veloDataComponentType);
+        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_11, unused -> new HashMap<>())
+                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloDataComponentType);
 
         return veloDataComponentType;
     }

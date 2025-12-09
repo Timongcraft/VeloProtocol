@@ -401,6 +401,8 @@ public class VeloItemTypes {
     public static final VeloItemType CALCITE = load("minecraft:calcite");
     @Since(ProtocolVersion.MINECRAFT_1_20)
     public static final VeloItemType CALIBRATED_SCULK_SENSOR = load("minecraft:calibrated_sculk_sensor");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType CAMEL_HUSK_SPAWN_EGG = load("minecraft:camel_husk_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_19_3)
     public static final VeloItemType CAMEL_SPAWN_EGG = load("minecraft:camel_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -619,6 +621,8 @@ public class VeloItemTypes {
     public static final VeloItemType COPPER_LANTERN = load("minecraft:copper_lantern");
     @Since(ProtocolVersion.MINECRAFT_1_21_9)
     public static final VeloItemType COPPER_LEGGINGS = load("minecraft:copper_leggings");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType COPPER_NAUTILUS_ARMOR = load("minecraft:copper_nautilus_armor");
     @Since(ProtocolVersion.MINECRAFT_1_21_9)
     public static final VeloItemType COPPER_NUGGET = load("minecraft:copper_nugget");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -627,6 +631,8 @@ public class VeloItemTypes {
     public static final VeloItemType COPPER_PICKAXE = load("minecraft:copper_pickaxe");
     @Since(ProtocolVersion.MINECRAFT_1_21_9)
     public static final VeloItemType COPPER_SHOVEL = load("minecraft:copper_shovel");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType COPPER_SPEAR = load("minecraft:copper_spear");
     @Since(ProtocolVersion.MINECRAFT_1_21_9)
     public static final VeloItemType COPPER_SWORD = load("minecraft:copper_sword");
     @Since(ProtocolVersion.MINECRAFT_1_21_9)
@@ -883,12 +889,16 @@ public class VeloItemTypes {
     public static final VeloItemType DIAMOND_HORSE_ARMOR = load("minecraft:diamond_horse_armor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DIAMOND_LEGGINGS = load("minecraft:diamond_leggings");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType DIAMOND_NAUTILUS_ARMOR = load("minecraft:diamond_nautilus_armor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DIAMOND_ORE = load("minecraft:diamond_ore");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DIAMOND_PICKAXE = load("minecraft:diamond_pickaxe");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DIAMOND_SHOVEL = load("minecraft:diamond_shovel");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType DIAMOND_SPEAR = load("minecraft:diamond_spear");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DIAMOND_SWORD = load("minecraft:diamond_sword");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1137,10 +1147,14 @@ public class VeloItemTypes {
     public static final VeloItemType GOLDEN_HORSE_ARMOR = load("minecraft:golden_horse_armor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GOLDEN_LEGGINGS = load("minecraft:golden_leggings");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType GOLDEN_NAUTILUS_ARMOR = load("minecraft:golden_nautilus_armor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GOLDEN_PICKAXE = load("minecraft:golden_pickaxe");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GOLDEN_SHOVEL = load("minecraft:golden_shovel");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType GOLDEN_SPEAR = load("minecraft:golden_spear");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GOLDEN_SWORD = load("minecraft:golden_sword");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1313,6 +1327,8 @@ public class VeloItemTypes {
     public static final VeloItemType IRON_INGOT = load("minecraft:iron_ingot");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType IRON_LEGGINGS = load("minecraft:iron_leggings");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType IRON_NAUTILUS_ARMOR = load("minecraft:iron_nautilus_armor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType IRON_NUGGET = load("minecraft:iron_nugget");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1321,6 +1337,8 @@ public class VeloItemTypes {
     public static final VeloItemType IRON_PICKAXE = load("minecraft:iron_pickaxe");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType IRON_SHOVEL = load("minecraft:iron_shovel");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType IRON_SPEAR = load("minecraft:iron_spear");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType IRON_SWORD = load("minecraft:iron_sword");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1705,6 +1723,8 @@ public class VeloItemTypes {
     public static final VeloItemType NAME_TAG = load("minecraft:name_tag");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NAUTILUS_SHELL = load("minecraft:nautilus_shell");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType NAUTILUS_SPAWN_EGG = load("minecraft:nautilus_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NETHER_BRICK = load("minecraft:nether_brick");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1741,16 +1761,22 @@ public class VeloItemTypes {
     public static final VeloItemType NETHERITE_HELMET = load("minecraft:netherite_helmet");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NETHERITE_HOE = load("minecraft:netherite_hoe");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType NETHERITE_HORSE_ARMOR = load("minecraft:netherite_horse_armor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NETHERITE_INGOT = load("minecraft:netherite_ingot");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NETHERITE_LEGGINGS = load("minecraft:netherite_leggings");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType NETHERITE_NAUTILUS_ARMOR = load("minecraft:netherite_nautilus_armor");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NETHERITE_PICKAXE = load("minecraft:netherite_pickaxe");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NETHERITE_SCRAP = load("minecraft:netherite_scrap");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NETHERITE_SHOVEL = load("minecraft:netherite_shovel");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType NETHERITE_SPEAR = load("minecraft:netherite_spear");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType NETHERITE_SWORD = load("minecraft:netherite_sword");
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
@@ -1925,6 +1951,8 @@ public class VeloItemTypes {
     public static final VeloItemType PANDA_SPAWN_EGG = load("minecraft:panda_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PAPER = load("minecraft:paper");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType PARCHED_SPAWN_EGG = load("minecraft:parched_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PARROT_SPAWN_EGG = load("minecraft:parrot_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_19)
@@ -2503,6 +2531,8 @@ public class VeloItemTypes {
     public static final VeloItemType STONE_SHOVEL = load("minecraft:stone_shovel");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType STONE_SLAB = load("minecraft:stone_slab");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType STONE_SPEAR = load("minecraft:stone_spear");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType STONE_STAIRS = load("minecraft:stone_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2943,6 +2973,8 @@ public class VeloItemTypes {
     public static final VeloItemType WOODEN_PICKAXE = load("minecraft:wooden_pickaxe");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WOODEN_SHOVEL = load("minecraft:wooden_shovel");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType WOODEN_SPEAR = load("minecraft:wooden_spear");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WOODEN_SWORD = load("minecraft:wooden_sword");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2985,6 +3017,8 @@ public class VeloItemTypes {
     public static final VeloItemType ZOMBIE_HEAD = load("minecraft:zombie_head");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ZOMBIE_HORSE_SPAWN_EGG = load("minecraft:zombie_horse_spawn_egg");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloItemType ZOMBIE_NAUTILUS_SPAWN_EGG = load("minecraft:zombie_nautilus_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ZOMBIE_SPAWN_EGG = load("minecraft:zombie_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3015,6 +3049,8 @@ public class VeloItemTypes {
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_7), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_9, unused -> new HashMap<>())
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_9), veloItemType);
+        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_11, unused -> new HashMap<>())
+                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloItemType);
 
         return veloItemType;
     }

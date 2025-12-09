@@ -1729,6 +1729,22 @@ public class VeloSounds {
     public static final String ENTITY_AXOLOTL_SPLASH = "minecraft:entity.axolotl.splash";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_AXOLOTL_SWIM = "minecraft:entity.axolotl.swim";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_BABY_NAUTILUS_AMBIENT = "minecraft:entity.baby_nautilus.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_BABY_NAUTILUS_AMBIENT_LAND = "minecraft:entity.baby_nautilus.ambient_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_BABY_NAUTILUS_DEATH = "minecraft:entity.baby_nautilus.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_BABY_NAUTILUS_DEATH_LAND = "minecraft:entity.baby_nautilus.death_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_BABY_NAUTILUS_EAT = "minecraft:entity.baby_nautilus.eat";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_BABY_NAUTILUS_HURT = "minecraft:entity.baby_nautilus.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_BABY_NAUTILUS_HURT_LAND = "minecraft:entity.baby_nautilus.hurt_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_BABY_NAUTILUS_SWIM = "minecraft:entity.baby_nautilus.swim";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_BAT_AMBIENT = "minecraft:entity.bat.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1823,6 +1839,28 @@ public class VeloSounds {
     public static final String ENTITY_CAMEL_STEP = "minecraft:entity.camel.step";
     @Since(ProtocolVersion.MINECRAFT_1_19_3)
     public static final String ENTITY_CAMEL_STEP_SAND = "minecraft:entity.camel.step_sand";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_AMBIENT = "minecraft:entity.camel_husk.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_DASH = "minecraft:entity.camel_husk.dash";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_DASH_READY = "minecraft:entity.camel_husk.dash_ready";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_DEATH = "minecraft:entity.camel_husk.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_EAT = "minecraft:entity.camel_husk.eat";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_HURT = "minecraft:entity.camel_husk.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_SADDLE = "minecraft:entity.camel_husk.saddle";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_SIT = "minecraft:entity.camel_husk.sit";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_STAND = "minecraft:entity.camel_husk.stand";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_STEP = "minecraft:entity.camel_husk.step";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_CAMEL_HUSK_STEP_SAND = "minecraft:entity.camel_husk.step_sand";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_CAT_AMBIENT = "minecraft:entity.cat.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2437,6 +2475,32 @@ public class VeloSounds {
     public static final String ENTITY_MULE_HURT = "minecraft:entity.mule.hurt";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final String ENTITY_MULE_JUMP = "minecraft:entity.mule.jump";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_AMBIENT = "minecraft:entity.nautilus.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_AMBIENT_LAND = "minecraft:entity.nautilus.ambient_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_DASH = "minecraft:entity.nautilus.dash";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_DASH_LAND = "minecraft:entity.nautilus.dash_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_DASH_READY = "minecraft:entity.nautilus.dash_ready";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_DASH_READY_LAND = "minecraft:entity.nautilus.dash_ready_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_DEATH = "minecraft:entity.nautilus.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_DEATH_LAND = "minecraft:entity.nautilus.death_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_EAT = "minecraft:entity.nautilus.eat";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_HURT = "minecraft:entity.nautilus.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_HURT_LAND = "minecraft:entity.nautilus.hurt_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_RIDING = "minecraft:entity.nautilus.riding";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_NAUTILUS_SWIM = "minecraft:entity.nautilus.swim";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_OCELOT_AMBIENT = "minecraft:entity.ocelot.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2469,6 +2533,14 @@ public class VeloSounds {
     public static final String ENTITY_PANDA_STEP = "minecraft:entity.panda.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PANDA_WORRIED_AMBIENT = "minecraft:entity.panda.worried_ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_PARCHED_AMBIENT = "minecraft:entity.parched.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_PARCHED_DEATH = "minecraft:entity.parched.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_PARCHED_HURT = "minecraft:entity.parched.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_PARCHED_STEP = "minecraft:entity.parched.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PARROT_AMBIENT = "minecraft:entity.parrot.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2485,6 +2557,8 @@ public class VeloSounds {
     public static final String ENTITY_PARROT_IMITATE_BOGGED = "minecraft:entity.parrot.imitate.bogged";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String ENTITY_PARROT_IMITATE_BREEZE = "minecraft:entity.parrot.imitate.breeze";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_PARROT_IMITATE_CAMEL_HUSK = "minecraft:entity.parrot.imitate.camel_husk";
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final String ENTITY_PARROT_IMITATE_CREAKING = "minecraft:entity.parrot.imitate.creaking";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2511,6 +2585,8 @@ public class VeloSounds {
     public static final String ENTITY_PARROT_IMITATE_ILLUSIONER = "minecraft:entity.parrot.imitate.illusioner";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PARROT_IMITATE_MAGMA_CUBE = "minecraft:entity.parrot.imitate.magma_cube";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_PARROT_IMITATE_PARCHED = "minecraft:entity.parrot.imitate.parched";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PARROT_IMITATE_PHANTOM = "minecraft:entity.parrot.imitate.phantom";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2549,6 +2625,10 @@ public class VeloSounds {
     public static final String ENTITY_PARROT_IMITATE_ZOGLIN = "minecraft:entity.parrot.imitate.zoglin";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PARROT_IMITATE_ZOMBIE = "minecraft:entity.parrot.imitate.zombie";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_PARROT_IMITATE_ZOMBIE_HORSE = "minecraft:entity.parrot.imitate.zombie_horse";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_PARROT_IMITATE_ZOMBIE_NAUTILUS = "minecraft:entity.parrot.imitate.zombie_nautilus";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PARROT_IMITATE_ZOMBIE_VILLAGER = "minecraft:entity.parrot.imitate.zombie_villager";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3201,10 +3281,38 @@ public class VeloSounds {
     public static final String ENTITY_ZOMBIE_STEP = "minecraft:entity.zombie.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_ZOMBIE_HORSE_AMBIENT = "minecraft:entity.zombie_horse.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_HORSE_ANGRY = "minecraft:entity.zombie_horse.angry";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_ZOMBIE_HORSE_DEATH = "minecraft:entity.zombie_horse.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_HORSE_EAT = "minecraft:entity.zombie_horse.eat";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_ZOMBIE_HORSE_HURT = "minecraft:entity.zombie_horse.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_AMBIENT = "minecraft:entity.zombie_nautilus.ambient";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_AMBIENT_LAND = "minecraft:entity.zombie_nautilus.ambient_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_DASH = "minecraft:entity.zombie_nautilus.dash";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_DASH_LAND = "minecraft:entity.zombie_nautilus.dash_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_DASH_READY = "minecraft:entity.zombie_nautilus.dash_ready";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_DASH_READY_LAND = "minecraft:entity.zombie_nautilus.dash_ready_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_DEATH = "minecraft:entity.zombie_nautilus.death";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_DEATH_LAND = "minecraft:entity.zombie_nautilus.death_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_EAT = "minecraft:entity.zombie_nautilus.eat";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_HURT = "minecraft:entity.zombie_nautilus.hurt";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_HURT_LAND = "minecraft:entity.zombie_nautilus.hurt_land";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ENTITY_ZOMBIE_NAUTILUS_SWIM = "minecraft:entity.zombie_nautilus.swim";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_ZOMBIE_VILLAGER_AMBIENT = "minecraft:entity.zombie_villager.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3251,12 +3359,16 @@ public class VeloSounds {
     public static final String ITEM_ARMOR_EQUIP_IRON = "minecraft:item.armor.equip_iron";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_ARMOR_EQUIP_LEATHER = "minecraft:item.armor.equip_leather";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_ARMOR_EQUIP_NAUTILUS = "minecraft:item.armor.equip_nautilus";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_ARMOR_EQUIP_NETHERITE = "minecraft:item.armor.equip_netherite";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_ARMOR_EQUIP_TURTLE = "minecraft:item.armor.equip_turtle";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final String ITEM_ARMOR_EQUIP_WOLF = "minecraft:item.armor.equip_wolf";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_ARMOR_UNEQUIP_NAUTILUS = "minecraft:item.armor.unequip_nautilus";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final String ITEM_ARMOR_UNEQUIP_WOLF = "minecraft:item.armor.unequip_wolf";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3397,6 +3509,10 @@ public class VeloSounds {
     public static final String ITEM_MACE_SMASH_GROUND = "minecraft:item.mace.smash_ground";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final String ITEM_MACE_SMASH_GROUND_HEAVY = "minecraft:item.mace.smash_ground_heavy";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_NAUTILUS_SADDLE_EQUIP = "minecraft:item.nautilus_saddle_equip";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_NAUTILUS_SADDLE_UNDERWATER_EQUIP = "minecraft:item.nautilus_saddle_underwater_equip";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_NETHER_WART_PLANT = "minecraft:item.nether_wart.plant";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -3411,6 +3527,24 @@ public class VeloSounds {
     public static final String ITEM_SHIELD_BREAK = "minecraft:item.shield.break";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_SHOVEL_FLATTEN = "minecraft:item.shovel.flatten";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_ATTACK = "minecraft:item.spear.attack";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_HIT = "minecraft:item.spear.hit";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_LUNGE_1 = "minecraft:item.spear.lunge_1";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_LUNGE_2 = "minecraft:item.spear.lunge_2";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_LUNGE_3 = "minecraft:item.spear.lunge_3";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_USE = "minecraft:item.spear.use";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_WOOD_ATTACK = "minecraft:item.spear_wood.attack";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_WOOD_HIT = "minecraft:item.spear_wood.hit";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String ITEM_SPEAR_WOOD_USE = "minecraft:item.spear_wood.use";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_SPYGLASS_STOP_USING = "minecraft:item.spyglass.stop_using";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)

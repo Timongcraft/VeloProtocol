@@ -23,7 +23,8 @@ public class VeloEntityEffect {
             ProtocolVersion.MINECRAFT_1_21_5,
             ProtocolVersion.MINECRAFT_1_21_6,
             ProtocolVersion.MINECRAFT_1_21_7,
-            ProtocolVersion.MINECRAFT_1_21_9
+            ProtocolVersion.MINECRAFT_1_21_9,
+            ProtocolVersion.MINECRAFT_1_21_11
     };
 
     private final String name;

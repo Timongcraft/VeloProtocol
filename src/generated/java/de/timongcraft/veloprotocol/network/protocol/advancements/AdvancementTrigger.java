@@ -99,6 +99,8 @@ public class AdvancementTrigger {
     public static final String SLEPT_IN_BED = "minecraft:slept_in_bed";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String SLIDE_DOWN_BLOCK = "minecraft:slide_down_block";
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final String SPEAR_MOBS = "minecraft:spear_mobs";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String STARTED_RIDING = "minecraft:started_riding";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)

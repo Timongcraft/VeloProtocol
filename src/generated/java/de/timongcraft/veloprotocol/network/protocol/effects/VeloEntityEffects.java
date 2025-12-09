@@ -18,6 +18,8 @@ public class VeloEntityEffects {
     public static final VeloEntityEffect BAD_OMEN = load("minecraft:bad_omen");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloEntityEffect BLINDNESS = load("minecraft:blindness");
+    @Since(ProtocolVersion.MINECRAFT_1_21_11)
+    public static final VeloEntityEffect BREATH_OF_THE_NAUTILUS = load("minecraft:breath_of_the_nautilus");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloEntityEffect CONDUIT_POWER = load("minecraft:conduit_power");
     @Since(ProtocolVersion.MINECRAFT_1_19)
@@ -130,6 +132,8 @@ public class VeloEntityEffects {
                 .put(veloEntityEffect.getProtocolId(ProtocolVersion.MINECRAFT_1_21_7), veloEntityEffect);
         LOADED_VELO_ENTITY_EFFECTS_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_9, unused -> new HashMap<>())
                 .put(veloEntityEffect.getProtocolId(ProtocolVersion.MINECRAFT_1_21_9), veloEntityEffect);
+        LOADED_VELO_ENTITY_EFFECTS_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_11, unused -> new HashMap<>())
+                .put(veloEntityEffect.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloEntityEffect);
 
         return veloEntityEffect;
     }
