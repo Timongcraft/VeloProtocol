@@ -107,6 +107,8 @@ public class VeloContainerTypes {
                 .put(veloContainerType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_9), veloContainerType);
         LOADED_VELO_CONTAINER_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_11, unused -> new HashMap<>())
                 .put(veloContainerType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloContainerType);
+        LOADED_VELO_CONTAINER_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_1, unused -> new HashMap<>())
+                .put(veloContainerType.getProtocolId(ProtocolVersion.MINECRAFT_26_1), veloContainerType);
 
         return veloContainerType;
     }

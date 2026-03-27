@@ -56,22 +56,6 @@ public class PlayerHeadData implements ComponentData {
     private final PlayerHeadData.Data data;
     private final SkinTexturesOverride texturesOverride;
 
-    /**
-     * @see #ofPlayer(Player)
-     */
-    @Deprecated(since = "1.6.4", forRemoval = true)
-    public PlayerHeadData(Player player) {
-        this(player.getGameProfile());
-    }
-
-    /**
-     * @see #ofProfile(GameProfile)
-     */
-    @Deprecated(since = "1.6.4", forRemoval = true)
-    public PlayerHeadData(GameProfile gameProfile) {
-        this(Data.fromProfile(gameProfile), SkinTexturesOverride.EMPTY);
-    }
-
     private PlayerHeadData(PlayerHeadData.Data data, SkinTexturesOverride texturesOverride) {
         this.data = data;
         this.texturesOverride = texturesOverride;
@@ -108,27 +92,6 @@ public class PlayerHeadData implements ComponentData {
 
     public SkinTexturesOverride getTexturesOverride() {
         return texturesOverride;
-    }
-
-    /**
-     * @see #getData()
-     * @see Data#toProfile()
-     */
-    @Deprecated(since = "1.6.4", forRemoval = true)
-    public GameProfile getGameProfile() {
-        return data.toProfile();
-    }
-
-    /**
-     * @see #getData()
-     */
-    @Deprecated(since = "1.6.4", forRemoval = true)
-    public PlayerHeadData setGameProfile(GameProfile gameProfile) {
-        data.setName(gameProfile.getName());
-        data.setUuid(gameProfile.getId());
-        data.getProperties().clear();
-        data.getProperties().addAll(gameProfile.getProperties());
-        return this;
     }
 
     @Override

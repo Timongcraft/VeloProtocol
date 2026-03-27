@@ -65,7 +65,7 @@ public class ContainerSetSlotPacket extends AbstractPacket {
         }
         ProtocolUtils.writeVarInt(buf, stateId);
         buf.writeShort(slotId);
-        stack.writeOpt(buf, version);
+        stack.writeOpt(buf, version, false);
     }
 
     public int getWindowId() {

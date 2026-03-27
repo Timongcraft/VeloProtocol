@@ -1139,6 +1139,8 @@ public class VeloItemTypes {
     public static final VeloItemType GOLDEN_CARROT = load("minecraft:golden_carrot");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GOLDEN_CHESTPLATE = load("minecraft:golden_chestplate");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType GOLDEN_DANDELION = load("minecraft:golden_dandelion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GOLDEN_HELMET = load("minecraft:golden_helmet");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3051,6 +3053,8 @@ public class VeloItemTypes {
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_9), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_11, unused -> new HashMap<>())
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloItemType);
+        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_1, unused -> new HashMap<>())
+                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_26_1), veloItemType);
 
         return veloItemType;
     }

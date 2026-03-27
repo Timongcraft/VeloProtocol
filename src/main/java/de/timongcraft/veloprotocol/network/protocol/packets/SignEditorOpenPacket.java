@@ -32,6 +32,7 @@ public class SignEditorOpenPacket extends AbstractPacket {
                 .mapping(0x36, MINECRAFT_1_21_2, encodeOnly)
                 .mapping(0x35, MINECRAFT_1_21_5, encodeOnly)
                 .mapping(0x3A, MINECRAFT_1_21_9, encodeOnly)
+                .mapping(0x3C, MINECRAFT_26_1, encodeOnly)
                 .register();
     }
 

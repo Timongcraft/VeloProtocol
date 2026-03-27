@@ -41,6 +41,7 @@ public class EntityEffectPacket extends AbstractPacket {
                 .mapping(0x76, MINECRAFT_1_20_5, encodeOnly)
                 .mapping(0x7D, MINECRAFT_1_21_2, encodeOnly)
                 .mapping(0x82, MINECRAFT_1_21_9, encodeOnly)
+                .mapping(0x84, MINECRAFT_26_1, encodeOnly)
                 .register();
     }
 

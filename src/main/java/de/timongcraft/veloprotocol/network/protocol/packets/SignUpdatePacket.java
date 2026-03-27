@@ -34,6 +34,7 @@ public class SignUpdatePacket extends AbstractPacket {
                 .mapping(0x39, MINECRAFT_1_21_4, encodeOnly)
                 .mapping(0x3A, MINECRAFT_1_21_5, encodeOnly)
                 .mapping(0x3B, MINECRAFT_1_21_6, encodeOnly)
+                .mapping(0x3D, MINECRAFT_26_1, encodeOnly)
                 .register();
     }
 

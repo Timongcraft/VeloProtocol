@@ -27,6 +27,7 @@ public class PlayerLoadedWorldPacket extends AbstractPacket {
                 .stateRegistry(StateRegistry.PLAY)
                 .mapping(0x2A, MINECRAFT_1_21_4, encodeOnly)
                 .mapping(0x2B, MINECRAFT_1_21_6, encodeOnly)
+                .mapping(0x2C, MINECRAFT_26_1, encodeOnly)
                 .register();
     }
 

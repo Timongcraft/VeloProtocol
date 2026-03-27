@@ -33,6 +33,7 @@ public class SelectAdvancementsTabPacket extends AbstractPacket {
                 .mapping(0x4F, MINECRAFT_1_21_2, encodeOnly)
                 .mapping(0x4E, MINECRAFT_1_21_5, encodeOnly)
                 .mapping(0x53, MINECRAFT_1_21_9, encodeOnly)
+                .mapping(0x55, MINECRAFT_26_1, encodeOnly)
                 .register();
     }
 

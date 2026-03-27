@@ -1059,6 +1059,14 @@ public class VeloSounds {
     public static final String BLOCK_NOTE_BLOCK_PLING = "minecraft:block.note_block.pling";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_NOTE_BLOCK_SNARE = "minecraft:block.note_block.snare";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_NOTE_BLOCK_TRUMPET = "minecraft:block.note_block.trumpet";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_NOTE_BLOCK_TRUMPET_EXPOSED = "minecraft:block.note_block.trumpet_exposed";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_NOTE_BLOCK_TRUMPET_OXIDIZED = "minecraft:block.note_block.trumpet_oxidized";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_NOTE_BLOCK_TRUMPET_WEATHERED = "minecraft:block.note_block.trumpet_weathered";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_NOTE_BLOCK_XYLOPHONE = "minecraft:block.note_block.xylophone";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1729,6 +1737,48 @@ public class VeloSounds {
     public static final String ENTITY_AXOLOTL_SPLASH = "minecraft:entity.axolotl.splash";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_AXOLOTL_SWIM = "minecraft:entity.axolotl.swim";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_AMBIENT = "minecraft:entity.baby_cat.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_BEG_FOR_FOOD = "minecraft:entity.baby_cat.beg_for_food";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_DEATH = "minecraft:entity.baby_cat.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_EAT = "minecraft:entity.baby_cat.eat";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_HISS = "minecraft:entity.baby_cat.hiss";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_HURT = "minecraft:entity.baby_cat.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_PURR = "minecraft:entity.baby_cat.purr";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_PURREOW = "minecraft:entity.baby_cat.purreow";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CAT_STRAY_AMBIENT = "minecraft:entity.baby_cat.stray_ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CHICKEN_AMBIENT = "minecraft:entity.baby_chicken.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CHICKEN_DEATH = "minecraft:entity.baby_chicken.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CHICKEN_HURT = "minecraft:entity.baby_chicken.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_CHICKEN_STEP = "minecraft:entity.baby_chicken.step";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_HORSE_AMBIENT = "minecraft:entity.baby_horse.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_HORSE_ANGRY = "minecraft:entity.baby_horse.angry";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_HORSE_BREATHE = "minecraft:entity.baby_horse.breathe";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_HORSE_DEATH = "minecraft:entity.baby_horse.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_HORSE_EAT = "minecraft:entity.baby_horse.eat";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_HORSE_HURT = "minecraft:entity.baby_horse.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_HORSE_LAND = "minecraft:entity.baby_horse.land";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_HORSE_STEP = "minecraft:entity.baby_horse.step";
     @Since(ProtocolVersion.MINECRAFT_1_21_11)
     public static final String ENTITY_BABY_NAUTILUS_AMBIENT = "minecraft:entity.baby_nautilus.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_21_11)
@@ -1745,6 +1795,30 @@ public class VeloSounds {
     public static final String ENTITY_BABY_NAUTILUS_HURT_LAND = "minecraft:entity.baby_nautilus.hurt_land";
     @Since(ProtocolVersion.MINECRAFT_1_21_11)
     public static final String ENTITY_BABY_NAUTILUS_SWIM = "minecraft:entity.baby_nautilus.swim";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_PIG_AMBIENT = "minecraft:entity.baby_pig.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_PIG_DEATH = "minecraft:entity.baby_pig.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_PIG_EAT = "minecraft:entity.baby_pig.eat";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_PIG_HURT = "minecraft:entity.baby_pig.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_PIG_STEP = "minecraft:entity.baby_pig.step";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_WOLF_AMBIENT = "minecraft:entity.baby_wolf.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_WOLF_DEATH = "minecraft:entity.baby_wolf.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_WOLF_GROWL = "minecraft:entity.baby_wolf.growl";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_WOLF_HURT = "minecraft:entity.baby_wolf.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_WOLF_PANT = "minecraft:entity.baby_wolf.pant";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_WOLF_STEP = "minecraft:entity.baby_wolf.step";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_BABY_WOLF_WHINE = "minecraft:entity.baby_wolf.whine";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_BAT_AMBIENT = "minecraft:entity.bat.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1879,6 +1953,24 @@ public class VeloSounds {
     public static final String ENTITY_CAT_PURREOW = "minecraft:entity.cat.purreow";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_CAT_STRAY_AMBIENT = "minecraft:entity.cat.stray_ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_AMBIENT = "minecraft:entity.cat_royal.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_BEG_FOR_FOOD = "minecraft:entity.cat_royal.beg_for_food";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_DEATH = "minecraft:entity.cat_royal.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_EAT = "minecraft:entity.cat_royal.eat";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_HISS = "minecraft:entity.cat_royal.hiss";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_HURT = "minecraft:entity.cat_royal.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_PURR = "minecraft:entity.cat_royal.purr";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_PURREOW = "minecraft:entity.cat_royal.purreow";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CAT_ROYAL_STRAY_AMBIENT = "minecraft:entity.cat_royal.stray_ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_CHICKEN_AMBIENT = "minecraft:entity.chicken.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1889,6 +1981,12 @@ public class VeloSounds {
     public static final String ENTITY_CHICKEN_HURT = "minecraft:entity.chicken.hurt";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_CHICKEN_STEP = "minecraft:entity.chicken.step";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CHICKEN_PICKY_AMBIENT = "minecraft:entity.chicken_picky.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CHICKEN_PICKY_DEATH = "minecraft:entity.chicken_picky.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_CHICKEN_PICKY_HURT = "minecraft:entity.chicken_picky.hurt";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_COD_AMBIENT = "minecraft:entity.cod.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1945,6 +2043,14 @@ public class VeloSounds {
     public static final String ENTITY_COW_MILK = "minecraft:entity.cow.milk";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_COW_STEP = "minecraft:entity.cow.step";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_COW_MOODY_AMBIENT = "minecraft:entity.cow_moody.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_COW_MOODY_DEATH = "minecraft:entity.cow_moody.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_COW_MOODY_HURT = "minecraft:entity.cow_moody.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_COW_MOODY_STEP = "minecraft:entity.cow_moody.step";
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final String ENTITY_CREAKING_ACTIVATE = "minecraft:entity.creaking.activate";
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
@@ -2649,12 +2755,30 @@ public class VeloSounds {
     public static final String ENTITY_PIG_AMBIENT = "minecraft:entity.pig.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PIG_DEATH = "minecraft:entity.pig.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_EAT = "minecraft:entity.pig.eat";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PIG_HURT = "minecraft:entity.pig.hurt";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PIG_SADDLE = "minecraft:entity.pig.saddle";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PIG_STEP = "minecraft:entity.pig.step";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_BIG_AMBIENT = "minecraft:entity.pig_big.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_BIG_DEATH = "minecraft:entity.pig_big.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_BIG_EAT = "minecraft:entity.pig_big.eat";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_BIG_HURT = "minecraft:entity.pig_big.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_MINI_AMBIENT = "minecraft:entity.pig_mini.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_MINI_DEATH = "minecraft:entity.pig_mini.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_MINI_EAT = "minecraft:entity.pig_mini.eat";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_PIG_MINI_HURT = "minecraft:entity.pig_mini.hurt";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_PIGLIN_ADMIRING_ITEM = "minecraft:entity.piglin.admiring_item";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3483,6 +3607,10 @@ public class VeloSounds {
     public static final String ITEM_GOAT_HORN_SOUND_6 = "minecraft:item.goat_horn.sound.6";
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final String ITEM_GOAT_HORN_SOUND_7 = "minecraft:item.goat_horn.sound.7";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ITEM_GOLDEN_DANDELION_UNUSE = "minecraft:item.golden_dandelion.unuse";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ITEM_GOLDEN_DANDELION_USE = "minecraft:item.golden_dandelion.use";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_HOE_TILL = "minecraft:item.hoe.till";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)

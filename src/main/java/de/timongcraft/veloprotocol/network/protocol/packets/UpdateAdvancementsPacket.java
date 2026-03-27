@@ -33,6 +33,7 @@ public class UpdateAdvancementsPacket extends AbstractPacket {
                 .mapping(0x74, MINECRAFT_1_20_5, encodeOnly)
                 .mapping(0x7B, MINECRAFT_1_21_4, encodeOnly)
                 .mapping(0x80, MINECRAFT_1_21_9, encodeOnly)
+                .mapping(0x82, MINECRAFT_26_1, encodeOnly)
                 .register();
     }
 

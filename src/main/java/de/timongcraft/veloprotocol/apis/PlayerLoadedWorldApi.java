@@ -17,7 +17,8 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 @SuppressWarnings("removal")
-@Deprecated(since = "1.3.3", forRemoval = true) // will be removed when the pull request is merged - https://github.com/PaperMC/Velocity/pull/1541
+@Deprecated(since = "1.3.3", forRemoval = true)
+// will be removed when the pull request is merged - https://github.com/PaperMC/Velocity/pull/1541
 @Beta
 public class PlayerLoadedWorldApi {
 
@@ -51,7 +52,8 @@ public class PlayerLoadedWorldApi {
 
         proxyServer.getScheduler().buildTask(pluginMainClass, () -> {
             loadingPlayers.remove(event.getPlayer().getUniqueId());
-            if (!event.getPlayer().isActive()) return;
+            if (!event.getPlayer().isActive()
+                    || !loadingPlayers.contains(event.getPlayer().getUniqueId())) return;
             proxyServer.getEventManager().fireAndForget(new PlayerClientLoadedWorldEvent(event.getPlayer(), true));
         }).delay(timeout).schedule();
     }
@@ -59,6 +61,7 @@ public class PlayerLoadedWorldApi {
     @Subscribe
     public void onClientLoadedWorldPacket(PacketReceiveEvent event) {
         if (!(event.getPacket() instanceof PlayerLoadedWorldPacket)) return;
+        if (!loadingPlayers.contains(event.getPlayer().getUniqueId())) return;
         loadingPlayers.remove(event.getPlayer().getUniqueId());
         proxyServer.getEventManager().fireAndForget(new PlayerClientLoadedWorldEvent(event.getPlayer(), false));
     }

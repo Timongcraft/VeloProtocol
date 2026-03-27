@@ -168,7 +168,7 @@ public class ProtocolAdvancementDisplay {
     public void write(ByteBuf buf, ProtocolVersion version) {
         ExProtocolUtils.writeInternalComponent(buf, version, title);
         ExProtocolUtils.writeInternalComponent(buf, version, description);
-        icon.write(buf, version);
+        icon.write(buf, version, version.noLessThan(MINECRAFT_26_1));
         ExProtocolUtils.writeEnumOrdinal(buf, frameType);
 
         int i = 0;

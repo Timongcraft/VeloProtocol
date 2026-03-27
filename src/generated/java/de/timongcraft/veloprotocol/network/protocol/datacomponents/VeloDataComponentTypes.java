@@ -13,6 +13,8 @@ public class VeloDataComponentTypes {
 
     private static final Map<ProtocolVersion, Map<Integer, VeloDataComponentType>> LOADED_VELO_DATA_COMPONENT_TYPES_CACHE = new HashMap<>();
 
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloDataComponentType ADDITIONAL_TRADE_COST = load("minecraft:additional_trade_cost");
     @Since(ProtocolVersion.MINECRAFT_1_21_11)
     public static final VeloDataComponentType ATTACK_RANGE = load("minecraft:attack_range");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -43,10 +45,14 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType CAN_PLACE_ON = load("minecraft:can_place_on");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType CAT_COLLAR = load("minecraft:cat/collar");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloDataComponentType CAT_SOUND_VARIANT = load("minecraft:cat/sound_variant");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType CAT_VARIANT = load("minecraft:cat/variant");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType CHARGED_PROJECTILES = load("minecraft:charged_projectiles");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloDataComponentType CHICKEN_SOUND_VARIANT = load("minecraft:chicken/sound_variant");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType CHICKEN_VARIANT = load("minecraft:chicken/variant");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
@@ -55,6 +61,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType CONTAINER = load("minecraft:container");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType CONTAINER_LOOT = load("minecraft:container_loot");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloDataComponentType COW_SOUND_VARIANT = load("minecraft:cow/sound_variant");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType COW_VARIANT = load("minecraft:cow/variant");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -75,6 +83,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType DEATH_PROTECTION = load("minecraft:death_protection");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType DEBUG_STICK_STATE = load("minecraft:debug_stick_state");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloDataComponentType DYE = load("minecraft:dye");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType DYED_COLOR = load("minecraft:dyed_color");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
@@ -153,6 +163,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType PARROT_VARIANT = load("minecraft:parrot/variant");
     @Since(ProtocolVersion.MINECRAFT_1_21_11)
     public static final VeloDataComponentType PIERCING_WEAPON = load("minecraft:piercing_weapon");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloDataComponentType PIG_SOUND_VARIANT = load("minecraft:pig/sound_variant");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloDataComponentType PIG_VARIANT = load("minecraft:pig/variant");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -253,6 +265,8 @@ public class VeloDataComponentTypes {
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_9), veloDataComponentType);
         LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_1_21_11, unused -> new HashMap<>())
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloDataComponentType);
+        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_1, unused -> new HashMap<>())
+                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_26_1), veloDataComponentType);
 
         return veloDataComponentType;
     }
