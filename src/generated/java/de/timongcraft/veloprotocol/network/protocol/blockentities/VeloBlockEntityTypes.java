@@ -19,7 +19,7 @@ public class VeloBlockEntityTypes {
     public static final VeloBlockEntityType BARREL = load("minecraft:barrel");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloBlockEntityType BEACON = load("minecraft:beacon");
-    @Since(ProtocolVersion.MINECRAFT_1_18_2)
+    @Since(ProtocolVersion.MINECRAFT_1_18_2) @Until(ProtocolVersion.MINECRAFT_1_21_11)
     public static final VeloBlockEntityType BED = load("minecraft:bed");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloBlockEntityType BEEHIVE = load("minecraft:beehive");
@@ -83,6 +83,8 @@ public class VeloBlockEntityTypes {
     public static final VeloBlockEntityType MOB_SPAWNER = load("minecraft:mob_spawner");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloBlockEntityType PISTON = load("minecraft:piston");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloBlockEntityType POTENT_SULFUR = load("minecraft:potent_sulfur");
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final VeloBlockEntityType SCULK_CATALYST = load("minecraft:sculk_catalyst");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -157,6 +159,8 @@ public class VeloBlockEntityTypes {
                 .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloBlockEntityType);
         LOADED_VELO_BLOCK_ENTITY_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_1, unused -> new HashMap<>())
                 .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_26_1), veloBlockEntityType);
+        LOADED_VELO_BLOCK_ENTITY_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_2, unused -> new HashMap<>())
+                .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_26_2), veloBlockEntityType);
 
         return veloBlockEntityType;
     }

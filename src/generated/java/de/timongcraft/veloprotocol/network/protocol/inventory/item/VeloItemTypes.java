@@ -485,6 +485,8 @@ public class VeloItemTypes {
     public static final VeloItemType CHIPPED_ANVIL = load("minecraft:chipped_anvil");
     @Since(ProtocolVersion.MINECRAFT_1_19_3)
     public static final VeloItemType CHISELED_BOOKSHELF = load("minecraft:chiseled_bookshelf");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CHISELED_CINNABAR = load("minecraft:chiseled_cinnabar");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType CHISELED_COPPER = load("minecraft:chiseled_copper");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -503,6 +505,8 @@ public class VeloItemTypes {
     public static final VeloItemType CHISELED_SANDSTONE = load("minecraft:chiseled_sandstone");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CHISELED_STONE_BRICKS = load("minecraft:chiseled_stone_bricks");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CHISELED_SULFUR = load("minecraft:chiseled_sulfur");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType CHISELED_TUFF = load("minecraft:chiseled_tuff");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
@@ -513,6 +517,22 @@ public class VeloItemTypes {
     public static final VeloItemType CHORUS_FRUIT = load("minecraft:chorus_fruit");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CHORUS_PLANT = load("minecraft:chorus_plant");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CINNABAR = load("minecraft:cinnabar");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CINNABAR_BRICK_SLAB = load("minecraft:cinnabar_brick_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CINNABAR_BRICK_STAIRS = load("minecraft:cinnabar_brick_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CINNABAR_BRICK_WALL = load("minecraft:cinnabar_brick_wall");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CINNABAR_BRICKS = load("minecraft:cinnabar_bricks");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CINNABAR_SLAB = load("minecraft:cinnabar_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CINNABAR_STAIRS = load("minecraft:cinnabar_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType CINNABAR_WALL = load("minecraft:cinnabar_wall");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CLAY = load("minecraft:clay");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1683,6 +1703,8 @@ public class VeloItemTypes {
     public static final VeloItemType MUSIC_DISC_5 = load("minecraft:music_disc_5");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MUSIC_DISC_BLOCKS = load("minecraft:music_disc_blocks");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType MUSIC_DISC_BOUNCE = load("minecraft:music_disc_bounce");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MUSIC_DISC_CAT = load("minecraft:music_disc_cat");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2059,6 +2081,14 @@ public class VeloItemTypes {
     public static final VeloItemType POLISHED_BLACKSTONE_STAIRS = load("minecraft:polished_blackstone_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType POLISHED_BLACKSTONE_WALL = load("minecraft:polished_blackstone_wall");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POLISHED_CINNABAR = load("minecraft:polished_cinnabar");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POLISHED_CINNABAR_SLAB = load("minecraft:polished_cinnabar_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POLISHED_CINNABAR_STAIRS = load("minecraft:polished_cinnabar_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POLISHED_CINNABAR_WALL = load("minecraft:polished_cinnabar_wall");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType POLISHED_DEEPSLATE = load("minecraft:polished_deepslate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2079,6 +2109,14 @@ public class VeloItemTypes {
     public static final VeloItemType POLISHED_GRANITE_SLAB = load("minecraft:polished_granite_slab");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType POLISHED_GRANITE_STAIRS = load("minecraft:polished_granite_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POLISHED_SULFUR = load("minecraft:polished_sulfur");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POLISHED_SULFUR_SLAB = load("minecraft:polished_sulfur_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POLISHED_SULFUR_STAIRS = load("minecraft:polished_sulfur_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POLISHED_SULFUR_WALL = load("minecraft:polished_sulfur_wall");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType POLISHED_TUFF = load("minecraft:polished_tuff");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
@@ -2095,6 +2133,8 @@ public class VeloItemTypes {
     public static final VeloItemType PORKCHOP = load("minecraft:porkchop");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType POTATO = load("minecraft:potato");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType POTENT_SULFUR = load("minecraft:potent_sulfur");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType POTION = load("minecraft:potion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2601,6 +2641,28 @@ public class VeloItemTypes {
     public static final VeloItemType SUGAR = load("minecraft:sugar");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SUGAR_CANE = load("minecraft:sugar_cane");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR = load("minecraft:sulfur");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_BRICK_SLAB = load("minecraft:sulfur_brick_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_BRICK_STAIRS = load("minecraft:sulfur_brick_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_BRICK_WALL = load("minecraft:sulfur_brick_wall");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_BRICKS = load("minecraft:sulfur_bricks");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_CUBE_BUCKET = load("minecraft:sulfur_cube_bucket");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_CUBE_SPAWN_EGG = load("minecraft:sulfur_cube_spawn_egg");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_SLAB = load("minecraft:sulfur_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_SPIKE = load("minecraft:sulfur_spike");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_STAIRS = load("minecraft:sulfur_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloItemType SULFUR_WALL = load("minecraft:sulfur_wall");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SUNFLOWER = load("minecraft:sunflower");
     @Since(ProtocolVersion.MINECRAFT_1_20)
@@ -3055,6 +3117,8 @@ public class VeloItemTypes {
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_1, unused -> new HashMap<>())
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_26_1), veloItemType);
+        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_2, unused -> new HashMap<>())
+                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_26_2), veloItemType);
 
         return veloItemType;
     }

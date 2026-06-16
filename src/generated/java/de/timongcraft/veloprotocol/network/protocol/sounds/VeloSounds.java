@@ -393,6 +393,16 @@ public class VeloSounds {
     public static final String BLOCK_CHORUS_FLOWER_DEATH = "minecraft:block.chorus_flower.death";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_CHORUS_FLOWER_GROW = "minecraft:block.chorus_flower.grow";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_CINNABAR_BREAK = "minecraft:block.cinnabar.break";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_CINNABAR_FALL = "minecraft:block.cinnabar.fall";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_CINNABAR_HIT = "minecraft:block.cinnabar.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_CINNABAR_PLACE = "minecraft:block.cinnabar.place";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_CINNABAR_STEP = "minecraft:block.cinnabar.step";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final String BLOCK_COBWEB_BREAK = "minecraft:block.cobweb.break";
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -1151,6 +1161,26 @@ public class VeloSounds {
     public static final String BLOCK_PORTAL_TRAVEL = "minecraft:block.portal.travel";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_PORTAL_TRIGGER = "minecraft:block.portal.trigger";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_BREAK = "minecraft:block.potent_sulfur.break";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_FALL = "minecraft:block.potent_sulfur.fall";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_GEYSER_CONTINUOUS_ERUPTION = "minecraft:block.potent_sulfur.geyser_continuous_eruption";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_GEYSER_CONTINUOUS_ERUPTION_ACTIVE = "minecraft:block.potent_sulfur.geyser_continuous_eruption_active";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_GEYSER_ERUPTION = "minecraft:block.potent_sulfur.geyser_eruption";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_GEYSER_ERUPTION_ACTIVE = "minecraft:block.potent_sulfur.geyser_eruption_active";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_HIT = "minecraft:block.potent_sulfur.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_NOXIOUS_GAS = "minecraft:block.potent_sulfur.noxious_gas";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_PLACE = "minecraft:block.potent_sulfur.place";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_POTENT_SULFUR_STEP = "minecraft:block.potent_sulfur.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_POWDER_SNOW_BREAK = "minecraft:block.powder_snow.break";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1459,6 +1489,28 @@ public class VeloSounds {
     public static final String BLOCK_STONE_PRESSURE_PLATE_CLICK_OFF = "minecraft:block.stone_pressure_plate.click_off";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_STONE_PRESSURE_PLATE_CLICK_ON = "minecraft:block.stone_pressure_plate.click_on";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_BREAK = "minecraft:block.sulfur.break";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_FALL = "minecraft:block.sulfur.fall";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_HIT = "minecraft:block.sulfur.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_PLACE = "minecraft:block.sulfur.place";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_STEP = "minecraft:block.sulfur.step";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_SPIKE_BREAK = "minecraft:block.sulfur_spike.break";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_SPIKE_FALL = "minecraft:block.sulfur_spike.fall";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_SPIKE_HIT = "minecraft:block.sulfur_spike.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_SPIKE_LAND = "minecraft:block.sulfur_spike.land";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_SPIKE_PLACE = "minecraft:block.sulfur_spike.place";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String BLOCK_SULFUR_SPIKE_STEP = "minecraft:block.sulfur_spike.step";
     @Since(ProtocolVersion.MINECRAFT_1_20)
     public static final String BLOCK_SUSPICIOUS_GRAVEL_BREAK = "minecraft:block.suspicious_gravel.break";
     @Since(ProtocolVersion.MINECRAFT_1_20)
@@ -3005,6 +3057,16 @@ public class VeloSounds {
     public static final String ENTITY_SLIME_SQUISH = "minecraft:entity.slime.squish";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_SLIME_SQUISH_SMALL = "minecraft:entity.slime.squish_small";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SMALL_SULFUR_CUBE_DEATH = "minecraft:entity.small_sulfur_cube.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SMALL_SULFUR_CUBE_EAT = "minecraft:entity.small_sulfur_cube.eat";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SMALL_SULFUR_CUBE_HURT = "minecraft:entity.small_sulfur_cube.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SMALL_SULFUR_CUBE_JUMP = "minecraft:entity.small_sulfur_cube.jump";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SMALL_SULFUR_CUBE_SQUISH = "minecraft:entity.small_sulfur_cube.squish";
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
     public static final String ENTITY_SNIFFER_DEATH = "minecraft:entity.sniffer.death";
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
@@ -3087,6 +3149,68 @@ public class VeloSounds {
     public static final String ENTITY_STRIDER_STEP = "minecraft:entity.strider.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_STRIDER_STEP_LAVA = "minecraft:entity.strider.step_lava";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_ABSORB = "minecraft:entity.sulfur_cube.absorb";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_BOUNCE = "minecraft:entity.sulfur_cube.bounce";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_BOUNCY_HIT = "minecraft:entity.sulfur_cube.bouncy.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_BOUNCY_PUSH = "minecraft:entity.sulfur_cube.bouncy.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_DEATH = "minecraft:entity.sulfur_cube.death";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_EJECT = "minecraft:entity.sulfur_cube.eject";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_EXPLOSIVE_HIT = "minecraft:entity.sulfur_cube.explosive.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_EXPLOSIVE_PUSH = "minecraft:entity.sulfur_cube.explosive.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_FAST_FLAT_HIT = "minecraft:entity.sulfur_cube.fast_flat.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_FAST_FLAT_PUSH = "minecraft:entity.sulfur_cube.fast_flat.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_FAST_SLIDING_HIT = "minecraft:entity.sulfur_cube.fast_sliding.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_FAST_SLIDING_PUSH = "minecraft:entity.sulfur_cube.fast_sliding.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_HIGH_RESISTANCE_HIT = "minecraft:entity.sulfur_cube.high_resistance.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_HIGH_RESISTANCE_PUSH = "minecraft:entity.sulfur_cube.high_resistance.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_HOT_HIT = "minecraft:entity.sulfur_cube.hot.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_HOT_PUSH = "minecraft:entity.sulfur_cube.hot.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_HURT = "minecraft:entity.sulfur_cube.hurt";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_JUMP = "minecraft:entity.sulfur_cube.jump";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_LIGHT_HIT = "minecraft:entity.sulfur_cube.light.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_LIGHT_PUSH = "minecraft:entity.sulfur_cube.light.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_REGULAR_HIT = "minecraft:entity.sulfur_cube.regular.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_REGULAR_PUSH = "minecraft:entity.sulfur_cube.regular.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_SLOW_BOUNCY_HIT = "minecraft:entity.sulfur_cube.slow_bouncy.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_SLOW_BOUNCY_PUSH = "minecraft:entity.sulfur_cube.slow_bouncy.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_SLOW_FLAT_HIT = "minecraft:entity.sulfur_cube.slow_flat.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_SLOW_FLAT_PUSH = "minecraft:entity.sulfur_cube.slow_flat.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_SLOW_SLIDING_HIT = "minecraft:entity.sulfur_cube.slow_sliding.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_SLOW_SLIDING_PUSH = "minecraft:entity.sulfur_cube.slow_sliding.push";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_SQUISH = "minecraft:entity.sulfur_cube.squish";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_STICKY_HIT = "minecraft:entity.sulfur_cube.sticky.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ENTITY_SULFUR_CUBE_STICKY_PUSH = "minecraft:entity.sulfur_cube.sticky.push";
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final String ENTITY_TADPOLE_DEATH = "minecraft:entity.tadpole.death";
     @Since(ProtocolVersion.MINECRAFT_1_19)
@@ -3537,6 +3661,8 @@ public class VeloSounds {
     public static final String ITEM_BUCKET_EMPTY_LAVA = "minecraft:item.bucket.empty_lava";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_BUCKET_EMPTY_POWDER_SNOW = "minecraft:item.bucket.empty_powder_snow";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ITEM_BUCKET_EMPTY_SULFUR_CUBE = "minecraft:item.bucket.empty_sulfur_cube";
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final String ITEM_BUCKET_EMPTY_TADPOLE = "minecraft:item.bucket.empty_tadpole";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3549,6 +3675,8 @@ public class VeloSounds {
     public static final String ITEM_BUCKET_FILL_LAVA = "minecraft:item.bucket.fill_lava";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ITEM_BUCKET_FILL_POWDER_SNOW = "minecraft:item.bucket.fill_powder_snow";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String ITEM_BUCKET_FILL_SULFUR_CUBE = "minecraft:item.bucket.fill_sulfur_cube";
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final String ITEM_BUCKET_FILL_TADPOLE = "minecraft:item.bucket.fill_tadpole";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3763,6 +3891,8 @@ public class VeloSounds {
     public static final String MUSIC_OVERWORLD_SPARSE_JUNGLE = "minecraft:music.overworld.sparse_jungle";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String MUSIC_OVERWORLD_STONY_PEAKS = "minecraft:music.overworld.stony_peaks";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String MUSIC_OVERWORLD_SULFUR_CAVES = "minecraft:music.overworld.sulfur_caves";
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final String MUSIC_OVERWORLD_SWAMP = "minecraft:music.overworld.swamp";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3775,6 +3905,8 @@ public class VeloSounds {
     public static final String MUSIC_DISC_5 = "minecraft:music_disc.5";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String MUSIC_DISC_BLOCKS = "minecraft:music_disc.blocks";
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final String MUSIC_DISC_BOUNCE = "minecraft:music_disc.bounce";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String MUSIC_DISC_CAT = "minecraft:music_disc.cat";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)

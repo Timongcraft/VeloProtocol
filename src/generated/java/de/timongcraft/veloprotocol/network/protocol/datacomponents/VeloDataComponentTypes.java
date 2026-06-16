@@ -197,6 +197,8 @@ public class VeloDataComponentTypes {
     public static final VeloDataComponentType SHULKER_COLOR = load("minecraft:shulker/color");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType STORED_ENCHANTMENTS = load("minecraft:stored_enchantments");
+    @Since(ProtocolVersion.MINECRAFT_26_1)
+    public static final VeloDataComponentType SULFUR_CUBE_CONTENT = load("minecraft:sulfur_cube_content");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloDataComponentType SUSPICIOUS_STEW_EFFECTS = load("minecraft:suspicious_stew_effects");
     @Since(ProtocolVersion.MINECRAFT_1_21_11)
@@ -267,6 +269,8 @@ public class VeloDataComponentTypes {
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_1_21_11), veloDataComponentType);
         LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_1, unused -> new HashMap<>())
                 .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_26_1), veloDataComponentType);
+        LOADED_VELO_DATA_COMPONENT_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_2, unused -> new HashMap<>())
+                .put(veloDataComponentType.getProtocolId(ProtocolVersion.MINECRAFT_26_2), veloDataComponentType);
 
         return veloDataComponentType;
     }
