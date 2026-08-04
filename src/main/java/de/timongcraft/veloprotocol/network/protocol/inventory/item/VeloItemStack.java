@@ -53,18 +53,6 @@ public class VeloItemStack {
         }
     }
 
-    /**
-     * @deprecated use {@link #write(ByteBuf, VeloItemStack, ProtocolVersion, boolean)} instead
-     */
-    @Deprecated(since = "1.8.0", forRemoval = true)
-    public static void write(ByteBuf buf, @Nullable VeloItemStack item, ProtocolVersion version) {
-        if (item == null) {
-            ProtocolUtils.writeVarInt(buf, 0);
-        } else {
-            item.write(buf, version, false);
-        }
-    }
-
     public static void write(ByteBuf buf, @Nullable VeloItemStack item, ProtocolVersion version, @Since(ProtocolVersion.MINECRAFT_26_1) boolean template) {
         if (item == null) {
             if (template) {
@@ -94,17 +82,6 @@ public class VeloItemStack {
         this.removedComponents = removedComponents;
     }
 
-    /**
-     * @deprecated use {@link #write(ByteBuf, ProtocolVersion, boolean)} instead
-     */
-    @Deprecated(since = "1.8.0", forRemoval = true)
-    public void write(ByteBuf buf, ProtocolVersion version) {
-        ProtocolUtils.writeVarInt(buf, amount);
-        ProtocolUtils.writeVarInt(buf, itemType.getProtocolId(version));
-
-        writeComponentChanges(buf, version);
-    }
-
     public void write(ByteBuf buf, ProtocolVersion version, @Since(ProtocolVersion.MINECRAFT_26_1) boolean template) {
         if (template) {
             ProtocolUtils.writeVarInt(buf, itemType.getProtocolId(version));
@@ -115,18 +92,6 @@ public class VeloItemStack {
         }
 
         writeComponentChanges(buf, version);
-    }
-
-    /**
-     * @deprecated use {@link #writeOpt(ByteBuf, ProtocolVersion, boolean)} instead
-     */
-    @Deprecated(since = "1.8.0", forRemoval = true)
-    public void writeOpt(ByteBuf buf, ProtocolVersion version) {
-        if (isEmpty()) {
-            ProtocolUtils.writeVarInt(buf, 0);
-        } else {
-            write(buf, version, false);
-        }
     }
 
     public void writeOpt(ByteBuf buf, ProtocolVersion version, @Since(ProtocolVersion.MINECRAFT_26_1) boolean template) {
