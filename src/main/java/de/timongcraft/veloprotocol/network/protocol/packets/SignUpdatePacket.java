@@ -35,12 +35,13 @@ public class SignUpdatePacket extends AbstractPacket {
                 .mapping(0x3A, MINECRAFT_1_21_5, encodeOnly)
                 .mapping(0x3B, MINECRAFT_1_21_6, encodeOnly)
                 .mapping(0x3D, MINECRAFT_26_1, encodeOnly)
+                .mapping(0x3E, MINECRAFT_26_3, encodeOnly)
                 .register();
     }
 
     private Position position;
     @Since(MINECRAFT_1_20)
-    private boolean frontText;
+    private boolean frontText = true;
     private String[] lines = new String[4];
 
     private SignUpdatePacket() {}
@@ -57,17 +58,31 @@ public class SignUpdatePacket extends AbstractPacket {
 
         position = Position.read(buf);
 
-        if (version.greaterThan(MINECRAFT_1_19_4)) {
-            frontText = buf.readBoolean();
-        }
+        if (version.noLessThan(MINECRAFT_26_3)) {
+            for (int i = 0; i < lines.length; i++) {
+                //lines[i] = ProtocolUtils.readString(buf, LINE_LENGTH_CAP);
 
-        for (int i = 0; i < lines.length; i++) {
-            //lines[i] = ProtocolUtils.readString(buf, LINE_LENGTH_CAP);
+                // circumvent MC-299502
+                lines[i] = ProtocolUtils.readString(buf);
+                if (lines[i].length() > LINE_LENGTH_CAP) {
+                    lines[i] = lines[i].substring(0, LINE_LENGTH_CAP);
+                }
+            }
 
-            // circumvent MC-299502
-            lines[i] = ProtocolUtils.readString(buf);
-            if (lines[i].length() > LINE_LENGTH_CAP) {
-                lines[i] = lines[i].substring(0, LINE_LENGTH_CAP);
+            frontText = ProtocolUtils.readVarInt(buf) != 0;
+        } else {
+            if (version.greaterThan(MINECRAFT_1_19_4)) {
+                frontText = buf.readBoolean();
+            }
+
+            for (int i = 0; i < lines.length; i++) {
+                //lines[i] = ProtocolUtils.readString(buf, LINE_LENGTH_CAP);
+
+                // circumvent MC-299502
+                lines[i] = ProtocolUtils.readString(buf);
+                if (lines[i].length() > LINE_LENGTH_CAP) {
+                    lines[i] = lines[i].substring(0, LINE_LENGTH_CAP);
+                }
             }
         }
     }
@@ -76,13 +91,20 @@ public class SignUpdatePacket extends AbstractPacket {
     public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         position.write(buf);
 
+        if (version.noLessThan(MINECRAFT_26_3)) {
+            for (String line : lines) {
+                ProtocolUtils.writeString(buf, line);
+            }
 
-        if (version.greaterThan(MINECRAFT_1_19_4)) {
-            buf.writeBoolean(frontText);
-        }
+            ProtocolUtils.writeVarInt(buf, frontText ? 1 : 0);
+        } else {
+            if (version.greaterThan(MINECRAFT_1_19_4)) {
+                buf.writeBoolean(frontText);
+            }
 
-        for (String line : lines) {
-            ProtocolUtils.writeString(buf, line);
+            for (String line : lines) {
+                ProtocolUtils.writeString(buf, line);
+            }
         }
     }
 

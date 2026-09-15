@@ -39,8 +39,27 @@ public class VeloItemStack {
         return new VeloItemStack(itemType, amount, setComponents, removedComponents);
     }
 
+    @Deprecated(forRemoval = true, since = "2.1.0")
     public static VeloItemStack of(ByteBuf buf, ProtocolVersion version) {
+        return of(buf, version, false);
+    }
+
+    public static VeloItemStack of(ByteBuf buf, ProtocolVersion version, @Since(ProtocolVersion.MINECRAFT_26_1) boolean template) {
         throw new UnsupportedOperationException("Not implemented");
+        /*VeloItemType itemType;
+        int amount;
+
+        if (template) {
+            itemType = VeloItemTypes.getFromProtocolId(ProtocolUtils.readVarInt(buf), version);
+            amount = ProtocolUtils.readVarInt(buf);
+        } else {
+            amount = ProtocolUtils.readVarInt(buf);
+            itemType = VeloItemTypes.getFromProtocolId(ProtocolUtils.readVarInt(buf), version);
+        }
+
+        // read component changes
+
+        return new VeloItemStack(itemType, amount, , );*/
     }
 
     public static VeloItemStack ofOpt(ByteBuf buf, ProtocolVersion version) {
@@ -49,7 +68,12 @@ public class VeloItemStack {
         if (amount < 1) {
             return NULL_STACK;
         } else {
-            return of(buf, version);
+            throw new UnsupportedOperationException("Not implemented");
+            /*VeloItemType itemType = VeloItemTypes.getFromProtocolId(ProtocolUtils.readVarInt(buf), version);
+
+            // read component changes
+
+            return new VeloItemStack(itemType, amount, , );*/
         }
     }
 
@@ -109,6 +133,10 @@ public class VeloItemStack {
         for (var entry : setComponents.entrySet()) {
             entry.getValue().ifPresentOrElse(componentData -> componentData.write(buf, version),
                     () -> ComponentData.writeNonValued(entry.getKey(), buf, version));
+        }
+
+        for (VeloDataComponentType removed : removedComponents) {
+            ProtocolUtils.writeVarInt(buf, removed.getProtocolId(version));
         }
     }
 

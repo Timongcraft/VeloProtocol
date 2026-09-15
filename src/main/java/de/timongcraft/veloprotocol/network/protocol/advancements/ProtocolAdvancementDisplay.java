@@ -20,7 +20,6 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * The "Protocol" prefix signifies that this class is a minimal, serialization-only representation.
  */
 @SuppressWarnings("unused")
-@ApiStatus.Experimental
 @Since(MINECRAFT_1_20_5)
 public class ProtocolAdvancementDisplay {
 
@@ -100,25 +99,20 @@ public class ProtocolAdvancementDisplay {
     public static ProtocolAdvancementDisplay of(ByteBuf buf, ProtocolVersion version) {
         ComponentHolder title = ExProtocolUtils.readComponentHolder(buf, version);
         ComponentHolder description = ExProtocolUtils.readComponentHolder(buf, version);
-        VeloItemStack icon = VeloItemStack.of(buf, version);
+        VeloItemStack icon = VeloItemStack.of(buf, version, false); // todo: check if template or not
         FrameType frame = ExProtocolUtils.readEnumByOrdinal(buf, FrameType.class);
 
         int i = buf.readInt();
         boolean hasBackground = (i & 1) != 0;
         boolean showToast = (i & 2) != 0;
         boolean hidden = (i & 4) != 0;
+        String backgroundTexture = hasBackground ? ProtocolUtils.readString(buf) : null;
 
-        return new ProtocolAdvancementDisplay(
-                title,
-                description,
-                icon,
-                frame,
-                hasBackground ? ProtocolUtils.readString(buf) : null,
-                showToast,
-                hidden,
-                buf.readFloat(),
-                buf.readFloat()
-        );
+        if (version.noLessThan(MINECRAFT_26_3)) {
+            return new ProtocolAdvancementDisplay(title, description, icon, frame, backgroundTexture, showToast, hidden, 0, 0);
+        } else {
+            return new ProtocolAdvancementDisplay(title, description, icon, frame, backgroundTexture, showToast, hidden, buf.readFloat(), buf.readFloat());
+        }
     }
 
     /**
@@ -132,10 +126,12 @@ public class ProtocolAdvancementDisplay {
     private Either<ComponentHolder, Component> description;
     private VeloItemStack icon;
     private FrameType frameType;
-    private @Nullable String backgroundTexture;
+    private @Nullable String backgroundTexture; // on >=26.3 this is only allowed fro root advancement (not enforced in protocol)
     private boolean showToast;
     private boolean hidden;
+    @Until(MINECRAFT_26_2)
     private float x;
+    @Until(MINECRAFT_26_2)
     private float y;
 
     @ApiStatus.Internal
@@ -181,8 +177,10 @@ public class ProtocolAdvancementDisplay {
             ProtocolUtils.writeString(buf, formatBackgroundTextureForVersion(backgroundTexture, version));
         }
 
-        buf.writeFloat(x);
-        buf.writeFloat(y);
+        if (version.noGreaterThan(MINECRAFT_26_2)) {
+            buf.writeFloat(x);
+            buf.writeFloat(y);
+        }
     }
 
     public Component getTitle() {
@@ -256,18 +254,22 @@ public class ProtocolAdvancementDisplay {
         this.hidden = hidden;
     }
 
+    @Until(MINECRAFT_26_2)
     public float getX() {
         return x;
     }
 
+    @Until(MINECRAFT_26_2)
     public void setX(float x) {
         this.x = x;
     }
 
+    @Until(MINECRAFT_26_2)
     public float getY() {
         return y;
     }
 
+    @Until(MINECRAFT_26_2)
     public void setY(float y) {
         this.y = y;
     }

@@ -26,7 +26,8 @@ public class VeloBlockEntityType {
             ProtocolVersion.MINECRAFT_1_21_9,
             ProtocolVersion.MINECRAFT_1_21_11,
             ProtocolVersion.MINECRAFT_26_1,
-            ProtocolVersion.MINECRAFT_26_2
+            ProtocolVersion.MINECRAFT_26_2,
+            ProtocolVersion.MINECRAFT_26_3
     };
 
     private final String name;

@@ -161,6 +161,8 @@ public class VeloBlockEntityTypes {
                 .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_26_1), veloBlockEntityType);
         LOADED_VELO_BLOCK_ENTITY_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_2, unused -> new HashMap<>())
                 .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_26_2), veloBlockEntityType);
+        LOADED_VELO_BLOCK_ENTITY_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_3, unused -> new HashMap<>())
+                .put(veloBlockEntityType.getProtocolId(ProtocolVersion.MINECRAFT_26_3), veloBlockEntityType);
 
         return veloBlockEntityType;
     }

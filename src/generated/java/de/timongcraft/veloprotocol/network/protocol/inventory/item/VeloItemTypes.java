@@ -13,6 +13,8 @@ public class VeloItemTypes {
 
     private static final Map<ProtocolVersion, Map<Integer, VeloItemType>> LOADED_VELO_ITEM_TYPES_CACHE = new HashMap<>();
 
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType ABANDONED_CAMP_MAP = load("minecraft:abandoned_camp_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ACACIA_BOAT = load("minecraft:acacia_boat");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -221,6 +223,12 @@ public class VeloItemTypes {
     public static final VeloItemType BLACK_CONCRETE = load("minecraft:black_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLACK_CONCRETE_POWDER = load("minecraft:black_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLACK_CONCRETE_SLAB = load("minecraft:black_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLACK_CONCRETE_STAIRS = load("minecraft:black_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLACK_CUSHION = load("minecraft:black_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLACK_DYE = load("minecraft:black_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -237,6 +245,10 @@ public class VeloItemTypes {
     public static final VeloItemType BLACK_TERRACOTTA = load("minecraft:black_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLACK_WOOL = load("minecraft:black_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLACK_WOOL_SLAB = load("minecraft:black_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLACK_WOOL_STAIRS = load("minecraft:black_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLACKSTONE = load("minecraft:blackstone");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -269,6 +281,12 @@ public class VeloItemTypes {
     public static final VeloItemType BLUE_CONCRETE = load("minecraft:blue_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLUE_CONCRETE_POWDER = load("minecraft:blue_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLUE_CONCRETE_SLAB = load("minecraft:blue_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLUE_CONCRETE_STAIRS = load("minecraft:blue_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLUE_CUSHION = load("minecraft:blue_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLUE_DYE = load("minecraft:blue_dye");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
@@ -291,6 +309,10 @@ public class VeloItemTypes {
     public static final VeloItemType BLUE_TERRACOTTA = load("minecraft:blue_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BLUE_WOOL = load("minecraft:blue_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLUE_WOOL_SLAB = load("minecraft:blue_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BLUE_WOOL_STAIRS = load("minecraft:blue_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
     public static final VeloItemType BOGGED_SPAWN_EGG = load("minecraft:bogged_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -351,6 +373,12 @@ public class VeloItemTypes {
     public static final VeloItemType BROWN_CONCRETE = load("minecraft:brown_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BROWN_CONCRETE_POWDER = load("minecraft:brown_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BROWN_CONCRETE_SLAB = load("minecraft:brown_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BROWN_CONCRETE_STAIRS = load("minecraft:brown_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BROWN_CUSHION = load("minecraft:brown_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BROWN_DYE = load("minecraft:brown_dye");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
@@ -373,6 +401,10 @@ public class VeloItemTypes {
     public static final VeloItemType BROWN_TERRACOTTA = load("minecraft:brown_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BROWN_WOOL = load("minecraft:brown_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BROWN_WOOL_SLAB = load("minecraft:brown_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BROWN_WOOL_STAIRS = load("minecraft:brown_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
     public static final VeloItemType BRUSH = load("minecraft:brush");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -387,6 +419,14 @@ public class VeloItemTypes {
     public static final VeloItemType BUDDING_AMETHYST = load("minecraft:budding_amethyst");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType BUNDLE = load("minecraft:bundle");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BURIED_ANCIENT_CITY_MAP = load("minecraft:buried_ancient_city_map");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BURIED_MINESHAFT_MAP = load("minecraft:buried_mineshaft_map");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BURIED_TREASURE_MAP = load("minecraft:buried_treasure_map");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType BURIED_TRIAL_CHAMBERS_MAP = load("minecraft:buried_trial_chambers_map");
     @Since(ProtocolVersion.MINECRAFT_1_20)
     public static final VeloItemType BURN_POTTERY_SHERD = load("minecraft:burn_pottery_sherd");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
@@ -753,6 +793,12 @@ public class VeloItemTypes {
     public static final VeloItemType CYAN_CONCRETE = load("minecraft:cyan_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CYAN_CONCRETE_POWDER = load("minecraft:cyan_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType CYAN_CONCRETE_SLAB = load("minecraft:cyan_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType CYAN_CONCRETE_STAIRS = load("minecraft:cyan_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType CYAN_CUSHION = load("minecraft:cyan_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CYAN_DYE = load("minecraft:cyan_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -769,6 +815,10 @@ public class VeloItemTypes {
     public static final VeloItemType CYAN_TERRACOTTA = load("minecraft:cyan_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType CYAN_WOOL = load("minecraft:cyan_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType CYAN_WOOL_SLAB = load("minecraft:cyan_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType CYAN_WOOL_STAIRS = load("minecraft:cyan_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DAMAGED_ANVIL = load("minecraft:damaged_anvil");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -889,6 +939,10 @@ public class VeloItemTypes {
     public static final VeloItemType DEEPSLATE_TILE_WALL = load("minecraft:deepslate_tile_wall");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DEEPSLATE_TILES = load("minecraft:deepslate_tiles");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType DESERT_PYRAMID_MAP = load("minecraft:desert_pyramid_map");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType DESERT_VILLAGE_MAP = load("minecraft:desert_village_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType DETECTOR_RAIL = load("minecraft:detector_rail");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1205,6 +1259,12 @@ public class VeloItemTypes {
     public static final VeloItemType GRAY_CONCRETE = load("minecraft:gray_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GRAY_CONCRETE_POWDER = load("minecraft:gray_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GRAY_CONCRETE_SLAB = load("minecraft:gray_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GRAY_CONCRETE_STAIRS = load("minecraft:gray_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GRAY_CUSHION = load("minecraft:gray_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GRAY_DYE = load("minecraft:gray_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1221,6 +1281,10 @@ public class VeloItemTypes {
     public static final VeloItemType GRAY_TERRACOTTA = load("minecraft:gray_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GRAY_WOOL = load("minecraft:gray_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GRAY_WOOL_SLAB = load("minecraft:gray_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GRAY_WOOL_STAIRS = load("minecraft:gray_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GREEN_BANNER = load("minecraft:green_banner");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1235,6 +1299,12 @@ public class VeloItemTypes {
     public static final VeloItemType GREEN_CONCRETE = load("minecraft:green_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GREEN_CONCRETE_POWDER = load("minecraft:green_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GREEN_CONCRETE_SLAB = load("minecraft:green_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GREEN_CONCRETE_STAIRS = load("minecraft:green_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GREEN_CUSHION = load("minecraft:green_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GREEN_DYE = load("minecraft:green_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1251,6 +1321,10 @@ public class VeloItemTypes {
     public static final VeloItemType GREEN_TERRACOTTA = load("minecraft:green_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GREEN_WOOL = load("minecraft:green_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GREEN_WOOL_SLAB = load("minecraft:green_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType GREEN_WOOL_STAIRS = load("minecraft:green_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType GRINDSTONE = load("minecraft:grindstone");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1395,6 +1469,8 @@ public class VeloItemTypes {
     public static final VeloItemType JUNGLE_PLANKS = load("minecraft:jungle_planks");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType JUNGLE_PRESSURE_PLATE = load("minecraft:jungle_pressure_plate");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType JUNGLE_PYRAMID_MAP = load("minecraft:jungle_pyramid_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType JUNGLE_SAPLING = load("minecraft:jungle_sapling");
     @Since(ProtocolVersion.MINECRAFT_1_21_9)
@@ -1465,6 +1541,12 @@ public class VeloItemTypes {
     public static final VeloItemType LIGHT_BLUE_CONCRETE = load("minecraft:light_blue_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_BLUE_CONCRETE_POWDER = load("minecraft:light_blue_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_BLUE_CONCRETE_SLAB = load("minecraft:light_blue_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_BLUE_CONCRETE_STAIRS = load("minecraft:light_blue_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_BLUE_CUSHION = load("minecraft:light_blue_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_BLUE_DYE = load("minecraft:light_blue_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1481,6 +1563,10 @@ public class VeloItemTypes {
     public static final VeloItemType LIGHT_BLUE_TERRACOTTA = load("minecraft:light_blue_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_BLUE_WOOL = load("minecraft:light_blue_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_BLUE_WOOL_SLAB = load("minecraft:light_blue_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_BLUE_WOOL_STAIRS = load("minecraft:light_blue_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_GRAY_BANNER = load("minecraft:light_gray_banner");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1495,6 +1581,12 @@ public class VeloItemTypes {
     public static final VeloItemType LIGHT_GRAY_CONCRETE = load("minecraft:light_gray_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_GRAY_CONCRETE_POWDER = load("minecraft:light_gray_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_GRAY_CONCRETE_SLAB = load("minecraft:light_gray_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_GRAY_CONCRETE_STAIRS = load("minecraft:light_gray_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_GRAY_CUSHION = load("minecraft:light_gray_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_GRAY_DYE = load("minecraft:light_gray_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1511,6 +1603,10 @@ public class VeloItemTypes {
     public static final VeloItemType LIGHT_GRAY_TERRACOTTA = load("minecraft:light_gray_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_GRAY_WOOL = load("minecraft:light_gray_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_GRAY_WOOL_SLAB = load("minecraft:light_gray_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIGHT_GRAY_WOOL_STAIRS = load("minecraft:light_gray_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIGHT_WEIGHTED_PRESSURE_PLATE = load("minecraft:light_weighted_pressure_plate");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1535,6 +1631,12 @@ public class VeloItemTypes {
     public static final VeloItemType LIME_CONCRETE = load("minecraft:lime_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIME_CONCRETE_POWDER = load("minecraft:lime_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIME_CONCRETE_SLAB = load("minecraft:lime_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIME_CONCRETE_STAIRS = load("minecraft:lime_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIME_CUSHION = load("minecraft:lime_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIME_DYE = load("minecraft:lime_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1551,6 +1653,10 @@ public class VeloItemTypes {
     public static final VeloItemType LIME_TERRACOTTA = load("minecraft:lime_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LIME_WOOL = load("minecraft:lime_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIME_WOOL_SLAB = load("minecraft:lime_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType LIME_WOOL_STAIRS = load("minecraft:lime_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType LINGERING_POTION = load("minecraft:lingering_potion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1575,6 +1681,12 @@ public class VeloItemTypes {
     public static final VeloItemType MAGENTA_CONCRETE = load("minecraft:magenta_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MAGENTA_CONCRETE_POWDER = load("minecraft:magenta_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType MAGENTA_CONCRETE_SLAB = load("minecraft:magenta_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType MAGENTA_CONCRETE_STAIRS = load("minecraft:magenta_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType MAGENTA_CUSHION = load("minecraft:magenta_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MAGENTA_DYE = load("minecraft:magenta_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1591,6 +1703,10 @@ public class VeloItemTypes {
     public static final VeloItemType MAGENTA_TERRACOTTA = load("minecraft:magenta_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MAGENTA_WOOL = load("minecraft:magenta_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType MAGENTA_WOOL_SLAB = load("minecraft:magenta_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType MAGENTA_WOOL_STAIRS = load("minecraft:magenta_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType MAGMA_BLOCK = load("minecraft:magma_block");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1849,6 +1965,8 @@ public class VeloItemTypes {
     public static final VeloItemType OBSERVER = load("minecraft:observer");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType OBSIDIAN = load("minecraft:obsidian");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType OCEAN_MONUMENT_MAP = load("minecraft:ocean_monument_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType OCELOT_SPAWN_EGG = load("minecraft:ocelot_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_19)
@@ -1873,12 +1991,20 @@ public class VeloItemTypes {
     public static final VeloItemType ORANGE_CONCRETE = load("minecraft:orange_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ORANGE_CONCRETE_POWDER = load("minecraft:orange_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType ORANGE_CONCRETE_SLAB = load("minecraft:orange_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType ORANGE_CONCRETE_STAIRS = load("minecraft:orange_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType ORANGE_CUSHION = load("minecraft:orange_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ORANGE_DYE = load("minecraft:orange_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ORANGE_GLAZED_TERRACOTTA = load("minecraft:orange_glazed_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_21_6)
     public static final VeloItemType ORANGE_HARNESS = load("minecraft:orange_harness");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType ORANGE_POPLAR_LEAVES = load("minecraft:orange_poplar_leaves");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ORANGE_SHULKER_BOX = load("minecraft:orange_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1891,6 +2017,10 @@ public class VeloItemTypes {
     public static final VeloItemType ORANGE_TULIP = load("minecraft:orange_tulip");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ORANGE_WOOL = load("minecraft:orange_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType ORANGE_WOOL_SLAB = load("minecraft:orange_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType ORANGE_WOOL_STAIRS = load("minecraft:orange_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType OXEYE_DAISY = load("minecraft:oxeye_daisy");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
@@ -2015,6 +2145,12 @@ public class VeloItemTypes {
     public static final VeloItemType PINK_CONCRETE = load("minecraft:pink_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PINK_CONCRETE_POWDER = load("minecraft:pink_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PINK_CONCRETE_SLAB = load("minecraft:pink_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PINK_CONCRETE_STAIRS = load("minecraft:pink_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PINK_CUSHION = load("minecraft:pink_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PINK_DYE = load("minecraft:pink_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2035,12 +2171,18 @@ public class VeloItemTypes {
     public static final VeloItemType PINK_TULIP = load("minecraft:pink_tulip");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PINK_WOOL = load("minecraft:pink_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PINK_WOOL_SLAB = load("minecraft:pink_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PINK_WOOL_STAIRS = load("minecraft:pink_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PISTON = load("minecraft:piston");
     @Since(ProtocolVersion.MINECRAFT_1_20)
     public static final VeloItemType PITCHER_PLANT = load("minecraft:pitcher_plant");
     @Since(ProtocolVersion.MINECRAFT_1_20)
     public static final VeloItemType PITCHER_POD = load("minecraft:pitcher_pod");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PLAINS_VILLAGE_MAP = load("minecraft:plains_village_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PLAYER_HEAD = load("minecraft:player_head");
     @Since(ProtocolVersion.MINECRAFT_1_20)
@@ -2125,6 +2267,40 @@ public class VeloItemTypes {
     public static final VeloItemType POLISHED_TUFF_STAIRS = load("minecraft:polished_tuff_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final VeloItemType POLISHED_TUFF_WALL = load("minecraft:polished_tuff_wall");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_BOAT = load("minecraft:poplar_boat");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_BUTTON = load("minecraft:poplar_button");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_CHEST_BOAT = load("minecraft:poplar_chest_boat");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_DOOR = load("minecraft:poplar_door");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_FENCE = load("minecraft:poplar_fence");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_FENCE_GATE = load("minecraft:poplar_fence_gate");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_HANGING_SIGN = load("minecraft:poplar_hanging_sign");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_LOG = load("minecraft:poplar_log");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_PLANKS = load("minecraft:poplar_planks");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_PRESSURE_PLATE = load("minecraft:poplar_pressure_plate");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_SAPLING = load("minecraft:poplar_sapling");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_SHELF = load("minecraft:poplar_shelf");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_SIGN = load("minecraft:poplar_sign");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_SLAB = load("minecraft:poplar_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_STAIRS = load("minecraft:poplar_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_TRAPDOOR = load("minecraft:poplar_trapdoor");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType POPLAR_WOOD = load("minecraft:poplar_wood");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType POPPED_CHORUS_FRUIT = load("minecraft:popped_chorus_fruit");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2187,6 +2363,12 @@ public class VeloItemTypes {
     public static final VeloItemType PURPLE_CONCRETE = load("minecraft:purple_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PURPLE_CONCRETE_POWDER = load("minecraft:purple_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PURPLE_CONCRETE_SLAB = load("minecraft:purple_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PURPLE_CONCRETE_STAIRS = load("minecraft:purple_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PURPLE_CUSHION = load("minecraft:purple_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PURPLE_DYE = load("minecraft:purple_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2203,6 +2385,10 @@ public class VeloItemTypes {
     public static final VeloItemType PURPLE_TERRACOTTA = load("minecraft:purple_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PURPLE_WOOL = load("minecraft:purple_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PURPLE_WOOL_SLAB = load("minecraft:purple_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType PURPLE_WOOL_STAIRS = load("minecraft:purple_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType PURPUR_BLOCK = load("minecraft:purpur_block");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2267,6 +2453,12 @@ public class VeloItemTypes {
     public static final VeloItemType RED_CONCRETE = load("minecraft:red_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_CONCRETE_POWDER = load("minecraft:red_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType RED_CONCRETE_SLAB = load("minecraft:red_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType RED_CONCRETE_STAIRS = load("minecraft:red_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType RED_CUSHION = load("minecraft:red_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_DYE = load("minecraft:red_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2285,6 +2477,8 @@ public class VeloItemTypes {
     public static final VeloItemType RED_NETHER_BRICK_WALL = load("minecraft:red_nether_brick_wall");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_NETHER_BRICKS = load("minecraft:red_nether_bricks");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType RED_POPLAR_LEAVES = load("minecraft:red_poplar_leaves");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_SAND = load("minecraft:red_sand");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2295,6 +2489,8 @@ public class VeloItemTypes {
     public static final VeloItemType RED_SANDSTONE_STAIRS = load("minecraft:red_sandstone_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_SANDSTONE_WALL = load("minecraft:red_sandstone_wall");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType RED_SHRUB = load("minecraft:red_shrub");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_SHULKER_BOX = load("minecraft:red_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2307,6 +2503,10 @@ public class VeloItemTypes {
     public static final VeloItemType RED_TULIP = load("minecraft:red_tulip");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType RED_WOOL = load("minecraft:red_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType RED_WOOL_SLAB = load("minecraft:red_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType RED_WOOL_STAIRS = load("minecraft:red_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType REDSTONE = load("minecraft:redstone");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2365,6 +2565,8 @@ public class VeloItemTypes {
     public static final VeloItemType SANDSTONE_STAIRS = load("minecraft:sandstone_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SANDSTONE_WALL = load("minecraft:sandstone_wall");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType SAVANNA_VILLAGE_MAP = load("minecraft:savanna_village_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SCAFFOLDING = load("minecraft:scaffolding");
     @Since(ProtocolVersion.MINECRAFT_1_20_5)
@@ -2395,6 +2597,8 @@ public class VeloItemTypes {
     public static final VeloItemType SHEARS = load("minecraft:shears");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SHEEP_SPAWN_EGG = load("minecraft:sheep_spawn_egg");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType SHELF_MUSHROOM = load("minecraft:shelf_mushroom");
     @Since(ProtocolVersion.MINECRAFT_1_20)
     public static final VeloItemType SHELTER_POTTERY_SHERD = load("minecraft:shelter_pottery_sherd");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2479,6 +2683,8 @@ public class VeloItemTypes {
     public static final VeloItemType SNOW_GOLEM_SPAWN_EGG = load("minecraft:snow_golem_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SNOWBALL = load("minecraft:snowball");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType SNOWY_VILLAGE_MAP = load("minecraft:snowy_village_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SOUL_CAMPFIRE = load("minecraft:soul_campfire");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2581,6 +2787,8 @@ public class VeloItemTypes {
     public static final VeloItemType STONE_SWORD = load("minecraft:stone_sword");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType STONECUTTER = load("minecraft:stonecutter");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType STRAW_BED = load("minecraft:straw_bed");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType STRAY_SPAWN_EGG = load("minecraft:stray_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2625,6 +2833,10 @@ public class VeloItemTypes {
     public static final VeloItemType STRIPPED_PALE_OAK_LOG = load("minecraft:stripped_pale_oak_log");
     @Since(ProtocolVersion.MINECRAFT_1_21_2)
     public static final VeloItemType STRIPPED_PALE_OAK_WOOD = load("minecraft:stripped_pale_oak_wood");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType STRIPPED_POPLAR_LOG = load("minecraft:stripped_poplar_log");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType STRIPPED_POPLAR_WOOD = load("minecraft:stripped_poplar_wood");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType STRIPPED_SPRUCE_LOG = load("minecraft:stripped_spruce_log");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2671,12 +2883,16 @@ public class VeloItemTypes {
     public static final VeloItemType SUSPICIOUS_SAND = load("minecraft:suspicious_sand");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SUSPICIOUS_STEW = load("minecraft:suspicious_stew");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType SWAMP_HUT_MAP = load("minecraft:swamp_hut_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType SWEET_BERRIES = load("minecraft:sweet_berries");
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final VeloItemType TADPOLE_BUCKET = load("minecraft:tadpole_bucket");
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final VeloItemType TADPOLE_SPAWN_EGG = load("minecraft:tadpole_spawn_egg");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType TAIGA_VILLAGE_MAP = load("minecraft:taiga_village_map");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
     public static final VeloItemType TALL_DRY_GRASS = load("minecraft:tall_dry_grass");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2777,6 +2993,8 @@ public class VeloItemTypes {
     public static final VeloItemType WARD_ARMOR_TRIM_SMITHING_TEMPLATE = load("minecraft:ward_armor_trim_smithing_template");
     @Since(ProtocolVersion.MINECRAFT_1_19)
     public static final VeloItemType WARDEN_SPAWN_EGG = load("minecraft:warden_spawn_egg");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType WARM_OCEAN_RUINS_MAP = load("minecraft:warm_ocean_ruins_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WARPED_BUTTON = load("minecraft:warped_button");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -2991,6 +3209,12 @@ public class VeloItemTypes {
     public static final VeloItemType WHITE_CONCRETE = load("minecraft:white_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WHITE_CONCRETE_POWDER = load("minecraft:white_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType WHITE_CONCRETE_SLAB = load("minecraft:white_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType WHITE_CONCRETE_STAIRS = load("minecraft:white_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType WHITE_CUSHION = load("minecraft:white_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WHITE_DYE = load("minecraft:white_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3009,6 +3233,10 @@ public class VeloItemTypes {
     public static final VeloItemType WHITE_TULIP = load("minecraft:white_tulip");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WHITE_WOOL = load("minecraft:white_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType WHITE_WOOL_SLAB = load("minecraft:white_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType WHITE_WOOL_STAIRS = load("minecraft:white_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_19_4)
     public static final VeloItemType WILD_ARMOR_TRIM_SMITHING_TEMPLATE = load("minecraft:wild_armor_trim_smithing_template");
     @Since(ProtocolVersion.MINECRAFT_1_21_5)
@@ -3041,6 +3269,8 @@ public class VeloItemTypes {
     public static final VeloItemType WOODEN_SPEAR = load("minecraft:wooden_spear");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WOODEN_SWORD = load("minecraft:wooden_sword");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType WOODLAND_MANSION_MAP = load("minecraft:woodland_mansion_map");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType WRITABLE_BOOK = load("minecraft:writable_book");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3059,12 +3289,20 @@ public class VeloItemTypes {
     public static final VeloItemType YELLOW_CONCRETE = load("minecraft:yellow_concrete");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType YELLOW_CONCRETE_POWDER = load("minecraft:yellow_concrete_powder");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType YELLOW_CONCRETE_SLAB = load("minecraft:yellow_concrete_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType YELLOW_CONCRETE_STAIRS = load("minecraft:yellow_concrete_stairs");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType YELLOW_CUSHION = load("minecraft:yellow_cushion");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType YELLOW_DYE = load("minecraft:yellow_dye");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType YELLOW_GLAZED_TERRACOTTA = load("minecraft:yellow_glazed_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_21_6)
     public static final VeloItemType YELLOW_HARNESS = load("minecraft:yellow_harness");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType YELLOW_POPLAR_LEAVES = load("minecraft:yellow_poplar_leaves");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType YELLOW_SHULKER_BOX = load("minecraft:yellow_shulker_box");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3075,6 +3313,10 @@ public class VeloItemTypes {
     public static final VeloItemType YELLOW_TERRACOTTA = load("minecraft:yellow_terracotta");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType YELLOW_WOOL = load("minecraft:yellow_wool");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType YELLOW_WOOL_SLAB = load("minecraft:yellow_wool_slab");
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final VeloItemType YELLOW_WOOL_STAIRS = load("minecraft:yellow_wool_stairs");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final VeloItemType ZOGLIN_SPAWN_EGG = load("minecraft:zoglin_spawn_egg");
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -3119,6 +3361,8 @@ public class VeloItemTypes {
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_26_1), veloItemType);
         LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_2, unused -> new HashMap<>())
                 .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_26_2), veloItemType);
+        LOADED_VELO_ITEM_TYPES_CACHE.computeIfAbsent(ProtocolVersion.MINECRAFT_26_3, unused -> new HashMap<>())
+                .put(veloItemType.getProtocolId(ProtocolVersion.MINECRAFT_26_3), veloItemType);
 
         return veloItemType;
     }

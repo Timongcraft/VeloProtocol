@@ -1,10 +1,10 @@
 package de.timongcraft.veloprotocol.network.protocol.packets;
 
 import com.velocitypowered.api.network.ProtocolVersion;
-import com.velocitypowered.proxy.connection.MinecraftSessionHandler;
 import com.velocitypowered.proxy.protocol.ProtocolUtils;
 import com.velocitypowered.proxy.protocol.StateRegistry;
 import de.timongcraft.velopacketimpl.network.protocol.packets.core.AbstractPacket;
+import de.timongcraft.velopacketimpl.utils.annotations.Since;
 import de.timongcraft.veloprotocol.utils.network.Position;
 import io.github._4drian3d.vpacketevents.api.register.PacketRegistration;
 import io.netty.buffer.ByteBuf;
@@ -33,11 +33,13 @@ public class SignEditorOpenPacket extends AbstractPacket {
                 .mapping(0x35, MINECRAFT_1_21_5, encodeOnly)
                 .mapping(0x3A, MINECRAFT_1_21_9, encodeOnly)
                 .mapping(0x3C, MINECRAFT_26_1, encodeOnly)
+                .mapping(0x3D, MINECRAFT_26_3, encodeOnly)
                 .register();
     }
 
     private Position position;
-    private boolean frontText;
+    @Since(MINECRAFT_1_20)
+    private boolean frontText = true;
 
     private SignEditorOpenPacket() {}
 
@@ -52,14 +54,22 @@ public class SignEditorOpenPacket extends AbstractPacket {
 
         position = Position.read(buf);
 
-        frontText = buf.readBoolean();
+        if (version.noLessThan(MINECRAFT_26_3)) {
+            frontText = ProtocolUtils.readVarInt(buf) != 0;
+        } else if (version.greaterThan(MINECRAFT_1_19_4)) {
+            frontText = buf.readBoolean();
+        }
     }
 
     @Override
     public void encode(ByteBuf buf, ProtocolUtils.Direction direction, ProtocolVersion version) {
         position.write(buf);
 
-        buf.writeBoolean(frontText);
+        if (version.noLessThan(MINECRAFT_26_3)) {
+            ProtocolUtils.writeVarInt(buf, frontText ? 1 : 0);
+        } else if (version.greaterThan(MINECRAFT_1_19_4)) {
+            buf.writeBoolean(frontText);
+        }
     }
 
     public Position getPosition() {

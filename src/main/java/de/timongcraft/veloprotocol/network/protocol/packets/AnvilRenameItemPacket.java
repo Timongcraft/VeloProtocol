@@ -29,6 +29,7 @@ public class AnvilRenameItemPacket extends AbstractPacket {
                 .mapping(0x2E, MINECRAFT_1_21_4, encodeOnly)
                 .mapping(0x2F, MINECRAFT_1_21_6, encodeOnly)
                 .mapping(0x30, MINECRAFT_26_1, encodeOnly)
+                .mapping(0x31, MINECRAFT_26_3, encodeOnly)
                 .register();
     }
 

@@ -21,7 +21,6 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * (latest) Resource Id: 'minecraft:update_advancements'
  */
 @SuppressWarnings("unused")
-@ApiStatus.Experimental
 @Since(MINECRAFT_1_20_5)
 public class UpdateAdvancementsPacket extends AbstractPacket {
 
@@ -34,6 +33,7 @@ public class UpdateAdvancementsPacket extends AbstractPacket {
                 .mapping(0x7B, MINECRAFT_1_21_4, encodeOnly)
                 .mapping(0x80, MINECRAFT_1_21_9, encodeOnly)
                 .mapping(0x82, MINECRAFT_26_1, encodeOnly)
+                .mapping(0x85, MINECRAFT_26_3, encodeOnly)
                 .register();
     }
 

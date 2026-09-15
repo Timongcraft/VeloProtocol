@@ -1155,6 +1155,18 @@ public class VeloSounds {
     public static final String BLOCK_POLISHED_TUFF_PLACE = "minecraft:block.polished_tuff.place";
     @Since(ProtocolVersion.MINECRAFT_1_20_3)
     public static final String BLOCK_POLISHED_TUFF_STEP = "minecraft:block.polished_tuff.step";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_POPLAR_LEAVES_AMBIENT = "minecraft:block.poplar_leaves.ambient";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_POPLAR_LEAVES_BREAK = "minecraft:block.poplar_leaves.break";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_POPLAR_LEAVES_FALL = "minecraft:block.poplar_leaves.fall";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_POPLAR_LEAVES_HIT = "minecraft:block.poplar_leaves.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_POPLAR_LEAVES_PLACE = "minecraft:block.poplar_leaves.place";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_POPLAR_LEAVES_STEP = "minecraft:block.poplar_leaves.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_PORTAL_AMBIENT = "minecraft:block.portal.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1193,6 +1205,10 @@ public class VeloSounds {
     public static final String BLOCK_POWDER_SNOW_STEP = "minecraft:block.powder_snow.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_PUMPKIN_CARVE = "minecraft:block.pumpkin.carve";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_RED_SHRUB_BREAK = "minecraft:block.red_shrub.break";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_RED_SHRUB_PLACE = "minecraft:block.red_shrub.place";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_REDSTONE_TORCH_BURNOUT = "minecraft:block.redstone_torch.burnout";
     @Since(ProtocolVersion.MINECRAFT_1_21_4)
@@ -1349,6 +1365,16 @@ public class VeloSounds {
     public static final String BLOCK_SHELF_STEP = "minecraft:block.shelf.step";
     @Since(ProtocolVersion.MINECRAFT_1_21_9)
     public static final String BLOCK_SHELF_TAKE_ITEM = "minecraft:block.shelf.take_item";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_SHELF_MUSHROOM_BOUNCE = "minecraft:block.shelf_mushroom.bounce";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_SHELF_MUSHROOM_BREAK = "minecraft:block.shelf_mushroom.break";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_SHELF_MUSHROOM_FALL = "minecraft:block.shelf_mushroom.fall";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_SHELF_MUSHROOM_PLACE = "minecraft:block.shelf_mushroom.place";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_SHELF_MUSHROOM_STEP = "minecraft:block.shelf_mushroom.step";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_SHROOMLIGHT_BREAK = "minecraft:block.shroomlight.break";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
@@ -1489,6 +1515,18 @@ public class VeloSounds {
     public static final String BLOCK_STONE_PRESSURE_PLATE_CLICK_OFF = "minecraft:block.stone_pressure_plate.click_off";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String BLOCK_STONE_PRESSURE_PLATE_CLICK_ON = "minecraft:block.stone_pressure_plate.click_on";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_STRAW_BED_BREAK = "minecraft:block.straw_bed.break";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_STRAW_BED_BREAK_LEAVE = "minecraft:block.straw_bed.break_leave";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_STRAW_BED_FALL = "minecraft:block.straw_bed.fall";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_STRAW_BED_HIT = "minecraft:block.straw_bed.hit";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_STRAW_BED_PLACE = "minecraft:block.straw_bed.place";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String BLOCK_STRAW_BED_STEP = "minecraft:block.straw_bed.step";
     @Since(ProtocolVersion.MINECRAFT_26_1)
     public static final String BLOCK_SULFUR_BREAK = "minecraft:block.sulfur.break";
     @Since(ProtocolVersion.MINECRAFT_26_1)
@@ -2131,6 +2169,14 @@ public class VeloSounds {
     public static final String ENTITY_CREEPER_HURT = "minecraft:entity.creeper.hurt";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_CREEPER_PRIMED = "minecraft:entity.creeper.primed";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String ENTITY_CUSHION_BREAK = "minecraft:entity.cushion.break";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String ENTITY_CUSHION_GET_UP = "minecraft:entity.cushion.get_up";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String ENTITY_CUSHION_PLACE = "minecraft:entity.cushion.place";
+    @Since(ProtocolVersion.MINECRAFT_26_3)
+    public static final String ENTITY_CUSHION_SIT = "minecraft:entity.cushion.sit";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)
     public static final String ENTITY_DOLPHIN_AMBIENT = "minecraft:entity.dolphin.ambient";
     @Since(ProtocolVersion.MINECRAFT_1_18_2)

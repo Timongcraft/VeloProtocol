@@ -16,7 +16,6 @@ import static com.velocitypowered.api.network.ProtocolVersion.*;
  * The "Protocol" prefix signifies that this class is a minimal, serialization-only representation.
  */
 @SuppressWarnings("unused")
-@ApiStatus.Experimental
 @Since(MINECRAFT_1_20_5)
 public class ProtocolAdvancementProgress {
 
